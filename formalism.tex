@@ -1,0 +1,30 @@
+\chapter{Methods for studying two species of bosons with mutual statistical interactions}
+
+Over the course of my graduate study I developed a set of powerful tools for studying a statistical mechanics model of two species of bosons, where the bosons have `mutual statistics': interchanging bosons of different species changes the wave function by a phase. Models such as this can have many applications, in particular these models will be used to construct bosonic versions of the quantum Hall effect in the next chapter. In this chapter I will pedagogically describe the methods that I have developed.
+
+\section{One species of bosons}
+Let us begin by considering a single species of bosons. The material in this section is not original, but it will be useful to understand a single species of bosons before we can move on to multiple species.
+
+First consider a Bose-Hubbard model at integer filling. When the number of bosons per site is very large and we can consider the fluctuations in the boson number to be much smaller than the average boson number, we can describe the system by a `quantum rotor model':
+\begin{equation}
+\hat{H}=t\sum_{\langle i,j \rangle} -\cos(\hat\phi_i-\hat\phi_j) + J\sum_i \hat n_i^2
+\end{equation}
+Here $\hat n\in \mathbb{Z}$ is the deviation of the boson number from its equilibrium value, while $\hat\phi$ are its conjugate variables such that 
+\begin{equation}
+[\hat n_i, \hat\phi_j]=i\delta_{ij}
+\end{equation}
+The first term in this Hamiltonian is a hopping term which moves the bosons around, when this term dominates the system is in a superfluid phase. The second term is a potential energy, which dominates in the Mott insulating phase. 
+
+We now wish to study the finite-temperature path integral of this system:
+\begin{equation}
+Z=Tr(e^{-\beta \hat H}).
+\end{equation}
+To do this we perform a Trotter decomposition\cite{Trotter}:
+\begin{equation}
+Z=Tr(\prod^N e^{-\delta\tau \hat H}).
+\end{equation}
+Here $\delta\tau=\beta/N$, and breaking up the exponential into a product introduces an error of $O(\delta\tau^2)$, which is fine as long as $N$ is large. We now insert decompositions of unity so that each $e^{-\delta\tau\hat H}$ becomes:
+\begin{equation}
+\bra{\phi_i(\tau)} e^{-\delta\tau J \hat n_i^2} \ket{n_i(\tau)} \bra{n_i(\tau)} e^{\delta\tau t\cos(\phi_i-\phi_j)} \ket{\phi_i(\tau+\delta\tau)}.
+\end{equation}
+Here all of the possible states of $\hat n$ and $\hat\phi$ will need to summed over. Note that we have inserted $N$ sets of states for both the $\hat n$ and $\hat\phi$ variables. In this step we also factored an exponential, which again introduces an error of $O(\delta\tau^2)$. 
