@@ -1,6 +1,5 @@
 \documentclass{cit_thesis}
-\usepackage{amsmath, amssymb, braket, units}
-
+\usepackage{amsmath, amssymb, braket, units,bm,bbm}
 \usepackage[mathscr]{euscript}
 \usepackage{graphicx}
 \usepackage{subfigure}		% This is supposed to be obsolete, superseded by subfig
@@ -10,6 +9,42 @@
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,breaklinks]{hyperref}
 \usepackage{breakurl}
 \usepackage{color}
+
+\newcommand{\JJ}{\vec{J}}
+\newcommand{\QQ}{\vec{Q}}
+\def\cJ{J}
+\def\cQ{Q}
+\def\cF{{\cal F}}
+\def\cG{{\cal G}}
+\newcommand{\FF}{\vec{\mathcal{F}}}
+\newcommand{\GG}{\vec{\mathcal{G}}}
+\newcommand{\genC}{C^{\mu\nu}_{ab}(k)}
+\def\vcJ{{\vec\cJ}}
+\def\vcQ{{\vec\cQ}}
+\def\vcF{{\vec\cF}}
+\def\vcG{{\vec\cG}}
+
+\def\br{{\bf r}}
+\def\bR{{\bf R}}
+\def\bx{{\bf x}}
+\def\by{{\bf y}}
+\def\bj{{\bf j}}
+\def\bk{{\bf k}}
+\def\valpha{{\vec{\alpha}}}
+\def\vbeta{{\vec{\beta}}}
+\def\vgamma{{\vec{\gamma}}}
+
+
+\def\half{{\frac{1}{2}}}
+\def\Aext{A^{\rm ext}}
+\def\vAext{{\vec{A}^{\rm ext}}}
+
+\newcommand{\curl}{\vec{\nabla}\times}
+\newcommand{\divv}{\vec{\nabla}\cdot}
+\newcommand{\uxu}{U(1)\times U(1)}
+\def\ra{\rangle} % bra
+\def\la{\langle} % ket
+
 
 \begin{document}
 \title{Competing Abelian and non-Abelian topological orders in \texorpdfstring{$\nu = 1/3+1/3$}{filling 1/3+1/3} quantum Hall bilayers}
@@ -32,4 +67,5 @@ Our results suggest that $\nu = 1/3 + 1/3$ systems merit further experimental st
 
 \include{intro}
 \include{formalism}
+\include{FQHE}
 \end{document}
