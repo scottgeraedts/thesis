@@ -1,4 +1,5 @@
 \chapter{Methods for studying two species of bosons with mutual statistical interactions}
+\label{chapter::methods}
 
 Over the course of my graduate study I developed a set of powerful tools for studying a statistical mechanics model of two species of bosons, where the bosons have `mutual statistics': interchanging bosons of different species changes the wave function by a phase. Models such as this can have many applications, in particular these models will be used to construct bosonic versions of the quantum Hall effect in the next chapter. In this chapter I will pedagogically describe the methods that I have developed.
 
@@ -36,7 +37,7 @@ Here all of the possible states of $\hat n$ and $\hat\phi$ will need to summed o
 The partition sum is made up of $N$ of the above expressions, and each one has a different $\tau$ index. All $N$ of the $\hat n$ and $\hat \phi$ bases will need to be summed over.
 In this step we also factored an exponential, which again introduces an error of $O(\delta\tau^2)$. Now all of the operators are diagonal in either the $\ket{n}$ or $\ket{\phi}$ bases, so they can all be factored out of the braket and they become classical variables. We are left with a bunch of $\bra{\phi}\ket{n}$ objects, and from Eq.~\ref{commute} these give:
 \begin{equation}
-\bra{\phi_i(\tau)}\bra{n_j(\tau^\prime)}=\delta_{ij}e^{i n(\tau^\prime)\phi(\tau)}.
+\bra{\phi_i(\tau)}\ket{n_j(\tau^\prime)}=\delta_{ij}e^{i n(\tau^\prime)\phi(\tau)}.
 \end{equation}
 Therefore the path integral has become
 \begin{eqnarray}
@@ -44,7 +45,7 @@ Therefore the path integral has become
 &&S=g\sum_{i,\tau} n_i(\tau)^2-t\sum_{\la i,j\ra,\tau} \cos[ \phi_i(\tau)-\phi_j(\tau)]+i\sum_{i,\tau} n_i(\tau)[\phi_i(\tau+\delta\tau)-\phi_i(\tau)].
 \label{first_classical}
 \end{eqnarray}
-We see that through the Trotter decomposition, our quantum problem has turned into a classical problem. The cost of doing this is that we now have an addition imaginary-time direction $\tau$ to sum over. At this point it is convenient to formally replace the cosine term with a Villain potential:
+We see that through the Trotter decomposition, our quantum problem has turned into a classical problem. The cost of doing this is that we now have an additional imaginary-time direction $\tau$ to sum over. At this point it is convenient to formally replace the cosine term with a Villain potential:
 \begin{equation}
 e^{\cos(x)}\approx\sum_p e^{-(x-2\pi p)^2}.
 \label{Villain}
@@ -58,7 +59,7 @@ Plugging the above into Eq.~(\ref{first_classical}) for each of the cosines we g
 \begin{equation}
 S=g\sum_{r} n(r)^2 + \frac{1}{t}\sum_r J_\tau(r)^2 + i\sum_r n(r) [\phi(r+\hat\tau)-\phi(r)] + i\sum_{r,a} J_{a}(r) [\phi(r+\hat a)-\phi(r)]
 \end{equation}
-Here position index $r$ can refer to either a spatial ($i$) or imaginary time ($\tau$) index, and $a$ is a direction on the original spatial lattice. If the original Hamiltonian was defined on a $d$ dimensional square lattice, we can imagine the sum over $\tau$ as giving us a number of copies of this $d$ dimensional lattice. Futhermore we can imagine links between the sites of the different lattices, turning the whole thing into a $d+1$ dimensional cubic lattice. The $(\phi_{i+\hat\tau}-\phi_i)$ term is defined on these $\tau$-direction links, and we can imagine the $n_i$ variables living on these links as well, while the $J_i$ variables live on the spatial links of the lattice. This partition sum for this action includes a sum over the $J$, $n$ and $\phi$ variables.
+Here position index $r$ can refer to either a spatial ($i$) or imaginary time ($\tau$) index, and $a$ is a direction on the original spatial lattice. If the original Hamiltonian was defined on a $d$ dimensional square lattice, we can imagine the sum over $\tau$ as giving us a number of copies of this $d$ dimensional lattice. Futhermore we can imagine links between the sites of the different lattices, turning the whole thing into a $d+1$ dimensional cubic lattice. The $(\phi(r+\hat\tau)-\phi_i)$ term is defined on these $\tau$-direction links, and we can imagine the $n(r)$ variables living on these links as well, while the $J_a(r)$ variables live on the spatial links of the lattice in direction $a$. This partition sum for this action includes a sum over the $J$, $n$ and $\phi$ variables.
 
 An this point we can also sum out the $\phi$ variables to get the following action:
 \begin{equation}
@@ -70,10 +71,10 @@ which is subject to the constraint
 \sum_\mu \nabla_\mu J\mu=0.
 \label{constraint}
 \end{equation}
-Th partition sum is over the $J_\mu$ variables subject to the constraint. Here we have relabelled the $n$ variables as $J_\tau$ and $\mu$ is a position index which can run over both $\tau$ and the spatial directions. We have specialized to the case where the parameter $\tilde g$ is space-time isotropic. The lattice derivative $\nabla_\mu$ is defined as $\nabla_\mu x= x(r+\mu)-x(r)$, and the constraint comes from integrating over the $\phi$ variables. The $J$ variables can be viewed as integer-valued conserved currents living on the links of the $d+1$ dimensional lattice, and they can be interpreted as the world-lines of the bosons introduced in Eq.~(\ref{singleHam}). The constraint forces the bosons to be conserved.
+Th partition sum is over the $J_\mu$ variables subject to the constraint. Here we have relabelled the $n$ variables as $J_\tau$ and $\mu$ is a direction index which can run over both $\tau$ and the spatial directions. We have specialized to the case where the parameter $\tilde g$ is space-time isotropic. The lattice derivative $\nabla_\mu$ is defined as $\nabla_\mu x= x(r+\mu)-x(r)$, and the constraint comes from integrating over the $\phi$ variables. The $J$ variables can be viewed as integer-valued conserved currents living on the links of the $d+1$ dimensional lattice, and they can be interpreted as the world-lines of the bosons introduced in Eq.~(\ref{singleHam}). The constraint forces the bosons to be conserved. In Chapters \ref{chapter::FQHE} and \ref{chapter::SO34D} we will be using Eq.~(\ref{singleJ}) frequently to represent at system of bosons.
 
 \subsection{Reformulations in terms of $\phi$ variables}
-Eq.~(\ref{singleJ}) is one way to study a statistical mechanics model for a system of bosons, and it will be very useful throughout this thesis. There are also a number of other ways to reformulate the same model, which will also be useful at various points in this work. One such reformulation can be obtained by starting with Eq.~(\ref{first_classical}) combined with Eq.~(\ref{Villain}), and summing over the $n$ variables instead of the $\phi$. Using Eq.~(\ref{Villain2}) one obtains:
+Eq.~(\ref{singleJ}) is one way to study a statistical mechanics model for a system of bosons, and it will be very useful throughout this thesis. There are also a number of other ways to reformulate the same model, which will also be useful at various points. One such reformulation can be obtained by starting with Eq.~(\ref{first_classical}) combined with Eq.~(\ref{Villain}), and summing over the $n$ variables instead of the $\phi$. Using Eq.~(\ref{Villain2}) one obtains:
 \begin{equation}
 S=\tilde t \sum_{r,\mu} (\nabla_\mu \phi(r)-2\pi p_\mu(r))^2
 \label{singleRods}
@@ -86,33 +87,38 @@ We can obtain yet another reformulation by summing over the $J$ variables in Eq.
 &&e^{-V_{\rm Villain}(x;\tilde t}=\sum_{p} e^{-\frac{1}{\tilde t} J^2+i\alpha J}.
 \label{singleVillain}
 \end{eqnarray}
-These reformulations are very useful when studying these systems in Monte Carlo.
+In both cases we are representing a $d$-dimensional model of bosons using a classical $(d+1)$-dimensional model in terms of the phases of those bosons. These reformulations are very useful when studying these systems in Monte Carlo. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Reformulations in terms of vortices}
 \label{subsec::JtoQ}
-Another way to reformulate Eq.~(\ref{singleJ}) is to write it in terms of the world-lines of the vortices of the bosons. This approach only works in $(2+1)$ dimensions, and is an application of the boson-vortex duality developed to study the Mott insulator-superfluid transition\cite{PolyakovBook, Peskin1978, Dasgupta1981, FisherLee1989, LeeFisher1989, artphoton,short_range3} . Unlike the reformulations in the previous subsection, this reformulation only works in $(2+1)$ dimensions, but we will see that it makes up for this by being an extremely powerful analytic tool to analyze these systems. 
+Another way to reformulate Eq.~(\ref{singleJ}) is to write it in terms of the world-lines of the vortices of the bosons. This approach only works in $(2+1)$ dimensions, and is an application of the boson-vortex duality developed to study the Mott insulator-superfluid transition\cite{PolyakovBook, Peskin1978, Dasgupta1981, FisherLee1989, LeeFisher1989, artphoton,short_range3} . Unlike the reformulations in the previous subsection, this reformulation only works in $(2+1)$ dimensions, but we will see that it makes up for this by being an extremely powerful analytic tool. 
 
- The original degrees of freedom are conserved integer-valued currents $\JJ(r)$ residing on links of a simple 3D cubic lattice; $\vec{\nabla} \cdot \JJ(r) = 0$ for any $r$.  To be precise, we use periodic boundary conditions and also require vanishing total current, $\JJ_{\rm tot} \equiv \sum_r \JJ(r) = 0$.  We define duality mapping as an exact rewriting of the partition sum in terms of new integer-valued currents $\QQ(R)$ residing on links of a dual lattice and also satisfying $\vec{\nabla} \cdot \vec{\cQ}(R) = 0$ for any $R$ and $\vec{\cQ}_{\rm tot} = 0$. These $\QQ$ variables represent the worldlines of the vortices. The derivation of this is as follows.
- 
- Then, we would like to integrate out the $\JJ$ variables. However, the $\JJ$ variables are integer-valued and constrained to be divergenceless with no total current. We enforce these constraints by adding new variables to our partition sum as follows.
+ The original degrees of freedom are conserved integer-valued currents $\JJ(r)$ residing on links of a simple 3D cubic lattice; $\vec{\nabla} \cdot \JJ(r) = 0$ for any $r$.  To be precise, we use periodic boundary conditions and also require vanishing total current, $\JJ_{\rm tot} \equiv \sum_r \JJ(r) = 0$
+\footnote{Here I have changed to the very convenient notation in which all of the $J_\mu$ from Eq.~(\ref{singleJ}) are grouped into a vector \JJ}.  
+
+We define duality mapping as an exact rewriting of the partition sum in terms of new integer-valued currents $\QQ(R)$. These new variables  reside on links of a` dual' lattice whose positions are labelled by $R$. The sites of the dual lattice sit in the centers of the cubes of the original (`direct') lattice, i.e. $R=r+\hat{x}/2+\hat{y}/2+\hat{z}/2$.
+The $\QQ$ variables also satisfy $\vec{\nabla} \cdot \vec{\cQ}(R) = 0$ for any $R$ and $\vec{\cQ}_{\rm tot} = 0$. These $\QQ$ variables represent the worldlines of the vortices dual to the original bosons. 
+
+The derivation of this duality mapping is as follows.  
+ First, we would like to integrate out the $\JJ$ variables. However, the $\JJ$ variables are integer-valued and constrained to be divergenceless with no total current. We enforce these constraints by adding new variables to our partition sum as follows.
 To enforce the divergenceless of the $\JJ$ variables we add the following term:
 \begin{equation}
-\delta_{[\divv\JJ](r)=0}=\int_{-\pi}^{\pi} d\phi(r) \exp\left[-i\phi_1(r)[\divv\JJ](r)\right].
+\delta_{[\divv\JJ](r)=0}=\int_{-\pi}^{\pi} d\phi(r) \exp\left[-i\phi(r)[\divv\JJ](r)\right].
 \label{zphi}
 \end{equation}
-(We are ignoring overall constants here and below.) This introduces a $2\pi$-periodic $\phi_1(r)$ variable on every site of the lattice. These variables correspond to the phases of the type-1 bosons. We enforce the constraint that there must be no total current (in our full system) by adding another term to the partition sum:
+(We are ignoring overall constants here and below.) This introduces a $2\pi$-periodic $\phi(r)$ variable on every site of the lattice. These variables correspond to the phases of the bosons. We enforce the constraint that there must be no total current (in our full system) by adding another term to the partition sum:
 \begin{eqnarray}
 \delta_{\JJ_{{\rm tot}}=0}=\prod_{\mu=1}^{3}\int_{-\pi}^{\pi} d\gamma_{1\mu} \exp[-i\gamma_{\mu}\sum_r \delta_{r_\mu=0}\JJ_{\mu}(r)].
 \label{zgamma}
 \end{eqnarray}
-This term introduces a $2\pi$-periodic $\gamma_{1\mu}$ variable for each direction $\mu$ on the lattice. This variable means that instead of periodic boundary conditions we have a fluctuating boundary condition such that across the boundary the $\phi$ variables differ by $\gamma$; here we chose the boundary plane perpendicular to the $x$ direction to be at $x=0$, and similarly for the other directions.
+This term introduces a $2\pi$-periodic $\gamma_{\mu}$ variable for each direction $\mu$ on the lattice. This variable means that instead of periodic boundary conditions we have a fluctuating boundary condition such that across the boundary the $\phi$ variables differ by $\gamma$; here we chose the boundary plane perpendicular to the $x$ direction to be at $x=0$, and similarly for the other directions.
  
  Now that the $\JJ$ variables are unconstrained, we can go from integer-valued $\JJ$ to real-valued $j$ by using the following relation:
 \begin{equation*}
 \sum_{\JJ_{\mu}(r)}[...]=\int_{-\infty}^{+\infty}\!\! dj_{1\mu}(r) \sum_{p_{\mu}(r)} \exp\left[-i2\pi p_{\mu}(r)j_{1\mu}(r)\right][...].
 \end{equation*} 
-This term introduces integer-valued $p_{1\mu}(r)$ variables on every link on the lattice, and these variables are free of any constraint.  In formal duality maps,\cite{PolyakovBook, Peskin1978, Dasgupta1981, FisherLee1989, LeeFisher1989, artphoton, short_range3} the physical meaning of the $p_1$ variables is that their curl gives vorticity in the phase variables conjugate to $\JJ_1$, i.e., $\vcQ_1 = \vec{\nabla} \times \vec{p}_1$.
+This term introduces integer-valued $p_{\mu}(r)$ variables on every link on the lattice, and these variables are free of any constraint.  In formal duality maps,\cite{PolyakovBook, Peskin1978, Dasgupta1981, FisherLee1989, LeeFisher1989, artphoton, short_range3} the physical meaning of the $p$ variables is that their curl gives vorticity in the phase variables conjugate to $\JJ$, i.e., $\vcQ = \vec{\nabla} \times \vec{p}$.
 
 Putting all of this together we obtain the following partition sum:
 \begin{equation}
@@ -143,7 +149,7 @@ This gives the following action:
 S[\JJ]=\frac{1}{2}\sum_{k} v(k) |\JJ(k)|^2 + i\sum_k  \JJ(k)\cdot \vec{A}(-k),
 \label{SJ}
 \end{eqnarray}
-where $v(k)$ is a potential and $\vec{A}$ is a fixed gauge field coupled to the $\JJ$ variables (in the main text in different contexts it corresponds to the external gauge field $\vAext$ or the internal gauge field $\vec{a}_{2}$).
+where $v(k)$ is a potential (which can be long ranged) and $\vec{A}$ is a fixed gauge field coupled to the $\JJ$ variables. 
 With this action, the integrations over the $j$ variables are Gaussian, with basic averages with respect to the quadratic piece in Eq.~(\ref{SJ}) given by:
 \begin{equation}
 \la j_\mu(k) j_{\mu'}(k') \ra_0 = \frac{\delta_{k+k'=0}}{v(k)} \left(\delta_{\mu \mu'} - \frac{f_{k,\mu} f_{k,\mu'}^*}{|\vec{f}_k|^2} \right) ~,
@@ -154,14 +160,15 @@ With this action, the integrations over the $j$ variables are Gaussian, with bas
  \end{equation}
   We then obtain
 \begin{equation}
-S_{\rm dual}[\vec{Q}] = \frac{1}{2} \sum_k \frac{(2\pi)^2}{v(k) |\vec{f}_k|^2} |2\pi\vec{Q}(k) + \vec{B}(k)/2\pi|^2,
+S_{\rm dual}[\vec{Q}] = \frac{1}{2} \sum_k \frac{(2\pi)^2}{v(k) |\vec{f}_k|^2} |\vec{Q}(k) + \vec{B}(k)/2\pi|^2,
 \label{singleQ}
 \end{equation}
-where $\vec{B} \equiv \vec{\nabla} \times \vec{A}$.  The relation between Eq.~(\ref{SJ}) and Eq.~(\ref{singleQ}) will be called ``duality map'' in the remainder of this work. Note that in real space the vortices live on a lattice dual to the lattice of the $J$ bosons. This lattice will be labelled by the index $R$, its sites sit in the center of the cubes of the lattice labelled by the index $r$. 
+where $\vec{B} \equiv \vec{\nabla} \times \vec{A}$.  The relation between Eq.~(\ref{SJ}) and Eq.~(\ref{singleQ}) will be called ``duality map'' in the remainder of this work. 
+%Note that in real space the vortices live on a lattice dual to the lattice of the $J$ bosons. This lattice will be labelled by the index $R$, its sites sit in the center of the cubes of the lattice labelled by the index $r$. 
 
-Equations (\ref{singleJ}), (\ref{singleRods}), (\ref{singleVillain}) and (\ref{singleQ}) are all equivalent ways to represent the same system of bosons, and each will be used at different times throughout the remainder of this thesis. Note also that we could have derived Eq.~(\ref{singleQ}) by integrating out the $\phi$ variables (and constraning the bosons to not wind) in Eq.~(\ref{singleRods}). Similarly we could have obtained Eq.~(\ref{singleRods}) by integrating out the $p$ variables instead of the $\phi$ variables in Eq.~(\ref{duality_mid}). 
+Equations (\ref{singleJ}), (\ref{singleRods}), (\ref{singleVillain}) and (\ref{singleQ}) are all equivalent ways to represent the same system of bosons, and each will be used at different times throughout the remainder of this thesis. Note also that we could have derived Eq.~(\ref{singleQ}) by integrating out the $\phi$ variables (and constraning the bosons to not have zero total current in the periodic system) in Eq.~(\ref{singleRods}). Similarly we could have obtained Eq.~(\ref{singleRods}) by integrating out the $p$ variables instead of the $\phi$ variables in Eq.~(\ref{duality_mid}). The duality was shown in this way in this subsection because going directly from the $\JJ$ to $\QQ$ variables is in practice often the most convenient.
 
-A system of bosons like this as two phases: a superfluid and a Mott Insulator. In the superfluid the bosons are proliferated, while the vortices are gapped. In our $(2+1)$ dimensional stat-mech model, this manifests itself by either proliferation of $\JJ$ currents, or an absence of $\QQ$ currents (depending on which formulation is being used). On the other hand, in a Mott insulator the vortices are proliferated while the bosons are gapped, so there are either a lot of $\QQ$ currents or an absence of $\JJ$ currents.
+A system of bosons like this has two phases: a superfluid and a Mott Insulator. In the superfluid the bosons are proliferated, while the vortices are gapped. In our $(2+1)$ dimensional stat-mech model, this manifests itself by either proliferation of $\JJ$ currents, or an absence of $\QQ$ currents (depending on which formulation is being used). On the other hand, in a Mott insulator the vortices are proliferated while the bosons are gapped, so there are either a lot of $\QQ$ currents or an absence of $\JJ$ currents.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Two species of Bosons: Modular Transformations}
@@ -170,15 +177,15 @@ In this section we use the techniques of the previous section to study models of
 S&=&\frac{1}{2}\sum_k \left[v_1(k)|\JJ_1(k)|^2+v_2(k)|\JJ_2(k)|^2\right]
 +i\sum_k \theta(k)\JJ_1(-k)\cdot \vec{a}_{\JJ_2}(k)\nonumber\\
 &+&i\sum_k \left[ \JJ_1(-k)\cdot \vec{A}_{1}^{\rm ext}(k) + \JJ_2(-k)\cdot \vec{A}_{2}^{\rm ext}(k) \right].
-\label{kaction}
+\label{kaction_1}
 \end{eqnarray}
-The first two terms of this action are just Eq.~(\ref{singleJ}), written in $k$-space. Both $\JJ_1$ and $\JJ_2$ behave like the $\JJ$ of the previous section, however in real space they are defined on different lattices. We will index the sites of lattice of $\JJ_1$ with the index $r$, and call it the direct lattice, while $\JJ_2$'s lattice will be indexed by $R$ and called the dual lattice. The sites of the dual lattice are in the center of the cubes of the direct lattice.\
+The first two terms of this action are just two copies of Eq.~(\ref{SJ}). Both $\JJ_1$ and $\JJ_2$ behave like the $\JJ$ of the previous section, however in real space they are defined on different lattices, as described previously. We will index the sites of lattice of $\JJ_1$ with the index $r$, and call it the direct lattice, while $\JJ_2$'s lattice will be indexed by $R$ and called the dual lattice. The sites of the dual lattice are in the center of the cubes of the direct lattice.
 
-Eq.~(\ref{kaction}) also contains an integer-valued gauge field $\vec{a}_{\JJ_2}$, which is defined such that $\JJ_2(R)=[\vec{\nabla}\times\vec{a}_{\mathcal{J}2}](R)$. This field lives on the links of direct lattice, but taking the curl of something on the links of the direct lattice gives a variable defined on the links of the dual lattice. The third term in this action is defined such that when $\theta(k)$ is a constant, this action has a phase of $e^{i\theta}$ when loops of opposite species are linked. This linking in the $(2+1)$-dimensional spacetime corresponds to an exchange in the corresponding $2d$ problem, so the effect of this term is to encode mutual statistics between $\JJ_1$ and $\JJ_2$. When $\theta(k)$ is not constant this term gives some additional interactions in addition to the statistical interactions. The $\Aext$ are external fields which will used to compute linear reponses.
+Eq.~(\ref{kaction_1}) also contains an integer-valued gauge field $\vec{a}_{\JJ_2}$, which is defined such that $\JJ_2(R)=[\vec{\nabla}\times\vec{a}_{J2}(r)]$. This field lives on the links of direct ($r$) lattice, but taking the curl of something on the links of the direct lattice gives a variable defined on the links of the dual lattice. The third term in this action is defined such that when $\theta(k)$ is a constant, this action has a phase of $e^{i\theta}$ when loops of opposite species are linked. This linking in the $(2+1)$-dimensional spacetime corresponds to an exchange in the corresponding $2d$ problem, so the effect of this term is to encode mutual statistics between $\JJ_1$ and $\JJ_2$. When $\theta(k)$ is not constant this term gives some additional interactions in addition to the statistical interactions. The $\Aext$ are external Maxwell fields which will be used to compute linear reponses.
 
-In this section we will show how to reformulate this action in terms of some new integer-valued currents $\GG$, which represent the worldlines of some other kind of boson. We will obtain an action for the $\GG$ bosons which is of the same form as Eq.~(\ref{kaction}), but with modified parameters $v(k)$ and $\theta(k)$. We will show how to write the $v(k)$, $\theta(k)$ for the $\GG$ variables in terms of those for the $\JJ$ variables. The point of doing this is that the depending on the choice of parameters, the $\GG$ variables can be much easier to study than the $\JJ$ variables. We can also relate observables in the $\JJ$ variables (which can be hard to measure) to observables in the $\GG$ variables (which can be easier to measure). These techniques were essential to solving the problems studied in Refs.~\cite{short_range3,Gen2Loops,FQHE}.
+In this section we will show how to reformulate this action in terms of some new integer-valued currents $\GG$, which represent the worldlines of some other kind of boson. We will obtain an action for the $\GG$ bosons which is of the same form as Eq.~(\ref{kaction_1}), but with modified parameters $v(k)$ and $\theta(k)$. We will show how to write the $v(k)$, $\theta(k)$ for the $\GG$ variables in terms of those for the $\JJ$ variables. The point of doing this is that depending on the choice of parameters, the $\GG$ variables can be much easier to study than the $\JJ$ variables. We can also relate observables in the $\JJ$ variables (which can be hard to measure) to observables in the $\GG$ variables (which can be easier to measure). These techniques were essential to solving the problems studied in Refs.~\cite{short_range3,Gen2Loops,FQHE}.
 
-We can use the duality transform from the previous section to go from the $\cJ_1$ variables to dual $\cQ_1$ variables as follows:
+We can use the duality transform from the previous section [see Eq.~(\ref{singleQ})] to go from the $\cJ_1$ variables to dual $\cQ_1$ variables as follows:
 \begin{eqnarray}
 &S&=\frac{1}{2}\sum_k \frac{\left|2\pi\QQ_1(k)+\theta(k)\JJ_2(k)+[\curl\vec{A}_{1}^{\rm ext}](k)\right|^2}{|\vec{f}_k|^2v_1(k)}\nonumber\\
 &+&\frac{1}{2}\sum_k v_2(k)|\JJ_2(k)|^2 + i \sum_k \JJ_2(-k) \cdot \vec{A}_{2}^{\rm ext}(k).
@@ -200,20 +207,21 @@ c & d
 \end{pmatrix}
 \in PSL(2,\mathbb{Z}),
 \end{equation}
-i.e.,  $a,b,c,d$ are integers such that $ad-bc=1$. Since the above matrix is an element of the modular group, we call this change of variables a modular transformation and will often refer to it simply $(a,b,c,d)$. Here $\FF_1$ and $\GG_2$ are new integer-valued conserved currents, with all the same properties (divergenceless, zero total current) as the $\JJ$ and $\QQ$ variables. We can therefore perform the duality transform to go from the $\FF_1$ variables to dual $\cG_1$ variables, which gives us an action in terms of the $\GG_1$ and $\cG_2$ variables. This transformation, from $\cJ_1$, $\cJ_2$ variables to $\cG_1$, $\cG_2$ variables, is the generalization of the duality operation to modular transformations. After performing this change we are left with the following action:
+i.e.,  $a,b,c,d$ are integers such that $ad-bc=1$. Since the above matrix is an element of the modular group, we call this change of variables a modular transformation and will often refer to it simply $(a,b,c,d)$. Here $\cF_1$ and $\cG_2$ are new integer-valued conserved currents, with all the same properties (divergenceless, zero total current) as the $\cJ$ and $\cQ$ variables. We can therefore perform the duality transform to go from the $\FF_1$ variables to dual $\cG_1$ variables, which gives us an action in terms of the $\cG_1$ and $\cG_2$ variables. This transformation, from $\cJ_1$, $\cJ_2$ variables to $\cG_1$, $\cG_2$ variables, is the generalization of the duality operation to modular transformations. After performing this change we are left with the following action:
 \begin{eqnarray}
-S&=&\frac{1}{2}\sum_k v_{\GG1}(k) \left|\GG_1(k)+\frac{c[\curl\vec{A}_{2}^{\rm ext}](k)}{2\pi}\right|^2
-+\frac{1}{2}\sum_k v_{\GG2}(k)\left|\GG_2(k)+\frac{c[\curl\vec{A}_{1}^{\rm ext}](k)}{2\pi}\right|^2\nonumber\\
-&+&i\sum_k \theta_{\GG}(k) \GG_1(-k)\cdot \vec{a}_{\cG2}(k)
+S&=&\frac{1}{2}\sum_k v_{\cG1}(k) \left|\GG_1(k)+\frac{c[\curl\vec{A}_{2}^{\rm ext}](k)}{2\pi}\right|^2
++\frac{1}{2}\sum_k v_{\cG2}(k)\left|\GG_2(k)+\frac{c[\curl\vec{A}_{1}^{\rm ext}](k)}{2\pi}\right|^2\nonumber\\
+&+&i\sum_k \theta_{\cG}(k) \GG_1(-k)\cdot \vec{a}_{\cG2}(k)
 -i\sum_k \frac{c[2\pi a-\theta_{\GG}(k)c]}{(2\pi)^2} [\curl\vec{A}_{1}^{\rm ext}](-k)\cdot \vec{A}_{2}^{\rm ext}(k)\nonumber\\
 &-& i\sum_k \left[a - \frac{\theta_{\GG}(k) c}{2\pi}\right]\left[\GG_1(-k) \cdot \vec{A}_{1}^{\rm ext}(k) + \GG_2(-k) \cdot \vec{A}_{2}^{\rm ext}(k) \right],
 \label{gaction}
 \end{eqnarray}
 where $\GG_2=\vec{\nabla}\times \vec{a}_{\cG2}$ and
 \begin{eqnarray}
-&&\!\!\!\!\! v_{\GG1/2}(k)=\frac{(2\pi)^2v_{1/2}(k)}{[2\pi d+\theta(k) c]^2+ v_{1}(k)v_{2}(k)|\vec{f}_k|^2c^2},\label{VJ}\\
-&&\!\!\!\!\! \frac{\theta_{\GG}(k)}{2\pi}=\frac{[2\pi b+\theta(k) a][2\pi d + \theta(k) c]+v_{1}(k)v_{2}(k)|\vec{f}_k|^2ca}{[2\pi d+\theta(k) c]^2+ v_{1}(k)v_{2}(k)|\vec{f}_k|^2c^2}.\label{TJ}
+&&\!\!\!\!\! v_{\cG1/2}(k)=\frac{(2\pi)^2v_{1/2}(k)}{[2\pi d+\theta(k) c]^2+ v_{1}(k)v_{2}(k)|\vec{f}_k|^2c^2},\label{VJ}\\
+&&\!\!\!\!\! \frac{\theta_{\cG}(k)}{2\pi}=\frac{[2\pi b+\theta(k) a][2\pi d + \theta(k) c]+v_{1}(k)v_{2}(k)|\vec{f}_k|^2ca}{[2\pi d+\theta(k) c]^2+ v_{1}(k)v_{2}(k)|\vec{f}_k|^2c^2}.\label{TJ}
 \end{eqnarray}
+Neglecting the $\Aext$ terms, the above action has the same form as Eq.~(\ref{kaction_1}), but with different $v(k)$ and $\theta(k)$. Though the expressions for may look intimidating, with a proper choice of $(a,b,c,d)$ they can in fact be quite easy to work with. 
 
 Often we are interested in measuring physical properties of the $\JJ$ variables, but find that the $\GG$ variables are much easier to work with. In particular, we want to measure linear responses to applied electromagnetic fields. These responses are defined by:
 \begin{equation}
@@ -221,19 +229,19 @@ C^{\mu\nu}_{ab}(k)=\la \cJ_{a\mu}(k) \cJ_{b\nu}(-k)\ra,
 \end{equation}
 where $\mu,\nu$ are lattice directions and $a,b$ represent boson species. $C^{\mu\mu}_{aa}(k)\equiv \rho_{a\mu}$ is the superfluid stiffness for species $a$, while $C^{xy}_{12}$ is related to the cross-species Hall response: the current induced in bosons of species $1$ to an applied field which couples to bosons of species $2$. The following equations give the $\genC$ of the $\JJ$ variables, in terms of the $\genC$ of the $\GG$ variables:
 \begin{eqnarray}
-&&C_J^{11}(k)=\frac{v(k)|f_k|^2c^2}{(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2}\\
-&&+\frac{[(\theta c+2\pi d)^2-|f_k|^2v(k)^2c^2]C_G^{11}(k)-4\sin{\frac{k_z}{2}}v(k)c(\theta c+2\pi d)C_G^{12}(k)}{[(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2]^2}\cdot (2\pi)^2,\nonumber\\
-&&C_J^{12}(k)=\frac{-2\sin{\frac{k_z}{2}}c(\theta c+2\pi d)}{(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2}\label{genHall}\\
-&&+\frac{[(\theta c+2\pi d)^2-|f_k|^2v(k)^2c^2]C_G^{12}(k)+4\sin{\frac{k_z}{2}}v(k)c(\theta c+2\pi d)C_G^{11}(k)}{[(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2]^2}\cdot (2\pi)^2.\nonumber
+&&C_{11}J^{xx}(k)=\frac{v(k)|f_k|^2c^2}{(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2}\\
+&&+\frac{[(\theta c+2\pi d)^2-|f_k|^2v(k)^2c^2]C_{11G}^{xx}(k)-4\sin{\frac{k_z}{2}}v(k)c(\theta c+2\pi d)C_{12G}^{xy}(k)}{[(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2]^2}\cdot (2\pi)^2,\nonumber\\
+&&C_{12J}^{xy}(k)=\frac{-2\sin{\frac{k_z}{2}}c(\theta c+2\pi d)}{(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2}\label{genHall}\\
+&&+\frac{[(\theta c+2\pi d)^2-|f_k|^2v(k)^2c^2]C_{12G}^{xy}(k)+4\sin{\frac{k_z}{2}}v(k)c(\theta c+2\pi d)C_{11G}^{xx}(k)}{[(\theta c+2\pi d)^2+|f_k|^2v(k)^2c^2]^2}\cdot (2\pi)^2.\nonumber
 \end{eqnarray}
 
-The above expressions are especially easy to evaluate if the $\GG$ variables are gapped. In the next chapter we will have an action of the form Eq.~(\ref{kaction}) which is difficult to study, and we will determine its Hall conductivity by finding the $(a,b,c,d)$ which produced gapped $\GG$ variables. We can then read off the Hall conductivity from Eq.~(\ref{genHall}). We also took a different approach in Ref.~\cite{Gen2Loops}, which is not covered by this report. We studied a model where $v(k)$ had the form $g/|f_k|$ for both the $\JJ$ and $\GG$ variables, with only the constant $g$ changing under the modular transformation. We were therefore able to use the above equations to produce the entire phase diagram, and find the Hall conductivity and superfluid stiffness in each phase.
+The above expressions are especially easy to evaluate if the $\GG$ variables are gapped. In the next chapter we will have an action of the form Eq.~(\ref{kaction_1}) which is difficult to study, and we will determine its Hall conductivity by finding the $(a,b,c,d)$ which produced gapped $\GG$ variables. We can then read off the Hall conductivity from Eq.~(\ref{genHall}). We also took a different approach in Ref.~\cite{Gen2Loops}, which is not covered by this report. We studied a model where $v(k)$ had the form $g/|f_k|$ for both the $\JJ$ and $\GG$ variables, with only the constant $g$ changing under the modular transformation. We were therefore able to use the above equations to produce the entire phase diagram, and find the Hall conductivity and superfluid stiffness in each phase.
 
 \section{Monte Carlo Techniques}
 
-In Refs.~\ref{Loopy,short_range3,Gen2Loops,FQHE} we studied actions of the form of Eq.~(\ref{kaction}) in Monte Carlo simulations. At first glance, this may not seem possible, as the third term in that equation contains a complex number. Actions which evaluate to complex numbers cannot be studied in Monte Carlo due to the `sign-problem': since Monte Carlo algorithms populate states with probability $e^{-S}$, if $S$ is not real the result will not be real, and thus cannot be a probability.
+In Refs.~\ref{Loopy,short_range3,Gen2Loops,FQHE} we studied actions of the form of Eq.~(\ref{kaction_1}) in Monte Carlo simulations. At first glance, this may not seem possible, as the third term in that equation contains a complex number. Actions which evaluate to complex numbers cannot be studied in Monte Carlo due to the `sign-problem': since Monte Carlo algorithms populate states with probability $e^{-S}$, if $S$ is not real the result will not be real, and thus cannot be a probability.
 
-There are number of ways to reformulate Eq.~(\ref{kaction}). One is to simulate Eq.~(\ref{JQ1}), which has no sign problem. This approach was taken in Ref.~\cite{Gen2Loops}. However, we can see that the $\QQ_1$ variables have long-ranged interactions, and in systems with such interactions the time required for the simulations scales as $L^6$. It is often convenient to have only short-ranged interactions in our system, so that the Monte Carlo can run in a time proportional to $L^3$, and larger sizes can be studied. 
+There are number of ways to reformulate Eq.~(\ref{kaction_1}). One is to simulate Eq.~(\ref{JQ1}), which has no sign problem. This approach was taken in Ref.~\cite{Gen2Loops}. However, we can see that the $\QQ_1$ variables have long-ranged interactions, and in systems with such interactions the time required for the simulations scales as $L^6$. It is often convenient to have only short-ranged interactions in our system, so that the Monte Carlo can run in a time proportional to $L^3$, and larger sizes can be studied. 
 When the $\JJ$ bosons have only onsite interactions, this can be accomplished using the reformulations discussed in Sec.~\ref{section::single}. In particular, we will represent one of the bosons (say $\JJ_1$) using Eq.~(\ref{singleRods}) or Eq.~(\ref{singleVillain}). The model which has two species of bosons therefore has an action which is a combination of Eq.~(\ref{singleJ}) for the $\JJ_2$ bosons and one of the Eqs.~(\ref{singleRods}),(\ref{singleVillain}), with $\nabla_mu\phi(r)\rightarrow\phi(r)+\theta a_{2\mu}(r)$. This approach was used in Refs.~\cite{Loopy,short_range3}. 
 In Chapter \ref{chapter::FQHE} we will describe additional reformulations which work for systems with spatially varying $\theta$. 
 
