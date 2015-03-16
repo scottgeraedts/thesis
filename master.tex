@@ -10,12 +10,13 @@
 \usepackage{breakurl}
 \usepackage{color}
 
+%macros for FQHE
 \newcommand{\JJ}{\vec{J}}
 \newcommand{\QQ}{\vec{Q}}
 \def\cJ{J}
 \def\cQ{Q}
-\def\cF{{\cal F}}
-\def\cG{{\cal G}}
+\def\cF{F}
+\def\cG{ G}
 \newcommand{\FF}{\vec{F}}
 \newcommand{\GG}{\vec{G}}
 \newcommand{\genC}{C^{\mu\nu}_{ab}(k)}
@@ -33,6 +34,8 @@
 \def\valpha{{\vec{\alpha}}}
 \def\vbeta{{\vec{\beta}}}
 \def\vgamma{{\vec{\gamma}}}
+\def\up{\uparrow}
+\def\dn{\downarrow}
 
 
 \def\half{{\frac{1}{2}}}
@@ -45,21 +48,27 @@
 \def\ra{\rangle} % bra
 \def\la{\langle} % ket
 
+%macros for SO34D
+\newcommand{\scripty}[1]{w}
+\def\uz{U(1)\times\mathbb{Z}_2}
+\def\ztwo{\mathbb{Z}_2}
+\def\ztwot{\mathbb{Z}_2^T}
+\newcommand{\cp}{$CP^1$ }
+\newcommand{\nccp}{$NCCP^1$ }
+
+\def\cP{{P}}
+\def\hext{h^{\rm ext}}
+\def\uu{B}
+\def\MM{N}
+\def\mm{n}
 
 \begin{document}
-\title{Competing Abelian and non-Abelian topological orders in \texorpdfstring{$\nu = 1/3+1/3$}{filling 1/3+1/3} quantum Hall bilayers}
+\title{Numerical Studies of Topological phases}
 \author{Scott Geraedts}
 
 
 \begin{abstract}
-Bilayer quantum Hall systems, realized either in two separated wells or in the lowest two sub-bands of a wide quantum well, provide an experimentally realizable way to tune between competing quantum orders at the same filling fraction.
-Using newly developed density matrix renormalization group techniques combined with exact diagonalization, we return to the problem of quantum Hall bilayers at filling $\nu = 1/3 + 1/3$.
-We first consider the Coulomb interaction at bilayer separation $d$,  bilayer tunneling energy $\Delta_\textrm{SAS}$, and individual layer width $w$,  where we find a phase diagram which includes three competing Abelian phases:  a bilayer-Laughlin phase (two nearly decoupled $\nu = 1/3$ layers);  a bilayer-spin singlet phase;  and a bilayer-symmetric phase. 
-We also study the order of the transitions between these phases.
-A variety of non-Abelian phases have also been proposed for these systems.
-While absent in the simplest phase diagram, by slightly modifying the interlayer repulsion we find a robust non-Abelian phase which we identify as the ``interlayer-Pfaffian" phase.
-In addition to non-Abelian statistics similar to the Moore-Read state, it exhibits a novel form of bilayer-spin charge separation.
-Our results suggest that $\nu = 1/3 + 1/3$ systems merit further experimental study.
+A diverse set of topological phases are studied using a variety of numerical techniques. First, a formalism for studying a class of bosonic models, both analytically and in Monte Carlo simulations, is developed. This formalism is applied to realize bosonic versions of the integer and fractional bosonic quantum Hall effects. This phase is realized by binding charges to point topological defects in two dimensions (vortices). Properties of this phase, such as the Hall conductivity, charge and statistics of quasiparticles, and gaplessness of the edge modes, are determined. The idea of binding charges to point topological defects is then extended to three dimensions, where a bosonic topological insulating phase is realized, along with its fractional version. The identity of this topological phase is determined by observing a `Witten effect', as well as by studying its surface physics. Lastly, infinite DMRG methods are applied to the study of a bilayer fractional quantum Hall system. A number of different phases are realized, including the non-Abelian `interlayer Pfaffian' phase. These phases are identified by studying the charges of the elementary quasiparticles, as well as the entanglement spectra and momentum polarization.
 \end{abstract}
 
 \maketitle
@@ -69,4 +78,5 @@ Our results suggest that $\nu = 1/3 + 1/3$ systems merit further experimental st
 \include{intro}
 \include{formalism}
 \include{FQHE}
+\include{SO34D}
 \end{document}
