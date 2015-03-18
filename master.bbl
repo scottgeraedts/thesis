@@ -41,6 +41,18 @@ X.~Chen, Z.-C. Gu, Z.-X. Liu, and X.-G. Wen, ``Symmetry protected topological
   orders and the group cohomology of their symmetry group,'' {\em Phys. Rev.
   B}, vol.~87, p.~155114, Apr 2013.
 
+\bibitem{KapustinThorngren}
+A.~Kapustin and R.~Thorngren {\em arXiV/hep-th}, p.~1309.4721, 2013.
+
+\bibitem{FidkowskiKitaev2011}
+L.~Fidkowski and A.~Kitaev, ``Topological phases of fermions in one
+  dimension,'' {\em Phys. Rev. B}, vol.~83, p.~075103, Feb 2011.
+
+\bibitem{LuVishwanath}
+Y.-M. Lu and A.~Vishwanath, ``Theory and classification of interacting integer
+  topological phases in two dimensions: A chern-simons approach,'' {\em Phys.
+  Rev. B}, vol.~86, p.~125119, Sep 2012.
+
 \bibitem{KitaevToric}
 A.~Kitaev and C.~Laumann, ``Topological phases and quantum computation,'' {\em
   arXiv:c}, p.~0904.2771, 2009.
@@ -56,18 +68,6 @@ K.~Walker and Z.~Wang, ``(3+1)-tqfts and topological insulators,'' {\em
 \bibitem{KeyserlingkBurnell2014}
 C.~W. {von Keyserlingk} and F.~J. {Burnell}, ``{Walker-Wang models and axion
   electrodynamics},'' {\em ArXiv e-prints}, 2014.
-
-\bibitem{FidkowskiKitaev2011}
-L.~Fidkowski and A.~Kitaev, ``Topological phases of fermions in one
-  dimension,'' {\em Phys. Rev. B}, vol.~83, p.~075103, Feb 2011.
-
-\bibitem{LuVishwanath}
-Y.-M. Lu and A.~Vishwanath, ``Theory and classification of interacting integer
-  topological phases in two dimensions: A chern-simons approach,'' {\em Phys.
-  Rev. B}, vol.~86, p.~125119, Sep 2012.
-
-\bibitem{KapustinThorngren}
-A.~Kapustin and R.~Thorngren {\em arXiV/hep-th}, p.~1309.4721, 2013.
 
 \bibitem{Wen_book}
 X.-G. Wen, {\em Quantum field theory of many-body systems: from the origin of
@@ -100,6 +100,33 @@ M.~A. Metlitski, C.~L. Kane, and M.~P.~A. Fisher, ``Bosonic topological
   insulator in three dimensions and the statistical witten effect,'' {\em Phys.
   Rev. B}, vol.~88, p.~035131, Jul 2013.
 
+\bibitem{CuiWang}
+S.~X. Cui and Z.~Wang, ``Universal quantum computation with metaplectic
+  anyons,'' {\em arXiv:con}, p.~1405.7778, 2014.
+
+\bibitem{AliceaReview}
+J.~Alicea, ``New directions in the pursuit of majorana fermions in solid state
+  systems,'' {\em Rep. Prog. Phys.}, vol.~75, p.~076501, 2012.
+
+\bibitem{MourikZuo:InSbWire:2012}
+V.~Mourik, K.~Zuo, S.~M. Frolov, S.~R. Plissard, E.~P. A.~M. Bakkers, and L.~P.
+  Kouwenhoven, ``{Signatures of Majorana Fermions in Hybrid
+  Superconductor-Semiconductor Nanowire Devices},'' {\em Science}, vol.~336,
+  pp.~1003--1007, Apr. 2012.
+
+\bibitem{Nadj-PergeYazdani:2014}
+S.~Nadj-Perge, I.~K. Drozdov, J.~Li, H.~Chen, S.~Jeon, J.~Seo, A.~H. MacDonald,
+  B.~A. Bernevig, and A.~Yazdani, ``Observation of {M}ajorana fermions in
+  ferromagnetic atomic chains on a superconductor,'' {\em Science}, vol.~346,
+  pp.~602--607, Oct. 2014.
+
+\bibitem{SOCALBS}
+K.~Mong, Roger~S.\, D.~J. Clarke, J.~Alicea, N.~H. Lindner, P.~Fendley,
+  C.~Nayak, Y.~Oreg, A.~Stern, E.~Berg, K.~Shtengel, and A.~Fisher,
+  Matthew~P.\, ``Universal topological quantum computation from a
+  superconductor-abelian quantum hall heterostructure,'' {\em Phys. Rev. X},
+  vol.~4, p.~011036, Mar 2014.
+
 \bibitem{MooreRead}
 G.~Moore and N.~Read, ``{Nonabelions in the fractional quantum Hall effect},''
   {\em Nucl. Phys. B}, vol.~360, pp.~362--396, Aug. 1991.
@@ -122,6 +149,49 @@ M.~P. Zaletel, R.~S.~K. Mong, and F.~Pollmann, ``Topological characterization
 M.~P. Zaletel, R.~S.~K. Mong, F.~Pollmann, and E.~H. Rezayi, ``Infinite density
   matrix renormalization group for multicomponent quantum hall systems,'' {\em
   Phys. Rev. B}, vol.~91, p.~045115, Jan 2015.
+
+\bibitem{JimReview}
+J.~P. Eisenstein, ``Exciton condensation in bilayer quantum hall systems,''
+  {\em Ann. Rev. Cond. Mat.}, vol.~5, no.~1, pp.~159--181, 2014.
+
+\bibitem{Loopy}
+S.~D. Geraedts and O.~I. Motrunich, ``Monte carlo study of a
+  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ system with $\pi{}$-statistical
+  interaction,'' {\em Phys. Rev. B}, vol.~85, p.~045114, Jan 2012.
+
+\bibitem{Ranged_Loops}
+S.~D. Geraedts and O.~I. Motrunich, ``Line of continuous phase transitions in a
+  three-dimensional u(1) loop model with $1/{r}^{2}$ current-current
+  interactions,'' {\em Phys. Rev. B}, vol.~85, p.~144303, Apr 2012.
+
+\bibitem{short_range3}
+S.~D. Geraedts and O.~I. Motrunich, ``Phases and phase transitions in a
+  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ system with $\theta{}=2\pi{}/3$
+  mutual statistics,'' {\em Phys. Rev. B}, vol.~86, p.~045106, Jul 2012.
+
+\bibitem{Gen2Loops}
+S.~D. Geraedts and O.~I. Motrunich, ``Monte carlo study of a
+  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ loop model with modular
+  invariance,'' {\em Phys. Rev. B}, vol.~86, p.~245121, Dec 2012.
+
+\bibitem{FQHE}
+S.~D. Geraedts and O.~I. Motrunich, ``Exact realization of integer and
+  fractional quantum hall phases in models in,'' {\em Annals of Physics},
+  vol.~334, no.~0, pp.~288 -- 315, 2013.
+
+\bibitem{1DSPT}
+S.~Geraedts and O.~Motrunich, ``Exact models for symmetry-protected topological
+  phases in one dimension,'' {\em arXiv:cond-mat}, p.~1410.1580, 2014.
+
+\bibitem{SO34D}
+S.~D. Geraedts and O.~I. Motrunich, ``Model realization and numerical studies
+  of a three-dimensional bosonic topological insulator and symmetry-enriched
+  topological phases,'' {\em Phys. Rev. X}, vol.~4, p.~041049, Dec 2014.
+
+\bibitem{FracFaraday}
+S.~D. Geraedts and O.~I. Motrunich, ``Model of fractionalization of faraday
+  lines in compact electrodynamics,'' {\em Phys. Rev. B}, vol.~90, p.~214505,
+  Dec 2014.
 
 \bibitem{PolyakovBook}
 A.~M. Polyakov, {\em Gauge Fields and Strings}.
@@ -150,26 +220,6 @@ D.-H. Lee and M.~P.~A. Fisher, ``Anyon superconductivity and the fractional
 O.~I. Motrunich and T.~Senthil, ``Origin of artificial electrodynamics in
   three-dimensional bosonic models,'' {\em Phys. Rev. B}, vol.~71, p.~125102,
   2005.
-
-\bibitem{short_range3}
-S.~D. Geraedts and O.~I. Motrunich, ``Phases and phase transitions in a
-  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ system with $\theta{}=2\pi{}/3$
-  mutual statistics,'' {\em Phys. Rev. B}, vol.~86, p.~045106, Jul 2012.
-
-\bibitem{Gen2Loops}
-S.~D. Geraedts and O.~I. Motrunich, ``Monte carlo study of a
-  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ loop model with modular
-  invariance,'' {\em Phys. Rev. B}, vol.~86, p.~245121, Dec 2012.
-
-\bibitem{FQHE}
-S.~D. Geraedts and O.~I. Motrunich, ``Exact realization of integer and
-  fractional quantum hall phases in models in,'' {\em Annals of Physics},
-  vol.~334, no.~0, pp.~288 -- 315, 2013.
-
-\bibitem{Loopy}
-S.~D. Geraedts and O.~I. Motrunich, ``Monte carlo study of a
-  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ system with $\pi{}$-statistical
-  interaction,'' {\em Phys. Rev. B}, vol.~85, p.~045114, Jan 2012.
 
 \bibitem{Sorensen}
 F.~Alet and E.~S. S\o{}rensen, ``Cluster monte carlo algorithm for the quantum
@@ -302,9 +352,6 @@ O.~I. Motrunich and A.~Vishwanath {\em arXiv:0805:1494}, 2008.
 \bibitem{GukovKapustin}
 S.~Gukov and A.~Kapustin {\em arXiv/hep-th}, p.~1307.4793, 2013.
 
-\bibitem{FracFaraday}
-S.~Geraedts and O.~Motrunich {\em to appear}.
-
 \bibitem{Chen2014}
 X.~Chen, F.~Burnell, A.~Vishwanath, and L.~Fidkowski {\em arXiv}, p.~1403.6491,
   2014.
@@ -391,12 +438,6 @@ C.~Nayak, S.~H. Simon, A.~Stern, M.~Freedman, and S.~Das~Sarma, ``Non-abelian
   anyons and topological quantum computation,'' vol.~80, pp.~1083--1159, Sept.
   2008.
 
-\bibitem{MourikZuo:InSbWire:2012}
-V.~Mourik, K.~Zuo, S.~M. Frolov, S.~R. Plissard, E.~P. A.~M. Bakkers, and L.~P.
-  Kouwenhoven, ``{Signatures of Majorana Fermions in Hybrid
-  Superconductor-Semiconductor Nanowire Devices},'' {\em Science}, vol.~336,
-  pp.~1003--1007, Apr. 2012.
-
 \bibitem{Rokhinson:InSbWireFracACJosephson:2012}
 L.~P. Rokhinson, X.~Liu, and J.~K. Furdyna, ``The fractional a.c. {J}osephson
   effect in a semiconductor-superconductor nanowire as a signature of
@@ -413,12 +454,6 @@ A.~Das, Y.~Ronen, Y.~Most, Y.~Oreg, M.~Heiblum, and H.~Shtrikman, ``{Zero-bias
   peaks and splitting in an $\mathrm{Al}$-$\mathrm{InAs}$ nanowire topological
   superconductor as a signature of Majorana fermions},'' {\em Nat. Phys.},
   vol.~8, pp.~887--895, Nov. 2012.
-
-\bibitem{Nadj-PergeYazdani:2014}
-S.~Nadj-Perge, I.~K. Drozdov, J.~Li, H.~Chen, S.~Jeon, J.~Seo, A.~H. MacDonald,
-  B.~A. Bernevig, and A.~Yazdani, ``Observation of {M}ajorana fermions in
-  ferromagnetic atomic chains on a superconductor,'' {\em Science}, vol.~346,
-  pp.~602--607, Oct. 2014.
 
 \bibitem{KitaevWireMajorana:01}
 A.~Y. Kitaev, ``{Unpaired Majorana fermions in quantum wires},'' vol.~44,
@@ -560,10 +595,6 @@ A.~Vaezi and M.~Barkeshli, ``Fibonacci anyons from abelian bilayer quantum hall
 \bibitem{EisensteinSeparateContacts}
 J.~P. Eisenstein, L.~N. Pfeiffer, and K.~W. West {\em Appl. Phys. Lett.},
   vol.~57, no.~22, p.~2324, 1990.
-
-\bibitem{JimReview}
-J.~P. Eisenstein, ``Exciton condensation in bilayer quantum hall systems,''
-  {\em Ann. Rev. Cond. Mat.}, vol.~5, no.~1, pp.~159--181, 2014.
 
 \bibitem{Shabani13}
 J.~Shabani, Y.~Liu, M.~Shayegan, L.~N. Pfeiffer, K.~W. West, and K.~W. Baldwin,
