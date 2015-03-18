@@ -1,0 +1,866 @@
+\begin{thebibliography}{100}
+
+\bibitem{klitzing}
+K.~v. Klitzing, G.~Dorda, and M.~Pepper, ``New method for high-accuracy
+  determination of the fine-structure constant based on quantized hall
+  resistance,'' {\em Phys. Rev. Lett.}, vol.~45, pp.~494--497, Aug 1980.
+
+\bibitem{Einstein}
+A.~Einstein, B.~Podolsky, and N.~Rosen, ``Can quantum-mechanical description of
+  physical reality be considered complete?,'' {\em Phys. Rev.}, vol.~47,
+  pp.~777--780, May 1935.
+
+\bibitem{QSHEreview}
+J.~Maciejko, T.~L. Hughes, and S.-C. Zhang, ``The quantum spin hall effect,''
+  {\em Annual Review of Condensed Matter Physics}, vol.~2, pp.~31--53, 2011.
+
+\bibitem{KaneHasanRMP}
+M.~Z. Hasan and C.~L. Kane, ``<i>colloquium</i>: Topological insulators,'' {\em
+  Rev. Mod. Phys.}, vol.~82, pp.~3045--3067, Nov 2010.
+
+\bibitem{QiZhangRMP}
+X.-L. Qi and S.-C. Zhang, ``Topological insulators and superconductors,'' {\em
+  Rev. Mod. Phys.}, vol.~83, pp.~1057--1110, Oct 2011.
+
+\bibitem{KitaevClass}
+A.~Kitaev, ``Periodic table for topological insulators and superconductors,''
+  {\em arXiv:cond-mat}, p.~0901.2686, 2009.
+
+\bibitem{Ludwig}
+A.~P. Schnyder, S.~Ryu, A.~Furusaki, and A.~W.~W. Ludwig, ``Classification of
+  topological insulators and superconductors in three spatial dimensions,''
+  {\em Phys. Rev. B}, vol.~78, p.~195125, Nov 2008.
+
+\bibitem{WenScience}
+X.~Chen, Z.-C. Gu, Z.-X. Liu, and X.-G. Wen, ``Symmetry-protected topological
+  orders in interacting bosonic systems,'' {\em Science}, vol.~338, no.~6114,
+  pp.~1604--1606, 2012.
+
+\bibitem{WenPRB}
+X.~Chen, Z.-C. Gu, Z.-X. Liu, and X.-G. Wen, ``Symmetry protected topological
+  orders and the group cohomology of their symmetry group,'' {\em Phys. Rev.
+  B}, vol.~87, p.~155114, Apr 2013.
+
+\bibitem{KitaevToric}
+A.~Kitaev and C.~Laumann, ``Topological phases and quantum computation,'' {\em
+  arXiv:c}, p.~0904.2771, 2009.
+
+\bibitem{LevinGu2012}
+M.~Levin and Z.-C. Gu, ``Braiding statistics approach to symmetry-protected
+  topological phases,'' {\em Phys. Rev. B}, vol.~86, p.~115109, Sep 2012.
+
+\bibitem{WalkerWang}
+K.~Walker and Z.~Wang, ``(3+1)-tqfts and topological insulators,'' {\em
+  arXiv:cond-mat}, p.~1104.2636, 2011.
+
+\bibitem{KeyserlingkBurnell2014}
+C.~W. {von Keyserlingk} and F.~J. {Burnell}, ``{Walker-Wang models and axion
+  electrodynamics},'' {\em ArXiv e-prints}, 2014.
+
+\bibitem{FidkowskiKitaev2011}
+L.~Fidkowski and A.~Kitaev, ``Topological phases of fermions in one
+  dimension,'' {\em Phys. Rev. B}, vol.~83, p.~075103, Feb 2011.
+
+\bibitem{LuVishwanath}
+Y.-M. Lu and A.~Vishwanath, ``Theory and classification of interacting integer
+  topological phases in two dimensions: A chern-simons approach,'' {\em Phys.
+  Rev. B}, vol.~86, p.~125119, Sep 2012.
+
+\bibitem{KapustinThorngren}
+A.~Kapustin and R.~Thorngren {\em arXiV/hep-th}, p.~1309.4721, 2013.
+
+\bibitem{Wen_book}
+X.-G. Wen, {\em Quantum field theory of many-body systems: from the origin of
+  sound to an origin of light and electrons}.
+\newblock Oxford: Oxford University Press, 2007.
+
+\bibitem{SenthilLevin2012}
+T.~Senthil and M.~Levin, ``Integer quantum hall effect for bosons,'' {\em Phys.
+  Rev. Lett.}, vol.~110, p.~046801, Jan 2013.
+
+\bibitem{QHZ}
+X.-L. Qi, T.~L. Hughes, and S.-C. Zhang, ``Topological field theory of
+  time-reversal invariant insulators,'' {\em Phys. Rev. B}, vol.~78, p.~195424,
+  Nov 2008.
+
+\bibitem{FranzWitten}
+G.~Rosenberg and M.~Franz, ``Witten effect in a crystalline topological
+  insulator,'' {\em Phys. Rev. B}, vol.~82, p.~035105, Jul 2010.
+
+\bibitem{SenthilVishwanath}
+A.~Vishwanath and T.~Senthil, ``Physics of three-dimensional bosonic
+  topological insulators: Surface-deconfined criticality and quantized
+  magnetoelectric effect,'' {\em Phys. Rev. X}, vol.~3, p.~011016, Feb 2013.
+
+\bibitem{Max}
+M.~Metlitski and M.~P.~A. Fisher {\em unpublished notes}, 2013.
+
+\bibitem{MaxWitten}
+M.~A. Metlitski, C.~L. Kane, and M.~P.~A. Fisher, ``Bosonic topological
+  insulator in three dimensions and the statistical witten effect,'' {\em Phys.
+  Rev. B}, vol.~88, p.~035131, Jul 2013.
+
+\bibitem{MooreRead}
+G.~Moore and N.~Read, ``{Nonabelions in the fractional quantum Hall effect},''
+  {\em Nucl. Phys. B}, vol.~360, pp.~362--396, Aug. 1991.
+
+\bibitem{Read-PhysRevB.59.8084}
+N.~Read and E.~Rezayi, ``Beyond paired quantum hall states: Parafermions and
+  incompressible states in the first excited landau level,'' {\em Phys. Rev.
+  B}, vol.~59, pp.~8084--8092, Mar 1999.
+
+\bibitem{BondersonSlingerland}
+P.~Bonderson and J.~K. Slingerland, ``Fractional quantum hall hierarchy and the
+  second landau level,'' {\em Phys. Rev. B}, vol.~78, p.~125323, Sep 2008.
+
+\bibitem{ZaletelQHdmrg13}
+M.~P. Zaletel, R.~S.~K. Mong, and F.~Pollmann, ``Topological characterization
+  of fractional quantum hall ground states from microscopic hamiltonians,''
+  {\em Phys. Rev. Lett.}, vol.~110, p.~236801, Jun 2013.
+
+\bibitem{ZaletelMixing}
+M.~P. Zaletel, R.~S.~K. Mong, F.~Pollmann, and E.~H. Rezayi, ``Infinite density
+  matrix renormalization group for multicomponent quantum hall systems,'' {\em
+  Phys. Rev. B}, vol.~91, p.~045115, Jan 2015.
+
+\bibitem{PolyakovBook}
+A.~M. Polyakov, {\em Gauge Fields and Strings}.
+\newblock Hardwood Academic Publishers, 1987.
+
+\bibitem{Peskin1978}
+M.~E. Peskin, ``Mandelstam-'t hooft duality in abelian lattice models,'' {\em
+  Annals of Physics}, vol.~113, no.~1, pp.~122 -- 152, 1978.
+
+\bibitem{Dasgupta1981}
+C.~Dasgupta and B.~I. Halperin, ``Phase transition in a lattice model of
+  superconductivity,'' {\em Phys. Rev. Lett.}, vol.~47, pp.~1556--1560, Nov
+  1981.
+
+\bibitem{FisherLee1989}
+M.~P.~A. Fisher and D.~H. Lee, ``Correspondence between two-dimensional bosons
+  and a bulk superconductor in a magnetic field,'' {\em Phys. Rev. B}, vol.~39,
+  pp.~2756--2759, Feb 1989.
+
+\bibitem{LeeFisher1989}
+D.-H. Lee and M.~P.~A. Fisher, ``Anyon superconductivity and the fractional
+  quantum hall effect,'' {\em Phys. Rev. Lett.}, vol.~63, pp.~903--906, Aug
+  1989.
+
+\bibitem{artphoton}
+O.~I. Motrunich and T.~Senthil, ``Origin of artificial electrodynamics in
+  three-dimensional bosonic models,'' {\em Phys. Rev. B}, vol.~71, p.~125102,
+  2005.
+
+\bibitem{short_range3}
+S.~D. Geraedts and O.~I. Motrunich, ``Phases and phase transitions in a
+  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ system with $\theta{}=2\pi{}/3$
+  mutual statistics,'' {\em Phys. Rev. B}, vol.~86, p.~045106, Jul 2012.
+
+\bibitem{Gen2Loops}
+S.~D. Geraedts and O.~I. Motrunich, ``Monte carlo study of a
+  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ loop model with modular
+  invariance,'' {\em Phys. Rev. B}, vol.~86, p.~245121, Dec 2012.
+
+\bibitem{FQHE}
+S.~D. Geraedts and O.~I. Motrunich, ``Exact realization of integer and
+  fractional quantum hall phases in models in,'' {\em Annals of Physics},
+  vol.~334, no.~0, pp.~288 -- 315, 2013.
+
+\bibitem{Loopy}
+S.~D. Geraedts and O.~I. Motrunich, ``Monte carlo study of a
+  $u(1)\ifmmode\times\else\texttimes\fi{}u(1)$ system with $\pi{}$-statistical
+  interaction,'' {\em Phys. Rev. B}, vol.~85, p.~045114, Jan 2012.
+
+\bibitem{Sorensen}
+F.~Alet and E.~S. S\o{}rensen, ``Cluster monte carlo algorithm for the quantum
+  rotor model,'' {\em Phys. Rev. E}, vol.~67, p.~015701, Jan 2003.
+
+\bibitem{EssinHermele}
+A.~M. Essin and M.~Hermele, ``Classifying fractionalization: Symmetry
+  classification of gapped ${\mathbb{z}}_{2}$ spin liquids in two dimensions,''
+  {\em Phys. Rev. B}, vol.~87, p.~104406, Mar 2013.
+
+\bibitem{LuVishwanath2012}
+Y.-M. Lu and A.~Vishwanath, ``Theory and classification of interacting integer
+  topological phases in two dimensions: A chern-simons approach,'' {\em Phys.
+  Rev. B}, vol.~86, p.~125119, Sep 2012.
+
+\bibitem{TurnerVishwanath2013}
+A.~M. {Turner} and A.~{Vishwanath}, ``{Beyond Band Insulators: Topology of
+  Semi-metals and Interacting Phases},'' {\em ArXiv e-prints}, Jan. 2013.
+
+\bibitem{GroverVishwanath2012}
+T.~{Grover} and A.~{Vishwanath}, ``{Quantum Phase Transition between Integer
+  Quantum Hall States of Bosons},'' {\em ArXiv e-prints}, Oct. 2012.
+
+\bibitem{LuLee2012_QPT}
+Y.-M. {Lu} and D.-H. {Lee}, ``{Quantum phase transitions between bosonic
+  symmetry protected topological phases in two dimensions: emergent \$QED\_3\$
+  and anyon superfluid},'' {\em ArXiv e-prints}, Oct. 2012.
+
+\bibitem{LuLee2012_S1}
+Y.-M. {Lu} and D.-H. {Lee}, ``{Spin quantum Hall effects in featureless
+  non-fractionalized spin-1 magnets},'' {\em ArXiv e-prints}, Dec. 2012.
+
+\bibitem{BalentsFisherNayak1999}
+L.~Balents, M.~P.~A. Fisher, and C.~Nayak, ``Dual order parameter for the nodal
+  liquid,'' {\em Phys. Rev. B}, vol.~60, pp.~1654--1667, Jul 1999.
+
+\bibitem{SenthilFisher_Z2}
+T.~Senthil and M.~P.~A. Fisher, ``$z_{2}$ gauge theory of electron
+  fractionalization in strongly correlated systems,'' {\em Phys. Rev. B},
+  vol.~62, no.~12, pp.~7850--7881, 2000.
+
+\bibitem{Senthil_Ashvin_thanks}
+{\em {\rm We are grateful to T.~Senthil and Ashvin Vishwanath for motivating us
+  to study edge states in such topological phases.}}
+
+\bibitem{Cha1991}
+M.-C. Cha, M.~P.~A. Fisher, S.~M. Girvin, M.~Wallin, and A.~P. Young,
+  ``Universal conductivity of two-dimensional films at the
+  superconductor-insulator transition,'' {\em Phys. Rev. B}, vol.~44,
+  pp.~6883--6902, Oct 1991.
+
+\bibitem{Matthew_Alexei_thanks}
+{\em {\rm We are grateful to Matthew Fisher and Alexei Kitaev for emphasizing
+  the question of whether our model can be realized as a path integral of a
+  local Hamiltonian and for sharing their insights about the fractionalized
+  phases.}}
+
+\bibitem{footnoteKitaev}
+{\em {\rm Such toric-code-like structure was suggested to us by Alexei
+  Kitaev}}.
+
+\bibitem{VishwanathSenthil2012}
+A.~{Vishwanath} and T.~{Senthil}, ``{Physics of three dimensional bosonic
+  topological insulators: Surface Deconfined Criticality and Quantized
+  Magnetoelectric Effect},'' {\em ArXiv e-prints}, Sept. 2012.
+
+\bibitem{KeyserlingkBurnellSimon2013}
+C.~W. von Keyserlingk, F.~J. Burnell, and S.~H. Simon, ``Three-dimensional
+  topological lattice models with surface anyons,'' {\em Phys. Rev. B},
+  vol.~87, p.~045107, Jan 2013.
+
+\bibitem{XuSenthil2013}
+C.~{Xu} and T.~{Senthil}, ``{Wave Functions of Bosonic Symmetry Protected
+  Topological Phases},'' {\em ArXiv e-prints}, Jan. 2013.
+
+\bibitem{Wen2013}
+X.-G. {Wen}, ``{Topological invariants of symmetry-protected and
+  symmetry-enriched topological phases of interacting bosons or fermions},''
+  {\em ArXiv e-prints}, Jan. 2013.
+
+\bibitem{YeWen2014}
+P.~Ye and X.-G. Wen, ``Constructing symmetric topological phases of bosons in
+  three dimensions via fermionic projective construction and dyon
+  condensation,'' {\em Phys. Rev. B}, vol.~89, p.~045127, 2014.
+
+\bibitem{YeWang2014}
+P.~Ye and J.~Wang, ``Symmetry-protected topological phases with charge and spin
+  symmetries: Response theory and dynamical gauge theory in two and three
+  dimensions,'' {\em Phys. Rev. B}, vol.~88, p.~235109, 2013.
+
+\bibitem{KamalMurthy}
+M.~Kamal and G.~Murthy, ``New o(3) transition in three dimensions,'' {\em Phys.
+  Rev. Lett.}, vol.~71, p.~1911, 1993.
+
+\bibitem{LauDasgupta}
+M.-h. Lau and C.~Dasgupta, ``Numerical investigation of the role of topological
+  defects in the three-dimensional heisenberg transition,'' {\em Phys. Rev. B},
+  vol.~39, pp.~7212--7222, Apr 1989.
+
+\bibitem{SachdevHedgehogs}
+S.~Sachdev and K.~Park {\em Annals of Physics N.~Y.}, vol.~298, p.~58, 2002.
+
+\bibitem{LesikAshvin}
+O.~I. Motrunich and A.~Vishwanath, ``Emergent photons and transitions in the
+  <span class="aps-inline-formula"><math display="inline"
+  baseline="-0.5"><mrow><mi
+  mathvariant="normal">o</mi><mo>(</mo><mn>3</mn><mo>)</mo></mrow></math></span>
+  sigma model with hedgehog suppression,'' {\em Phys. Rev. B}, vol.~70,
+  p.~075104, Aug 2004.
+
+\bibitem{McKenzie2}
+S.~McKenzie, C.~Domb, and D.~L. Hunter {\em J. Phys. A. Math. Gen.}, vol.~15,
+  pp.~3909--3914, 1982.
+
+\bibitem{LesikSenthil}
+O.~I. Motrunich and T.~Senthil, ``Exotic order in simple models of bosonic
+  systems,'' {\em Phys. Rev. Lett.}, vol.~89, p.~277004, Dec 2002.
+
+\bibitem{BiRasmussenXu13}
+Z.~Bi, A.~Rasmussen, and C.~Xu {\em arXiv}, p.~1309.0515, 2013.
+
+\bibitem{HermeleFisherBalents}
+M.~Hermele, M.~P.~A. Fisher, and L.~Balents, ``Pyrochlore photons: The $u(1)$
+  spin liquid in a $s=\frac{1}{2}$ three-dimensional frustrated magnet,'' {\em
+  Phys. Rev. B}, vol.~69, p.~064404, 2004.
+
+\bibitem{LesikAshvin2}
+O.~I. Motrunich and A.~Vishwanath {\em arXiv:0805:1494}, 2008.
+
+\bibitem{GukovKapustin}
+S.~Gukov and A.~Kapustin {\em arXiv/hep-th}, p.~1307.4793, 2013.
+
+\bibitem{FracFaraday}
+S.~Geraedts and O.~Motrunich {\em to appear}.
+
+\bibitem{Chen2014}
+X.~Chen, F.~Burnell, A.~Vishwanath, and L.~Fidkowski {\em arXiv}, p.~1403.6491,
+  2014.
+
+\bibitem{Cho2014}
+G.~Cho, J.~Teo, and S.~Ryu {\em arXiv}, p.~1403.2018, 2014.
+
+\bibitem{BiRasmussenXu}
+Z.~Bi, A.~Rasmussen, and C.~Xu {\em arXiv:cond-mat}, p.~1309.0515, 2013.
+
+\bibitem{Kapustin2014}
+A.~Kapustin {\em arXiv:cond-mat}, p.~1404.6659, 2014.
+
+\bibitem{Tsui-PhysRevLett.48.1559}
+D.~C. Tsui, H.~L. Stormer, and A.~C. Gossard, ``Two-dimensional
+  magnetotransport in the extreme quantum limit,'' {\em Phys. Rev. Lett.},
+  vol.~48, pp.~1559--1562, May 1982.
+
+\bibitem{prangegirvin}
+R.~E. Prange and S.~M. Girvin, {\em The Quantum Hall Effect}.
+\newblock Springer-Verlag, New York, 1990.
+
+\bibitem{Laughlin-PhysRevLett.50.1395}
+R.~B. Laughlin, ``Anomalous quantum hall effect: An incompressible quantum
+  fluid with fractionally charged excitations,'' {\em Phys. Rev. Lett.},
+  vol.~50, pp.~1395--1398, May 1983.
+
+\bibitem{Haldane1983}
+F.~D.~M. Haldane, ``Fractional quantization of the hall effect: A hierarchy of
+  incompressible quantum fluid states,'' {\em Phys. Rev. Lett.}, vol.~51,
+  pp.~605--608, Aug 1983.
+
+\bibitem{Halperin84}
+B.~I. Halperin, ``Statistics of quasiparticles and the hierarchy of fractional
+  quantized hall states,'' {\em Phys. Rev. Lett.}, vol.~52, pp.~1583--1586, Apr
+  1984.
+
+\bibitem{Jain:1989p294}
+J.~K. Jain, ``Composite-fermion approach for the fractional quantum hall
+  effect,'' {\em Phys. Rev. Lett.}, vol.~63, pp.~199--202, Jul 1989.
+
+\bibitem{LeinaasMyrheim}
+J.~M. Leinaas and J.~Myrheim, ``On the theory of identical particles,'' {\em Il
+  Nuovo Cimento B}, vol.~37, pp.~1--23, 1977.
+
+\bibitem{Arovas-Schrieffer-Wilczek}
+D.~Arovas, J.~R. Schrieffer, and F.~Wilczek, ``Fractional statistics and the
+  quantum hall effect,'' {\em Phys. Rev. Lett.}, vol.~53, pp.~722--723, Aug
+  1984.
+
+\bibitem{Willett87}
+R.~Willett, J.~P. Eisenstein, H.~L. St\"ormer, D.~C. Tsui, A.~C. Gossard, and
+  J.~H. English, ``Observation of an even-denominator quantum number in the
+  fractional quantum hall effect,'' {\em Phys. Rev. Lett.}, vol.~59,
+  pp.~1776--1779, Oct 1987.
+
+\bibitem{Greiter91}
+M.~Greiter, X.-G. Wen, and F.~Wilczek, ``Paired hall state at half filling,''
+  {\em Phys. Rev. Lett.}, vol.~66, pp.~3205--3208, Jun 1991.
+
+\bibitem{Greiter92}
+M.~Greiter, X.-G. Wen, and F.~Wilczek {\em Nucl. Phys. B}, vol.~374, p.~567,
+  1992.
+
+\bibitem{Nayak96}
+C.~Nayak and F.~Wilczek {\em Nucl. Phys. B}, vol.~479, pp.~529--553, 1996.
+
+\bibitem{ReadGreen}
+N.~Read and D.~Green, ``Paired states of fermions in two dimensions with
+  breaking of parity and time-reversal symmetries and the fractional quantum
+  hall effect,'' {\em Phys. Rev. B}, vol.~61, pp.~10267--10297, Apr 2000.
+
+\bibitem{BondersonGurarieNayak11}
+P.~Bonderson, V.~Gurarie, and C.~Nayak, ``Plasma analogy and non-abelian
+  statistics for ising-type quantum hall states,'' {\em Phys. Rev. B}, vol.~83,
+  p.~075303, Feb 2011.
+
+\bibitem{Kitaev:QC:03}
+A.~Y. Kitaev, ``Fault-tolerant quantum computation by anyons,'' vol.~303,
+  pp.~2--30, Jan. 2003.
+
+\bibitem{Nayak:TQCReview:2008}
+C.~Nayak, S.~H. Simon, A.~Stern, M.~Freedman, and S.~Das~Sarma, ``Non-abelian
+  anyons and topological quantum computation,'' vol.~80, pp.~1083--1159, Sept.
+  2008.
+
+\bibitem{MourikZuo:InSbWire:2012}
+V.~Mourik, K.~Zuo, S.~M. Frolov, S.~R. Plissard, E.~P. A.~M. Bakkers, and L.~P.
+  Kouwenhoven, ``{Signatures of Majorana Fermions in Hybrid
+  Superconductor-Semiconductor Nanowire Devices},'' {\em Science}, vol.~336,
+  pp.~1003--1007, Apr. 2012.
+
+\bibitem{Rokhinson:InSbWireFracACJosephson:2012}
+L.~P. Rokhinson, X.~Liu, and J.~K. Furdyna, ``The fractional a.c. {J}osephson
+  effect in a semiconductor-superconductor nanowire as a signature of
+  {M}ajorana particles,'' {\em Nat. Phys.}, vol.~8, pp.~795--799, Sept. 2012.
+
+\bibitem{DengLarssonXu:InSbWire:2012}
+M.~T. Deng, C.~L. Yu, G.~Y. Huang, M.~Larsson, P.~Caroff, and H.~Q. Xu,
+  ``{Anomalous Zero-Bias Conductance Peak in a $\mathrm{Nb}$-$\mathrm{InSb}$
+  Nanowire-$\mathrm{Nb}$ Hybrid Device},'' {\em Nano Lett.}, vol.~12,
+  pp.~6414--6419, Nov. 2012.
+
+\bibitem{DasRonen:InAsWire:2012}
+A.~Das, Y.~Ronen, Y.~Most, Y.~Oreg, M.~Heiblum, and H.~Shtrikman, ``{Zero-bias
+  peaks and splitting in an $\mathrm{Al}$-$\mathrm{InAs}$ nanowire topological
+  superconductor as a signature of Majorana fermions},'' {\em Nat. Phys.},
+  vol.~8, pp.~887--895, Nov. 2012.
+
+\bibitem{Nadj-PergeYazdani:2014}
+S.~Nadj-Perge, I.~K. Drozdov, J.~Li, H.~Chen, S.~Jeon, J.~Seo, A.~H. MacDonald,
+  B.~A. Bernevig, and A.~Yazdani, ``Observation of {M}ajorana fermions in
+  ferromagnetic atomic chains on a superconductor,'' {\em Science}, vol.~346,
+  pp.~602--607, Oct. 2014.
+
+\bibitem{KitaevWireMajorana:01}
+A.~Y. Kitaev, ``{Unpaired Majorana fermions in quantum wires},'' vol.~44,
+  p.~131, Oct. 2001.
+
+\bibitem{Halperin83}
+B.~I. Halperin, ``{Theory of quantized Hall conductance},'' {\em Helv. Phys.
+  Acta.}, vol.~56, pp.~75--102, Mar. 1983.
+
+\bibitem{Wu93}
+X.~G. Wu, G.~Dev, and J.~K. Jain, ``Mixed-spin incompressible states in the
+  fractional quantum hall effect,'' {\em Phys. Rev. Lett.}, vol.~71,
+  pp.~153--156, Jul 1993.
+
+\bibitem{Wu94}
+X.~G. Wu and J.~K. Jain, ``Fractional quantum hall states in the
+  low-zeeman-energy limit,'' {\em Phys. Rev. B}, vol.~49, pp.~7515--7519, Mar
+  1994.
+
+\bibitem{Davenport12}
+S.~C. Davenport and S.~H. Simon, ``Spinful composite fermions in a negative
+  effective field,'' {\em Phys. Rev. B}, vol.~85, p.~245303, Jun 2012.
+
+\bibitem{Balram14}
+A.~C. Balram, C.~T\H{o}ke, A.~W\'ojs, and J.~K. Jain, ``Phase diagram of
+  fractional quantum hall effect of composite fermions in multicomponent
+  systems,'' {\em Phys. Rev. B}, vol.~91, p.~045109, Jan 2015.
+
+\bibitem{Bishop07}
+N.~C. Bishop, M.~Padmanabhan, K.~Vakili, Y.~P. Shkolnikov, E.~P. De~Poortere,
+  and M.~Shayegan, ``Valley polarization and susceptibility of composite
+  fermions around a filling factor nu=3/2,'' {\em Phys. Rev. Lett.}, vol.~98,
+  p.~266404, Jun 2007.
+
+\bibitem{Padmanabhan09}
+M.~Padmanabhan, T.~Gokmen, and M.~Shayegan, ``Density dependence of valley
+  polarization energy for composite fermions,'' {\em Phys. Rev. B}, vol.~80,
+  p.~035423, Jul 2009.
+
+\bibitem{Gokmen10}
+T.~Gokmen, M.~Padmanabhan, and M.~Shayegan {\em Nat. Phys.}, vol.~6, p.~621,
+  2010.
+
+\bibitem{Novoselov05}
+K.~S. Novoselov, A.~K. Geim, S.~V. Morosov, D.~Jiang, M.~I. Katsnelson, I.~V.
+  Grigorieva, S.~V. Dubonos, and A.~A. Firsov {\em Nature}, vol.~438, p.~197,
+  2005.
+
+\bibitem{Zhang05}
+Y.~Zhang, Y.-W. Tan, H.~L. Stormer, and P.~Kim {\em Nature}, vol.~438, p.~201,
+  2005.
+
+\bibitem{Du09}
+X.~Du, I.~Skachko, F.~Duerr, A.~Luican, and E.~Y. Andrei {\em Nature},
+  vol.~462, p.~192, 2009.
+
+\bibitem{Bolotin09}
+K.~I. Bolotin, F.~Ghahari, M.~D. Shulman, H.~L. Stormer, and P.~Kim {\em
+  Nature}, vol.~462, p.~196, 2009.
+
+\bibitem{Ghahari11}
+F.~Ghahari, Y.~Zhao, P.~Cadden-Zimansky, K.~Bolotin, and P.~Kim, ``Measurement
+  of the nu=1/3 fractional quantum hall energy gap in suspended graphene,''
+  {\em Phys. Rev. Lett.}, vol.~106, p.~046801, Jan 2011.
+
+\bibitem{Dean11}
+C.~R. Dean, A.~F. Young, P.~Cadden-Zimansky, L.~Wang, H.~Ren, K.~Watanabe,
+  T.~Taniguchi, P.~Kim, J.~Hone, and K.~L. Shepard {\em Nat. Phys.}, vol.~7,
+  p.~693, 2011.
+
+\bibitem{Feldman12}
+B.~E. Feldman, B.~Krauss, J.~H. Smet, and A.~Yacoby {\em Science}, vol.~337,
+  p.~1196, 2012.
+
+\bibitem{Suen94}
+Y.~W. Suen, H.~C. Manoharan, X.~Ying, M.~B. Santos, and M.~Shayegan, ``Origin
+  of the nu=1/2 fractional quantum hall state in wide single quantum wells,''
+  {\em Phys. Rev. Lett.}, vol.~72, pp.~3405--3408, May 1994.
+
+\bibitem{Lay97}
+T.~S. Lay, T.~Jungwirth, L.~Smr\ifmmode~\check{c}\else \v{c}\fi{}ka, and
+  M.~Shayegan, ``One-component to two-component transition of the nu=2/3
+  fractional quantum hall effect in a wide quantum well induced by an in-plane
+  magnetic field,'' {\em Phys. Rev. B}, vol.~56, pp.~R7092--R7095, Sep 1997.
+
+\bibitem{HaldaneDiagram}
+I.~McDonald and F.~Haldane, ``Topological phase transition in the nu=2/3
+  quantum hall effect,'' {\em Phys. Rev. B}, vol.~53, pp.~15845--15855, 1996.
+
+\bibitem{Chakraborty84}
+T.~Chakraborty and F.~C. Zhang, ``Role of reversed spins in the correlated
+  ground state for the fractional quantum hall effect,'' {\em Phys. Rev. B},
+  vol.~29, pp.~7032--7033, Jun 1984.
+
+\bibitem{Rezayi87}
+E.~H. Rezayi, ``Reversed-spin excitations of the fractionally quantized hall
+  effect from finite-size calculations,'' {\em Phys. Rev. B}, vol.~36,
+  pp.~5454--5457, Oct 1987.
+
+\bibitem{Maksym89}
+P.~A. Maksym {\em J. Phys. Condens. Matter}, vol.~1, p.~6299, 1989.
+
+\bibitem{Moore97}
+J.~E. Moore and F.~D.~M. Haldane, ``Edge excitations of the nu= spin-singlet
+  quantum hall state,'' {\em Phys. Rev. B}, vol.~55, pp.~7818--7823, Mar 1997.
+
+\bibitem{Hirayama2002b}
+N.~Kumada, D.~Terasawa, Y.~Shimoda, H.~Azuhata, A.~Sawada, Z.~F. Ezawa,
+  K.~Muraki, T.~Saku, and Y.~Hirayama, ``Phase diagram of interacting composite
+  fermions in the bilayer $\nu{}=2/3$ quantum hall effect,'' {\em Phys. Rev.
+  Lett.}, vol.~89, p.~116802, Aug 2002.
+
+\bibitem{Ardonne02}
+E.~Ardonne, F.~J.~M. vanLankvelt, A.~W.~W. Ludwig, and K.~Schoutens,
+  ``Separation of spin and charge in paired spin-singlet quantum hall states,''
+  {\em Phys. Rev. B}, vol.~65, p.~041305, Jan 2002.
+
+\bibitem{Barkeshli10}
+M.~Barkeshli and X.-G. Wen, ``Non-abelian two-component fractional quantum hall
+  states,'' {\em Phys. Rev. B}, vol.~82, p.~233301, Dec 2010.
+
+\bibitem{RezayiZ4}
+E.~H. Rezayi, X.-G. Wen, and N.~Read unpublished, 2010.
+
+\bibitem{Barkeshli11}
+M.~Barkeshli and X.-G. Wen, ``Bilayer quantum hall phase transitions and the
+  orbifold non-abelian fractional quantum hall states,'' {\em Phys. Rev. B},
+  vol.~84, p.~115121, Sep 2011.
+
+\bibitem{Barkeshli14}
+M.~Barkeshli and X.-L. Qi, ``Synthetic topological qubits in conventional
+  bilayer quantum hall systems,'' {\em Phys. Rev. X}, vol.~4, p.~041035, Nov
+  2014.
+
+\bibitem{Vaezi14}
+A.~Vaezi and M.~Barkeshli, ``Fibonacci anyons from abelian bilayer quantum hall
+  states,'' {\em Phys. Rev. Lett.}, vol.~113, p.~236804, Dec 2014.
+
+\bibitem{EisensteinSeparateContacts}
+J.~P. Eisenstein, L.~N. Pfeiffer, and K.~W. West {\em Appl. Phys. Lett.},
+  vol.~57, no.~22, p.~2324, 1990.
+
+\bibitem{JimReview}
+J.~P. Eisenstein, ``Exciton condensation in bilayer quantum hall systems,''
+  {\em Ann. Rev. Cond. Mat.}, vol.~5, no.~1, pp.~159--181, 2014.
+
+\bibitem{Shabani13}
+J.~Shabani, Y.~Liu, M.~Shayegan, L.~N. Pfeiffer, K.~W. West, and K.~W. Baldwin,
+  ``Phase diagrams for the stability of the nu=1/2 fractional quantum hall
+  effect in electron systems confined to symmetric, wide gaas quantum wells,''
+  {\em Phys. Rev. B}, vol.~88, p.~245413, Dec 2013.
+
+\bibitem{HalperinLeeRead}
+B.~I. Halperin, P.~A. Lee, and N.~Read, ``Theory of the half-filled landau
+  level,'' {\em Phys. Rev. B}, vol.~47, pp.~7312--7343, Mar 1993.
+
+\bibitem{SuenOneHalf}
+Y.~W. Suen, L.~W. Engel, M.~B. Santos, M.~Shayegan, and D.~C. Tsui,
+  ``Observation of a nu=1/2 fractional quantum hall state in a double-layer
+  electron system,'' {\em Phys. Rev. Lett.}, vol.~68, pp.~1379--1382, Mar 1992.
+
+\bibitem{EisensteinOneHalf}
+J.~P. Eisenstein, G.~S. Boebinger, L.~N. Pfeiffer, K.~W. West, and S.~He, ``New
+  fractional quantum hall state in double-layer two-dimensional electron
+  systems,'' {\em Phys. Rev. Lett.}, vol.~68, pp.~1383--1386, Mar 1992.
+
+\bibitem{Chakraborty87}
+T.~Chakraborty and P.~Pietil\"ainen, ``Fractional quantum hall effect at
+  half-filled landau level in a multiple-layer electron system,'' {\em Phys.
+  Rev. Lett.}, vol.~59, pp.~2784--2787, Dec 1987.
+
+\bibitem{Yoshioka89}
+D.~Yoshioka, A.~H. MacDonald, and S.~M. Girvin, ``Fractional quantum hall
+  effect in two-layered systems,'' {\em Phys. Rev. B}, vol.~39, pp.~1932--1935,
+  Jan 1989.
+
+\bibitem{He93}
+S.~He, S.~Das~Sarma, and X.~C. Xie, ``Quantized hall effect and quantum phase
+  transitions in coupled two-layer electron systems,'' {\em Phys. Rev. B},
+  vol.~47, pp.~4394--4412, Feb 1993.
+
+\bibitem{Scarola01}
+V.~W. Scarola and J.~K. Jain, ``Phase diagram of bilayer composite fermion
+  states,'' {\em Phys. Rev. B}, vol.~64, p.~085313, Aug 2001.
+
+\bibitem{Peterson10_2}
+M.~R. Peterson and S.~Das~Sarma, ``Quantum hall phase diagram of half-filled
+  bilayers in the lowest and the second orbital landau levels: Abelian versus
+  non-abelian incompressible fractional quantum hall states,'' {\em Phys. Rev.
+  B}, vol.~81, p.~165304, Apr 2010.
+
+\bibitem{Shabani09}
+J.~Shabani, T.~Gokmen, Y.~T. Chiu, and M.~Shayegan, ``Evidence for developing
+  fractional quantum hall states at even denominator 1/2 and 1/4 fillings in
+  asymmetric wide quantum wells,'' {\em Phys. Rev. Lett.}, vol.~103, p.~256802,
+  Dec 2009.
+
+\bibitem{Nomura04}
+K.~Nomura and D.~Yoshioka, ``Gap evolution in nu=1/2 bilayer quantum hall
+  systems,'' {\em Journal of the Physical Society of Japan}, vol.~73, no.~10,
+  pp.~2612--2615, 2004.
+
+\bibitem{Papic10}
+Z.~Papi\'c, M.~O. Goerbig, N.~Regnault, and M.~V. Milovanovi\'c,
+  ``Tunneling-driven breakdown of the 331 state and the emergent pfaffian and
+  composite fermi liquid phases,'' {\em Phys. Rev. B}, vol.~82, p.~075302, Aug
+  2010.
+
+\bibitem{Peterson10}
+M.~R. Peterson, Z.~Papi\'c, and S.~Das~Sarma, ``Fractional quantum hall effects
+  in bilayers in the presence of interlayer tunneling and charge imbalance,''
+  {\em Phys. Rev. B}, vol.~82, p.~235312, Dec 2010.
+
+\bibitem{Zhu2015}
+W.~Zhu, S.~Gong, D.~N. Sheng, and L.~Sheng unpublished, 2015.
+
+\bibitem{Papic09}
+Z.~Papi{\'{c}}, G.~M{\"{o}}ller, M.~V. Milovanovi{\'{c}}, N.~Regnault, and
+  M.~O. Goerbig, ``Fractional quantum hall state at nu=1/4 in a wide quantum
+  well,'' {\em Phys. Rev. B}, vol.~79, p.~245325, Jun 2009.
+
+\bibitem{Liu14}
+Y.~Liu, A.~L. Graninger, S.~Hasdemir, M.~Shayegan, L.~N. Pfeiffer, K.~W. West,
+  K.~W. Baldwin, and R.~Winkler, ``Fractional quantum hall effect at nu=1/2 in
+  hole systems confined to gaas quantum wells,'' {\em Phys. Rev. Lett.},
+  vol.~112, p.~046804, Jan 2014.
+
+\bibitem{EisensteinMacDonald}
+J.~P. Eisenstein and A.~H. MacDonald, ``Bose–einstein condensation of
+  excitons in bilayer electron systems,'' {\em Nature}, vol.~432, pp.~691--694,
+  2004.
+
+\bibitem{GirvinMacDonald}
+S.~M. Girvin and A.~H. Macdonald, ``Multi-component quantum hall systems : The
+  sum of their parts and more,'' in {\em in Novel Quantum Liquids in
+  Low-Dimensional Semiconductor Structures, S.D. Sarma and A. Pinczuk Eds},
+  Wiley (New York), 1995.
+
+\bibitem{Spielman00}
+I.~B. Spielman, J.~P. Eisenstein, L.~N. Pfeiffer, and K.~W. West, ``Resonantly
+  enhanced tunneling in a double layer quantum hall ferromagnet,'' {\em Phys.
+  Rev. Lett.}, vol.~84, pp.~5808--5811, Jun 2000.
+
+\bibitem{Kellogg04}
+M.~Kellogg, J.~P. Eisenstein, L.~N. Pfeiffer, and K.~W. West, ``Vanishing hall
+  resistance at high magnetic field in a double-layer two-dimensional electron
+  system,'' {\em Phys. Rev. Lett.}, vol.~93, p.~036801, Jul 2004.
+
+\bibitem{Tutuc04}
+E.~Tutuc, M.~Shayegan, and D.~A. Huse, ``Counterflow measurements in strongly
+  correlated gaas hole bilayers: Evidence for electron-hole pairing,'' {\em
+  Phys. Rev. Lett.}, vol.~93, p.~036802, Jul 2004.
+
+\bibitem{Schliemann01}
+J.~Schliemann, S.~M. Girvin, and A.~H. MacDonald, ``Strong correlation to weak
+  correlation phase transition in bilayer quantum hall systems,'' {\em Phys.
+  Rev. Lett.}, vol.~86, pp.~1849--1852, Feb 2001.
+
+\bibitem{Simon03}
+S.~H. Simon, E.~H. Rezayi, and M.~V. Milovanovic, ``Coexistence of composite
+  bosons and composite fermions in nu=1/2+1/2 quantum hall bilayers,'' {\em
+  Phys. Rev. Lett.}, vol.~91, p.~046803, Jul 2003.
+
+\bibitem{Shibata06}
+N.~Shibata and D.~Yoshioka, ``Ground state of nu=1 bilayer quantum hall
+  systems,'' {\em Journal of the Physical Society of Japan}, vol.~75, no.~4,
+  p.~043712, 2006.
+
+\bibitem{Moller08}
+G.~M\"oller, S.~H. Simon, and E.~H. Rezayi, ``Paired composite fermion phase of
+  quantum hall bilayers at nu=1/2+1/2,'' {\em Phys. Rev. Lett.}, vol.~101,
+  p.~176803, Oct 2008.
+
+\bibitem{Papic11}
+Z.~Papi\'c and M.~Milovanovi\'c, ``p-wave pairing in quantum hall bilayers,''
+  {\em Advances in Condensed Matter Physics}, vol.~2011, p.~614173, 2011.
+
+\bibitem{Hirayama2004}
+N.~Kumada, D.~Terasawa, M.~Morino, K.~Tagashira, A.~Sawada, Z.~F. Ezawa,
+  K.~Muraki, Y.~Hirayama, and T.~Saku, ``Phase diagrams of $\nu=2$ and
+  $\nu=\frac{2}{3}$ quantum hall states in bilayer systems,'' {\em Phys. Rev.
+  B}, vol.~69, p.~155319, Apr 2004.
+
+\bibitem{Liu15}
+Y.~Liu, S.~Hasdemir, J.~Shabani, M.~Shayegan, L.~N. Pfeiffer, K.~W. West, and
+  K.~W. Baldwin unpublished, 2015.
+
+\bibitem{BisharaNayakMixing}
+W.~Bishara and C.~Nayak, ``Effect of landau level mixing on the effective
+  interaction between electrons in the fractional quantum hall regime,'' {\em
+  Phys. Rev. B}, vol.~80, p.~121302, Sep 2009.
+
+\bibitem{WojsMixing}
+A.~W\'ojs, C.~T\H{o}ke, and J.~K. Jain, ``Landau-level mixing and the emergence
+  of pfaffian excitations for the 5/2 fractional quantum hall effect,'' {\em
+  Phys. Rev. Lett.}, vol.~105, p.~096802, Aug 2010.
+
+\bibitem{RezayiSimonMixing}
+E.~H. Rezayi and S.~H. Simon, ``Breaking of particle-hole symmetry by landau
+  level mixing in the nu=5/2 quantized hall state,'' {\em Phys. Rev. Lett.},
+  vol.~106, p.~116801, Mar 2011.
+
+\bibitem{Papic12}
+Z.~Papi\'c, F.~D.~M. Haldane, and E.~H. Rezayi, ``Quantum phase transitions and
+  the nu=5/2 fractional hall state in wide quantum wells,'' {\em Phys. Rev.
+  Lett.}, vol.~109, p.~266806, Dec 2012.
+
+\bibitem{SodemannMixing}
+I.~Sodemann and A.~MacDonald, ``Landau level mixing and the fractional quantum
+  hall effect,'' {\em Phys. Rev. B}, vol.~87, p.~245425, Jun 2013.
+
+\bibitem{PetersonMixing}
+M.~Peterson and C.~Nayak, ``More realistic hamiltonians for the fractional
+  quantum hall regime in gaas and graphene,'' {\em Phys. Rev. B}, vol.~87,
+  p.~245129, Jun 2013.
+
+\bibitem{SimonRezayiMixing}
+S.~H. Simon and E.~H. Rezayi, ``Landau level mixing in the perturbative
+  limit,'' {\em Phys. Rev. B}, vol.~87, p.~155426, Apr 2013.
+
+\bibitem{PakrouskiMixing}
+K.~Pakrouski, M.~R. Peterson, T.~Jolicoeur, V.~W. Scarola, C.~Nayak, and
+  M.~Troyer unpublished, 2014.
+
+\bibitem{Haldane-PhysRevLett.55.2095}
+F.~D.~M. Haldane, ``Many-particle translational symmetries of two-dimensional
+  electrons at rational landau-level filling,'' {\em Phys. Rev. Lett.},
+  vol.~55, pp.~2095--2098, Nov 1985.
+
+\bibitem{Fannes1992}
+M.~Fannes, B.~Nachtergaele, and R.~Werner, ``Finitely correlated states on
+  quantum spin chains,'' {\em Communications in Mathematical Physics},
+  vol.~144, no.~3, pp.~443--490, 1992.
+
+\bibitem{Ostlund1995}
+S.~\"Ostlund and S.~Rommer, ``Thermodynamic limit of density matrix
+  renormalization,'' {\em Phys. Rev. Lett.}, vol.~75, pp.~3537--3540, Nov 1995.
+
+\bibitem{Rommer1997}
+S.~Rommer and S.~\"Ostlund, ``Class of ansatz wave functions for
+  one-dimensional spin systems and their relation to the density matrix
+  renormalization group,'' {\em Phys. Rev. B}, vol.~55, pp.~2164--2181, Jan
+  1997.
+
+\bibitem{Zhang2012}
+Y.~Zhang, T.~Grover, A.~Turner, M.~Oshikawa, and A.~Vishwanath, ``Quasiparticle
+  statistics and braiding from ground-state entanglement,'' {\em Phys. Rev. B},
+  vol.~85, p.~235151, Jun 2012.
+
+\bibitem{Cincio2013}
+L.~Cincio and G.~Vidal, ``Characterizing topological order by studying the
+  ground states on an infinite cylinder,'' {\em Phys. Rev. Lett.}, vol.~110,
+  p.~067208, Feb 2013.
+
+\bibitem{HHTuMomPol13}
+H.-H. Tu, Y.~Zhang, and X.-L. Qi, ``Momentum polarization: An entanglement
+  measure of topological spin and chiral central charge,'' {\em Phys. Rev. B},
+  vol.~88, p.~195412, Nov 2013.
+
+\bibitem{KitaevPreskill}
+A.~Kitaev and J.~Preskill, ``Topological entanglement entropy,'' {\em Phys.
+  Rev. Lett.}, vol.~96, p.~110404, Mar 2006.
+
+\bibitem{LiHaldane}
+H.~Li and F.~Haldane, ``Entanglement spectrum as a generalization of
+  entanglement entropy: Identification of topological order in non-abelian
+  fractional quantum hall effect states,'' {\em Phys. Rev. Lett.}, vol.~101,
+  p.~010504, Jul 2008.
+
+\bibitem{LevinWen}
+M.~Levin and X.-G. Wen, ``Detecting topological order in a ground state wave
+  function,'' {\em Phys. Rev. Lett.}, vol.~96, p.~110405, Mar 2006.
+
+\bibitem{wenzee}
+X.~G. Wen and A.~Zee, ``Shift and spin vector: New topological quantum numbers
+  for the hall fluids,'' {\em Phys. Rev. Lett.}, vol.~69, pp.~953--956, Aug
+  1992.
+
+\bibitem{Eisenstein90}
+J.~P. Eisenstein, H.~L. Stormer, L.~N. Pfeiffer, and K.~W. West, ``Evidence for
+  a spin transition in the nu=2/3 fractional quantum hall effect,'' {\em Phys.
+  Rev. B}, vol.~41, pp.~7910--7913, Apr 1990.
+
+\bibitem{spinpolED}
+X.~C. Xie, Y.~Guo, and F.~C. Zhang, ``Fractional quantum hall effect with spin
+  reversal,'' {\em Phys. Rev. B}, vol.~40, pp.~3487--3490, Aug 1989.
+
+\bibitem{KunYang14}
+Y.~Zhang, E.~H. Rezayi, and K.~Yang, ``Existence of strong-pairing quantum hall
+  phase in bilayer cold-atom systems with dipolar interactions,'' {\em Phys.
+  Rev. B}, vol.~90, p.~165102, Oct 2014.
+
+\bibitem{lankvelt}
+F.~J.~M. van Lankvelt, {\em PhD thesis}.
+\newblock University of Amsterdam, 2004.
+
+\bibitem{CHLee15}
+C.-H. Lee, Z.~Papi\'c, and R.~Thomale (to appear), 2015.
+
+\bibitem{TaoThouless:1983}
+R.~Tao and D.~J. Thouless, ``Fractional quantization of hall conductance,''
+  vol.~28, pp.~1142--1144, July 1983.
+
+\bibitem{Seidel}
+A.~Seidel, H.~Fu, D.-H. Lee, J.~M. Leinaas, and J.~Moore, ``Incompressible
+  quantum liquids and new conservation laws,'' {\em Phys. Rev. Lett.}, vol.~95,
+  p.~266405, Dec 2005.
+
+\bibitem{Bergholtz}
+E.~J. Bergholtz and A.~Karlhede, ``Quantum hall system in tao-thouless limit,''
+  {\em Phys. Rev. B}, vol.~77, p.~155308, Apr 2008.
+
+\bibitem{Ardonne11}
+E.~Ardonne and N.~Regnault, ``Structure of spinful quantum hall states: A
+  squeezing perspective,'' {\em Phys. Rev. B}, vol.~84, p.~205134, Nov 2011.
+
+\bibitem{PanPhysRevB.77.075307}
+W.~Pan, J.~S. Xia, H.~L. Stormer, D.~C. Tsui, C.~Vicente, E.~D. Adams, N.~S.
+  Sullivan, L.~N. Pfeiffer, K.~W. Baldwin, and K.~W. West, ``Experimental
+  studies of the fractional quantum hall effect in the first excited landau
+  level,'' {\em Phys. Rev. B}, vol.~77, p.~075307, Feb 2008.
+
+\bibitem{ChoiPhysRevB.77.081301}
+H.~C. Choi, W.~Kang, S.~Das~Sarma, L.~N. Pfeiffer, and K.~W. West, ``Activation
+  gaps of fractional quantum hall effect in the second landau level,'' {\em
+  Phys. Rev. B}, vol.~77, p.~081301, Feb 2008.
+
+\bibitem{DolevPhysRevLett.107.036805}
+M.~Dolev, Y.~Gross, R.~Sabo, I.~Gurman, M.~Heiblum, V.~Umansky, and D.~Mahalu,
+  ``Characterizing neutral modes of fractional states in the second landau
+  level,'' {\em Phys. Rev. Lett.}, vol.~107, p.~036805, Jul 2011.
+
+\bibitem{KumarPhysRevB.83.201305}
+A.~Kumar, N.~Samkharadze, G.~A. Cs\'athy, M.~J. Manfra, L.~N. Pfeiffer, and
+  K.~W. West, ``Particle-hole asymmetry of fractional quantum hall states in
+  the second landau level of a two-dimensional hole system,'' {\em Phys. Rev.
+  B}, vol.~83, p.~201305, May 2011.
+
+\bibitem{SamkharadzePhysRevB.84.121305}
+N.~Samkharadze, J.~D. Watson, G.~Gardner, M.~J. Manfra, L.~N. Pfeiffer, K.~W.
+  West, and G.~A. Cs\'athy, ``Quantitative analysis of the disorder broadening
+  and the intrinsic gap for the $\nu{}=\frac{5}{2}$ fractional quantum hall
+  state,'' {\em Phys. Rev. B}, vol.~84, p.~121305, Sep 2011.
+
+\end{thebibliography}

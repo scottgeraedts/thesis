@@ -10,6 +10,9 @@
 \usepackage{breakurl}
 \usepackage{color}
 
+%macros for intro
+\newcommand{\lct}{\epsilon^{\mu\nu\lambda}}
+\newcommand{\lcf}{\epsilon^{\mu\nu\lambda\sigma}}
 %macros for FQHE
 \newcommand{\JJ}{\vec{J}}
 \newcommand{\QQ}{\vec{Q}}
@@ -62,6 +65,19 @@
 \def\MM{N}
 \def\mm{n}
 
+%macros for bilayer
+\newcommand{\corrR}{{g}}
+\newcommand{\corrM}{{\tilde g}}
+\renewcommand{\r}{{\mathbf{r}}}
+\newcommand{\shift}{\mathscr{S}}
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\DSAS}{\Delta_\textrm{SAS}}
+\newcommand{\Dnorm}{\DSAS/\frac{e^2}{\epsilon\ell_B}}		% change to (\frac{e^2}{\epsilon\ell_B})
+\newcommand{\barthird}{\ensuremath{\overline{1/3}}}
+\newcommand{\Uone}{\ensuremath{\mathrm{U(1)}} }
+\newcommand{\SU}[1]{\ensuremath{\mathrm{SU(#1)}}}
+\newcommand{\spinon}{{\phi_s}}
+
 \begin{document}
 \title{Numerical Studies of Topological phases}
 \author{Scott Geraedts}
@@ -79,4 +95,8 @@ A diverse set of topological phases are studied using a variety of numerical tec
 \include{formalism}
 \include{FQHE}
 \include{SO34D}
+\include{bilayer}
+
+\bibliographystyle{ieeetr}
+\bibliography{thesis}
 \end{document}

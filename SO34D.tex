@@ -11,11 +11,11 @@ Among all the topological phases studied in recent years, the topological insula
 
 One obvious extension of research into topological insulators is to consider the effects of interactions on their properties. This is however a difficult task. Many of the methods used to study TI's involve the properties of their band structure, and these methods obviously do not apply if interactions are strong. As an introduction to this difficult problem, one can try to study an analog of the topological insulator, constructed of interacting {\em bosons} instead of fermions. In bosonic systems we know that the non-interacting case would be a condensate, so we can be sure that the topological behavior is due to the interactions. In addition, certain theoretical techniques, like the Monte Carlo studies employed in this paper, work mainly for bosonic systems.
 
-%The study of topological phases of interacting bosons is relatively recent, but much progress has been made.\cite{WenScience,*WenPRB,LuVishwanath,SenthilLevin,SenthilVishwanath,FQHE,TurnerVishwanath,SenthilReview,BiRasmussenXu, WangSenthil,Kapustin2014,Wen2014} 
-%Chen, Liu, Gu, and Wen\cite{WenScience,*WenPRB} have used group cohomology theory to determine which symmetries and dimensions can lead to non-trivial topological phases. However, this approach tells us little about the properties of these phases, which must be determined through other methods.
+%The study of topological phases of interacting bosons is relatively recent, but much progress has been made.\cite{WenScience,WenPRB,LuVishwanath,SenthilLevin,SenthilVishwanath,FQHE,TurnerVishwanath,SenthilReview,BiRasmussenXu, WangSenthil,Kapustin2014,Wen2014} 
+%Chen, Liu, Gu, and Wen\cite{WenScience,WenPRB} have used group cohomology theory to determine which symmetries and dimensions can lead to non-trivial topological phases. However, this approach tells us little about the properties of these phases, which must be determined through other methods.
 %One well-studied case is that of SPT phases with $U(1)$ symmetry in two dimensions. Lu and Vishwanath\cite{LuVishwanath} proposed a phenomenological Chern-Simons field theory to describe both the bulk and edges of these states and showed that such states have a Hall effect quantized to an even integer (in units of $e^2/h$) and possess gapless counter-propagating edge modes. Therefore such states are called ``bosonic integer quantum Hall phases''. Senthil and Levin\cite{SenthilLevin} proposed how to realize such phases in a quantum Hall-like setting by starting with two species of bosons in a magnetic field and using mutual flux attachment.  One drawback of the flux attachment technique is that it is difficult to relate it precisely to a microscopic model.  To address this, in our work\cite{FQHE} we provided an alternative exactly solvable model that replaces flux attachment by a (precisely formulated) dynamical binding of bosons to vortices.  We studied this model in Monte Carlo and confirmed that it realizes the integer Quantum Hall phase of bosons, including observation of the gapless edge modes.  We also showed that by binding multiple vortices to bosons we can realize Symmetry-Enriched Topological phases (SET)\cite{EssinHermele,MesarosRan} with long-ranged entanglement.
 
-%In this paper we focus on understanding interacting bosonic topological phases which are analogs of the electronic topological insulator in three dimensions. Motivated by the formal cohomology results,\cite{WenScience,*WenPRB} 
+%In this paper we focus on understanding interacting bosonic topological phases which are analogs of the electronic topological insulator in three dimensions. Motivated by the formal cohomology results,\cite{WenScience,WenPRB} 
 Vishwanath and Senthil in an inspirational paper\cite{SenthilVishwanath} found effective field theories which can describe both the bulk and the surface of a three-dimensional ``bosonic topological insulator'' with charge conservation and time-reversal symmetry. They found exotic behavior on the surface which can be used to assert the topological behavior in the bulk.
 
 In particular, Vishwanath and Senthil found three kinds of exotic phases on the surface of the bosonic TI. These surface phases cannot exist in a purely two-dimensional system, and their existence on the surface of a three-dimensional system shows that the system is topological. The first kind of phase is a superfluid, which spontaneously breaks charge conservation symmetry. There are actually several different types of superfluids which can exist on the surface. The gapped vortex excitations in these superfluids have properties which cannot exist in a purely two-dimensional system.  Phase transitions between the different superfluids are predicted to be deconfined critical points. Another kind of surface phase appears when we break time-reversal symmetry on the surface. This phase has a Hall conductivity quantized to one-half of the elementary value possible in a purely two-dimensional bosonic system. Since the Hall conductivity in the bosonic integer quantum Hall effect is quantized to even integers, this surface phase is expected to have an odd integer Hall conductivity. Finally, it is possible to have a surface phase which breaks no symmetries but has a symmetry-enriched intrinsic topological order of a kind impossible in a purely two-dimensional system with these symmetries.
@@ -106,7 +106,7 @@ We can now summarize the phase diagram shown in the inset in Fig.~\ref{heisbulk}
 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/heisbulkout.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/heisbulkout.eps}
 \caption{Inset: Bulk phase diagram for the model in Eqs.~(\ref{action})~and~(\ref{SHeis}) with bosons and Heisenberg spins. The phase diagram is mathematically equivalent to a system of decoupled currents and spins, hence the straight line boundaries. At $\lambda=0$, the system has a paramagnet-ferromagnet transition as $\beta$ is increased, while the bosons are superfluid throughout. As $\lambda$ is increased, the boson currents bind to the hedgehog currents. The loop pictures in the phases show a ``snapshot'' of the phase. Red solid loops mean that boson currents are proliferated in the phase, while blue dashed loops indicate proliferated hedgehog currents. The phase of interest is the ``binding'' phase in the upper left corner where bosons are bound to hedgehogs. The main figure shows the current-current correlations of the bosons and hedgehogs as $\lambda$ is increased while $\beta=0$, for a system of linear dimension $L=6$. We see that the correlators become essentially equal as the system enters the upper left phase, indicating that bosons have bound to hedgehogs.}
 \label{heisbulk}
 \end{figure}
@@ -122,7 +122,7 @@ If, when looking along the line from the $\uparrow$ core to the $\downarrow$ cor
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/monopoles.eps}
+\includegraphics[width=0.6\linewidth]{figures/monopoles.eps}
 \caption{As discussed in the text, the easy-plane spin system has two species of vortex lines, $\uparrow$ and $\downarrow$, depending on $n_c$ at the core. A hedgehog is a transition point between the two types of lines, with the sign of the hedgehog determined by the orientation of the type and vorticity of the vortex lines, as shown with examples. This figure shows only the spatial dimensions of the system, therefore the hedgehogs are point particles and the vortices are lines. Applying a Zeeman field to the surface means allowing only one type of vortex line through the surface. This leads to a correlation between the hedgehog number (and therefore the boson charge) and the vorticity at the surface, which is the origin of the Hall conductivity.}
 \label{monopoles}
 \end{figure}
@@ -168,7 +168,7 @@ When a Zeeman field is applied, the hedgehogs are effectively forbidden, and so 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Binding of Multiple Bosons to a Hedgehog}
-The above methods also allow us to answer the question of what happens to the system if $\eta$ in Eq.~(\ref{tbind}) is an integer larger than 1.  In a $U(1)\times U(1)$ system in two dimensions, we studied the binding of multiple bosons to vortices (realized by taking integer $\eta$) and found that each number of bound bosons led to a different symmetry-protected topological phase.\cite{FQHE} There were therefore as many SPTs as there are integers, in agreement with the cohomology classification.\cite{WenScience,*WenPRB, LuVishwanath} In the present three-dimensional case the classification of Chen et al.\cite{WenScience,*WenPRB} for $U(1)$ and $\ztwot$ symmetry predicts the existence of only a finite number of such symmetry protected topological phases, implying that not every value of $\eta$ would lead to a distinct phase. Indeed, we find that all systems with $\eta$ an even integer are topologically trivial, while when $\eta$ is odd we have the same topological phase as $\eta=1$. 
+The above methods also allow us to answer the question of what happens to the system if $\eta$ in Eq.~(\ref{tbind}) is an integer larger than 1.  In a $U(1)\times U(1)$ system in two dimensions, we studied the binding of multiple bosons to vortices (realized by taking integer $\eta$) and found that each number of bound bosons led to a different symmetry-protected topological phase.\cite{FQHE} There were therefore as many SPTs as there are integers, in agreement with the cohomology classification.\cite{WenScience,WenPRB, LuVishwanath} In the present three-dimensional case the classification of Chen et al.\cite{WenScience,WenPRB} for $U(1)$ and $\ztwot$ symmetry predicts the existence of only a finite number of such symmetry protected topological phases, implying that not every value of $\eta$ would lead to a distinct phase. Indeed, we find that all systems with $\eta$ an even integer are topologically trivial, while when $\eta$ is odd we have the same topological phase as $\eta=1$. 
 
 We can justify this claim by showing that $\eta=2$ can be continuously connected to $\eta=0$ which is a trivial insulator. This argument can then be extended to show that any two systems where $\eta$ differs by $2$ are in the same phase.  Our argument is inspired by Ref.~\cite{BiRasmussenXu13}, except that here we are working with a microscopic model rather than a topological field theory.
 We start by considering two copies of our action, each with its own bosons and Heisenberg spins and with $\eta=1$:
@@ -179,8 +179,8 @@ We start by considering two copies of our action, each with its own bosons and H
 \end{eqnarray}
 where the superscripts indicate which copy a variable is from.  We now couple the two copies by adding the following terms:
 \begin{eqnarray}
-\delta S&=&-A\sum_{R} \vec{n}^{(1)}(R)\cdot \vec{n}^{(2)}(R)\nonumber\\
-&-&B\sum_{r} \cos[\Phi^{(1)}(r)-\Phi^{(2)}(r)].
+\delta S=-A\sum_{R} \vec{n}^{(1)}(R)\cdot \vec{n}^{(2)}(R)
+-B\sum_{r} \cos[\Phi^{(1)}(r)-\Phi^{(2)}(r)].
 \label{AB}
 \end{eqnarray} 
 When $A$ is large and positive, the first term above locks spins of the different copies together, $\vec{n}^{(1)}\approx\vec{n}^{(2)}$. The hedgehog variables therefore take on the same values, and either can be viewed as the hedgehog number of the whole spin system in this case: $Q \approx Q^{(1)} \approx Q^{(2)}$. On the other hand, when $A$ is large and negative the spins of different types are locked in opposite directions,  $\vec{n}^{(1)}\approx -\vec{n}^{(2)}$, and $Q^{(1)} \approx -Q^{(2)}$.
@@ -220,7 +220,7 @@ The binding between hedgehogs and bosons in the bulk of the topological phase le
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/surface.eps}
+\includegraphics[width=0.6\linewidth]{figures/surface.eps}
 \caption{A snapshot of the system, when it is spatially divided into a region which is a trivial insulator and a region which is in the binding phase. In the trivial phase, boson currents are gapped and hedgehog currents are proliferated. In the binding phase both currents are gapped individually, but their bound states are proliferated. Large hedgehog current loops can exist in either region; however, when such a loop tries to cross the boundary the conservation of boson current leads to a conflict between the two sides, and this can lead to exotic surface physics. }
 \label{surface}
 \end{figure}
@@ -247,7 +247,7 @@ Here we focused on the surface at $z_R$, and $\mu$ denotes link orientation for 
 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/heissurf.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/heissurf.eps}
 \caption{The inset shows the phase diagram of the surface of the binding phase, without a Zeeman field. It was obtained by tuning the bulk parameters deep into the binding phase and then varying $\beta$ and $\lambda$ {\em only on the surface}.  We find that in this model our surface always spontaneously breaks a symmetry. At small $\beta_{\rm surf}$ and $\lambda_{\rm surf}$ the boson $U(1)$ symmetry is broken and the bosons condense into a superfluid, while at large $\lambda_{\rm surf}$ the spin $SO(3)$ symmetry is broken and the spins align into a ferromagnet. At small $\lambda_{\rm surf}$ and large $\beta_{\rm surf}$ both symmetries are broken.  The main plot shows surface magnetization on a sweep in $\lambda_{\rm surf}$ for $\beta_{\rm surf}=0$. We show $mL^{3/2}$, which is independent of system size in the disordered phase, and grows with system size in the ordered phase. We can clearly see that the $SO(3)$ symmetry is broken as $\lambda_{\rm surf}$ is increased past a value of approximately $4$. All data in this section was taken with $\beta_{\rm bulk}=0$, $\lambda_{\rm bulk}=5.2$.}
 \label{heissurf}
 \end{figure}
@@ -262,7 +262,7 @@ In Fig.~\ref{slabcurs} we plot $\rho_J \cdot L^2$. We see that at large $\lambda
 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/slabcurs.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/slabcurs.eps}
 \caption{Current-current correlators of the entire system, multiplied by $L^2$, used to detect symmetry breaking of the bosons on the surface. This quantity is constant when the boson $U(1)$ symmetry is preserved and increases linearly with system size when it is broken on the surface. Parameters used are the same as in Fig.~\ref{heissurf}. We see that there is a phase transition at $\lambda_{\rm surf}\approx 4$.
 }
 \label{slabcurs}
@@ -306,7 +306,7 @@ In order to measure Hall conductivity, we need to couple both the bosons and spi
 
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/vortexcor.eps}
+\includegraphics[width=0.6\linewidth]{figures/vortexcor.eps}
 \caption{Spin vortex - boson charge correlators near the surface of the binding phase in the model Eqs.~(\ref{action})~and~(\ref{SHeis}) using Heisenberg spins. The horizontal axis is the strength of the Zeeman field applied only near the surfaces (and of opposite sign on the two surfaces). We see that as soon as the Zeeman field is turned on, the correlator takes a non-zero value. The value is non-universal, but is approximately the same on the top and bottom surfaces. Data was taken with $\beta=0$, $\lambda=5.2$ everywhere and the binding phase occupying half of the system, cf.\ Eq.~(\ref{eta_r}).  Since we do not know how to properly couple external gauge fields to this system, we are unable to compute the Hall conductivity.
 }
 \label{heishall}
@@ -325,8 +325,8 @@ This theory has spinor matter fields (``spinons'') coupled to a compact gauge fi
 \subsection{Bulk Phase Diagram}
 The following action represents the spins in the $CP^1$ representation:
 \begin{eqnarray}
-&&S_{\rm spin}=-\beta\sum_{s=\uparrow,\downarrow}\sum_{R,\mu} [z_s^\dagger(R)z_s(R+\hat\mu)e^{-ia_\mu(R)}+c.c.] \nonumber\\
-&&-K\sum_{R,\mu<\nu} \cos[\nabla_\mu a_\nu(R)-\nabla_\nu a_\mu(R)].
+S_{\rm spin}=-\beta\sum_{s=\uparrow,\downarrow}\sum_{R,\mu} [z_s^\dagger(R)z_s(R+\hat\mu)e^{-ia_\mu(R)}+c.c.] 
+-K\sum_{R,\mu<\nu} \cos[\nabla_\mu a_\nu(R)-\nabla_\nu a_\mu(R)].
 \label{cp1action}
 \end{eqnarray} 
 Here the spins are represented by two complex bosonic fields $z_\uparrow$,$z_\downarrow$ (``spinons''), which satisfy $|z_\uparrow|^2+|z_\downarrow|^2=1$. We can write the $z$ fields as a spinor, $\mathbf{z}\equiv(z_\uparrow,z_\downarrow)^T$, and extract the spin $\vec{n}=\mathbf{z^\dagger} \vec\sigma \mathbf{z}$, where $\vec{\sigma}\equiv (\sigma_1,\sigma_2,\sigma_3)$ is a vector of Pauli matrices.
@@ -334,8 +334,8 @@ The spinon fields are minimally coupled to a compact gauge field $a_\mu(R)$. The
 
 The \cp model defined above actually has global $SO(3)$ symmetry, similar to the previous section. In this section we find it convenient to break the $SO(3)$ symmetry down to $U(1)$ explicitly by taking the ``easy-plane'' limit of the $CP^1$ model. We align all the spins $\vec{n}$ in the $ab$-plane, which corresponds to fixing the magnitude of $z_\uparrow$ and $z_\downarrow$, and allowing only phase fluctuations, i.e., $z_s\equiv \frac{1}{\sqrt{2}}e^{i\phi_s}$. The $CP^1$ model in the easy-plane limit becomes:
 \begin{eqnarray}
-&&S_{\rm spin}=-\beta\sum_{s=\uparrow,\downarrow}\sum_{R,\mu} \cos[\nabla_\mu\phi_s(R)-a_\mu(R)]\nonumber\\
-&&+\frac{K}{2}\sum_{R,\mu<\nu}\left[\nabla_\mu a_\nu(R)-\nabla_\nu a_\mu(R)-2\pi B_{\mu\nu}(R)\right]^2.
+S_{\rm spin}=-\beta\sum_{s=\uparrow,\downarrow}\sum_{R,\mu} \cos[\nabla_\mu\phi_s(R)-a_\mu(R)]
++\frac{K}{2}\sum_{R,\mu<\nu}\left[\nabla_\mu a_\nu(R)-\nabla_\nu a_\mu(R)-2\pi B_{\mu\nu}(R)\right]^2.
 \label{sspin}
 \end{eqnarray}
 Here $\phi_\uparrow$ and $\phi_\downarrow$ are $2\pi$-periodic variables which represent the phases of the spinon fields. We have also replaced the cosine in the Maxwell term by a quadratic ``Villain'' form, with $B_{\mu\nu}$ which are unconstrained, integer-valued dynamical variables residing on the plackets of the lattice. Upon summing over $B_{\mu\nu}$ in the partition sum, the third term generates a $2\pi$ periodic function of $\nabla_\mu a_{\nu}-\nabla_\nu a_{\mu}$, and therefore this does not change the universality class of the problem.
@@ -368,7 +368,7 @@ In the case when $\lambda$ is large, the spin parts of the Coulomb and ferromagn
 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/cp1bulkphase.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/cp1bulkphase.eps}
 \caption{Bulk phase diagram in the $\beta$ and $K$ variables for the model defined in Eqs.~(\ref{action}) and (\ref{sspin}) where the spins are described by an easy-plane $CP^1$ model. The top panel shows the phases at small $\lambda$, while the bottom panel shows large $\lambda$. The locations of the phase boundaries are independent of $\lambda$, but the nature of the phases are not. Symbols indicate points where the phase transitions were identified numerically from singularities in the heat capacity. The candidate for the topological phase is the binding phase, which occurs at large $\lambda$, small $\beta$, and small $K$. }
 \label{cp1bulkphase}
 \end{figure}
@@ -422,10 +422,10 @@ Let us first consider the gauge field coupled to the spin degrees of freedom. He
 To modify Eq.~(\ref{sspin}) to reflect this, we add $\pm A_{1\mu}/2$ inside the cosines on the first line. 
 Partially integrating out the parton fields then gives compact Maxwell terms in the field combinations $a_\mu+A_{1\mu}/2$ and $a_\mu-A_{1\mu}/2$, with equal couplings due to the $\ztwot$ symmetry. We can write each in the Villain form, which introduces two integer-valued placket variables $B^+_{\mu\nu}$ and $B^-_{\mu\nu}$. We can expand and recombine these quadratic terms to get separate terms for the $a$ and $A_1$ fields, leading to the following action:
 \begin{eqnarray}
-S&=&-\beta\sum_{R,\mu} \cos[\nabla_\mu\phi_\uparrow(R)-a_\mu(R)-\frac{1}{2}A_{1\mu}(R)]\nonumber\\
-&-&\beta\sum_{R,\mu} \cos[\nabla_\mu\phi_\downarrow(R)-a_\mu(R)+\frac{1}{2}A_{1\mu}(R)]\nonumber\\
-&+&\frac{K}{2}\sum_{R,\mu<\nu}\left[\nabla_\mu a_\nu(R)-\nabla_\nu a_\mu(R)-2\pi B_{\mu\nu}(R)\right]^2\nonumber\\
-&+&\frac{K}{8}\sum_{R,\mu<\nu}\left[\nabla_\mu A_{1\nu}(R)-\nabla_\nu A_{1\mu}(R)-2\pi M_{\mu\nu}(R)\right]^2\nonumber\\
+S&=&-\beta\sum_{R,\mu} \cos[\nabla_\mu\phi_\uparrow(R)-a_\mu(R)-\frac{1}{2}A_{1\mu}(R)]
+-\beta\sum_{R,\mu} \cos[\nabla_\mu\phi_\downarrow(R)-a_\mu(R)+\frac{1}{2}A_{1\mu}(R)]\nonumber\\
+&+&\frac{K}{2}\sum_{R,\mu<\nu}\left[\nabla_\mu a_\nu(R)-\nabla_\nu a_\mu(R)-2\pi B_{\mu\nu}(R)\right]^2
++\frac{K}{8}\sum_{R,\mu<\nu}\left[\nabla_\mu A_{1\nu}(R)-\nabla_\nu A_{1\mu}(R)-2\pi M_{\mu\nu}(R)\right]^2\nonumber\\
 &+&\frac{\lambda}{2}\sum_{r,\mu} [ J_\mu(r)- Q_\mu(r)]^2+i\sum_{r,\mu}J_{\mu}(r)A_{2\mu}(r).
 \label{withA}
 \end{eqnarray}
@@ -480,7 +480,7 @@ We performed simulations with $L=10$ and show the results in Fig.~\ref{witten}.
 At $\scripty{r}=0$, we are at the location of the monopole. There is nearly no boson charge bound here. At $\scripty{r}=1$, we have already included most of the screening cloud, and therefore measure an enclosed charge close to $1/2$, as expected. The fact that $\scripty{r}=1$ measures a value close to one half shows that the screening length in the system is quite short. At $\scripty{r}=2$, we have included the entire screening cloud, so the charge is even closer to $1/2$. As $\scripty{r}$ is further increased, we start to include the screening cloud from the other monopole, which is located at a distance $L/2$ from the first one. This cancels some of the charge from the first monopole, and so the total charge starts to decrease. When $\scripty{r}>L/2$, the sphere encompasses the screening clouds from both external monopoles, and so there is a total charge of nearly zero. The values of charge are negative because we set the biasing parameter $\gamma$ such that at the origin there is a monopole of positive charge, $Q=+1/2$, and the sign of the charge in the screening cloud is the opposite of the sign of the monopole. 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/wittenout.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/wittenout.eps}
 \caption{Measurement of the Witten effect. The inset shows the measurement setup. External monopoles are inserted into the system, at a distance $L/2$ apart. They carry hedgehog numbers of $\pm 1/2$, and are Debye screened by hedgehogs of equal and opposite number, which also carry half of a boson charge. The main plot shows the boson charge enclosed in a sphere of radius $\scripty{r}$. For $\scripty{r}\approx 1-3$, this sphere measures the boson charge in the screening cloud near the origin, and the result is $1/2$, as expected. For $\scripty{r}\gtrsim 5$ the sphere includes the charge from the other screening cloud, and the enclosed charge drops to zero. The system size is $L=10$, using bulk parameters $\beta=0.2$, $K=0.4$, $\lambda=8$ (cf.\ bottom panel in Fig.~\ref{cp1bulkphase}), and local biasing parameter $\gamma=1.5$.}
 \label{witten}
 \end{figure}
@@ -489,7 +489,7 @@ In Fig.~\ref{witten}, we have found that the amount of charge at the site of the
 In our simulations, we find that $\scripty{r}=2$ is sufficiently far from the monopole to be unaffected by the change in $\gamma$. Figure~\ref{diffgamma} shows simulations taken with different values of $\gamma$. We see that though the amount of charge close to the monopoles (near $\scripty{r}=0$ and $\scripty{r}=L/2$) can be affected by changing $\gamma$, the value at $\scripty{r}=2$ is always very close to one-half, regardless of what $\gamma$ is used.
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/wittendiff.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/wittendiff.eps}
 \caption{Witten effect for different values of $\gamma$, but all other parameters the same as in Fig.~\ref{witten}. We see that near $\scripty{r}=2$, when we are measuring the charge inside a sphere which surrounds exactly one monopole, the amount of charge is approximately one-half, and independent of $\gamma$. At smaller $\scripty{r}$ (or at $\scripty{r} \gtrsim 4$ when the sphere starts overlapping with the screening cloud near the second monopole), the enclosed charge does depend on $\gamma$.}
 \label{diffgamma}
 \end{figure}
@@ -498,7 +498,7 @@ Various other measurements can be made to support our conclusions. Measuring the
 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/wittenphase.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/wittenphase.eps}
 \caption{A demonstration of how the Witten effect can be used to detect phase transitions. The plot shows the amount of charge enclosed by a sphere with $\scripty{r}=1$, while changing $K$ but keeping all other parameters the same as in Fig.~\ref{witten}. We can compare to Fig.~\ref{cp1bulkphase}, and see that at $K=0.6$, when the system transitions from the topological phase to the Coulomb phase, the 1/2-quantization of the enclosed charge abruptly stops.}
 \label{wittenphase}
 \end{figure}
@@ -517,9 +517,9 @@ G_\mu(r) \equiv J_\mu(r) - \eta(r) Q_\mu(r) ~,
 \end{equation}
 which satisfy 
 \begin{eqnarray*}
-\left(\sum_\mu \nabla_\mu G_\mu\right) (x, y, z, \tau) &=& 
-\delta_{z, z_R} Q_z(x, y, z_R-1, \tau) \\
-&-& \delta_{z, z_L} Q_z(x, y, z_L-1, \tau) ~. 
+\left(\sum_\mu \nabla_\mu G_\mu\right) (x, y, z, \tau) = 
+\delta_{z, z_R} Q_z(x, y, z_R-1, \tau) 
+- \delta_{z, z_L} Q_z(x, y, z_L-1, \tau) ~. 
 \end{eqnarray*}
 The action for the spins and the new $G_\mu(r)$ variables is simply
 \begin{equation}
@@ -537,8 +537,8 @@ Focusing on the spins near one surface, say at $z_R$, we can view $Q_z(x, y, z_R
 
 Let us now proceed more systematically and, in particular, show how we obtain a generic $NCCP^1$ model on the surface of the bosonic TI region.  For simplicity, we take $\lambda_{\rm bulk}$ to be very large. For finite $\lambda_{\rm surf}$, we need to keep $G_x, G_y, G_\tau$ degrees of freedom in the (2+1)D ``layer'' at $z_R$, while all other $G_\mu(r)$ are zero.  Focusing on the spin variables residing on sites $(X, Y, Z=z_R-1/2, T)$, the hedgehogs in this (2+1)D system are given precisely by $Q_z(x, y, z_R-1, \tau)$, which we will denote simply as $Q(x, y, \tau)$.  The structure of the surface theory is
 \begin{eqnarray}
-S_{\rm surface} &=& S_{\rm matter-gauge} + \frac{K}{2}\sum  ({\bm\nabla} \times {\bm a} - 2\pi {\bm B})^2\nonumber \\
-&+& \frac{\lambda_{\rm surf}}{2}\sum  {\bm G}^2 ~,
+S_{\rm surface} &=& S_{\rm matter-gauge} + \frac{K}{2}\sum  ({\bm\nabla} \times {\bm a} - 2\pi {\bm B})^2
++ \frac{\lambda_{\rm surf}}{2}\sum  {\bm G}^2 ~,
 \label{Ssurf}
 \end{eqnarray}
 subject to constraints
@@ -559,8 +559,8 @@ which satisfy
 \end{equation}
 The action becomes 
 \begin{eqnarray*}
-S_{\rm surface} &=& S_{\rm matter-gauge} + \frac{K}{2}\sum  ({\bm\nabla} \times {\bm a}  - 2\pi {\bm B}^\prime - 2\pi {\bm G})^2 \\
- &+& \frac{\lambda_{\rm surf}}{2}\sum  {\bm G}^2 ~.
+S_{\rm surface} = S_{\rm matter-gauge} + \frac{K}{2}\sum  ({\bm\nabla} \times {\bm a}  - 2\pi {\bm B}^\prime - 2\pi {\bm G})^2 
+ + \frac{\lambda_{\rm surf}}{2}\sum  {\bm G}^2 ~.
 \end{eqnarray*}
 There are now no constraints on the ${\bm G}$ variables, and we can formally sum these out to obtain a local action which is a function of ${\bm\nabla} \times {\bm a} - 2\pi {\bm B}^\prime$,
 \begin{eqnarray}
@@ -609,7 +609,7 @@ We emphasize that the microscopic model we are simulating in (3+1)D has a compac
 All of the phases in Fig.~\ref{cp1surfphase} break either a $U(1)_{\rm spin}$ or a $U(1)_{\rm boson}$ symmetry and are therefore superfluids. As in the previous section, without access to the properties of their gapped excitations we cannot directly confirm that they are the predicted surface phases. As in the previous section, our phase diagram contains a direct transition between the superfluid phases, which can be viewed as providing some evidence for the proposed surface physics and is also predicted to be a deconfined critical point.\cite{SenthilVishwanath}
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/cp1surfphase.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/cp1surfphase.eps}
 \caption{Surface phase diagram on the boundary of the SPT phase in the model with a $CP^1$ version of the spins. The bulk parameters are $\beta_{\rm bulk}=0.2$, $K_{\rm bulk}=0.2$, $\lambda=8$, and the surface parameters are varied. The phase diagram has the same structure as the one found in the $NCCP^1$ model in Ref.~\cite{LesikAshvin2}. The phases are the same as those in Fig.~\ref{heissurf}, though in this figure we have replaced the $SO(3)$ symmetry with $U(1)_{\rm spin}$, and the $\beta_{\rm surf}$ axis is oriented horizontally in Fig.~\ref{heissurf} and vertically in the present figure. }
 \label{cp1surfphase}
 \end{figure}
@@ -638,7 +638,7 @@ Thus, it is suggestive to compare Fig.~\ref{cp1surfpair} with the phase diagram 
 
 
 \begin{figure}
-\includegraphics[angle=-90,width=\linewidth]{figures/cp1surfacepairing.eps}
+\includegraphics[angle=-90,width=0.6\linewidth]{figures/cp1surfacepairing.eps}
 \caption{Surface phase diagram for the easy-plane $CP^1$ version of the model, with the additional pairing term on the surface given by Eq.~(\ref{pairing}). This diagram was obtained for $\beta_{\rm bulk}=0.2$, $K_{\rm bulk}=0.2$, $\lambda=8$, and on the surface $t_{\rm pair}=2$, $\beta_{\rm surf}$ and $K_{\rm surf}$ varied. Compared to Fig.~\ref{cp1surfphase}, we see that there is a new phase at small $\beta_{\rm surf}$ and large $K_{\rm surf}$.  We expect that this surface phase is fully symmetric and has intrinsic topological order.
 }
 \label{cp1surfpair}
@@ -684,7 +684,7 @@ In particular, when the gauge fields are identified the Hall conductivity of a t
 Figure \ref{cp1hall} shows our numerical measurements of the Hall conductivity. The horizontal axis is the strength of the $\ztwot$ symmetry breaking, which we will loosely call Zeeman field. We see that initially there is no quantized Hall conductivity, until the Zeeman field is strong enough to forbid one species of vortex (realized here by ``condensing'' the corresponding spinon species). At this point the Hall conductivity increases and reaches the value of approximately $1$. Though the value observed is actually slightly less than $1$, we believe that a large part of this is a finite-size effect, and indeed as the system size is increased the Hall conductivity gets closer to the expected value.  Note that we performed this measurement at precisely $z=z_R$.  It is {\em a priori} possible that the Hall conductivity could be spread among several values of $z$ near the surface, but this spreading is apparently very small, so that including additional layers does not change the result. In addition to the plot shown, we have performed the same measurement for several different values of $K$, $\beta$ and $\lambda$, and found that the quantized result is independent of these parameters as long as the bulk stays in the topological phase. This odd integer cannot be observed in a purely two-dimensional system with only short-ranged entanglement, and therefore this observation shows that we are measuring the Hall conductivity on the surface of a bosonic TI.
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/cp1hall.eps}
+\includegraphics[width=0.6\linewidth]{figures/cp1hall.eps}
 \caption{Hall conductivity on the surface of the binding phase realized in the $CP^1$ version of the model, measured in units of $e^2/h$ (see text for details). On each surface we find that the conductivity is quantized to $1$, and this odd-integer value shows that we are on the surface of a bosonic TI. Data was taken for $K=0.4$, $\lambda=8$, $\beta_\downarrow=\beta_{\rm bulk}=0.2$. We measure the same conductivity on both the top and bottom surfaces of the topological phase.
 }
 \label{cp1hall}
@@ -735,7 +735,7 @@ Our results for the Hall conductivity are shown in Fig.~\ref{halldiff}. We find 
 \end{figure}
 
 \begin{figure}
-\includegraphics[width=\linewidth]{figures/halldiff.eps}
+\includegraphics[width=0.6\linewidth]{figures/halldiff.eps}
 \caption{Surface Hall conductivity at a boundary of an SET phase for diffent values of $d$, in units of $e^2/h$. We see that the Hall conductivity is given by $1/d$. Both surfaces have been averaged over to improve statistics. Dashed lines are drawn at $1/d$ to guide the eye. Data was taken with $K=0.2$, $\lambda=8$. Different values of $\beta_{\rm bulk}$ were used for different values of $d$, since the phase diagram changes as $d$ changes (see for example Fig.~\ref{fracphase}) and $\beta_{\rm bulk}$ needs to be chosen so that the system is in the topological phase.
 }
 \label{halldiff}
