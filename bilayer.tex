@@ -32,24 +32,18 @@
 
 \section{Introduction}
 
-The remarkable experimental discovery of quantized resistance of a two-dimensional electron gas (2DEG) in strong perpendicular magnetic fields~\cite{Tsui-PhysRevLett.48.1559} has revealed many topologically ordered phases that form due to strong Coulomb interactions in a partially filled Landau level~\cite{prangegirvin}.
- Some examples include the 
- ``odd-denominator" fractional quantum Hall (FQH) states that belong to the sequence of Laughlin~\cite{Laughlin-PhysRevLett.50.1395}, hierarchy~\cite{Haldane1983, Halperin84} and ``composite fermion"~\cite{Jain:1989p294} states. 
- One of their prominent features is the presence of quasiparticles (``anyons") that carry fractional charges~\cite{Laughlin-PhysRevLett.50.1395} and obey fractional statistics~\cite{LeinaasMyrheim, Arovas-Schrieffer-Wilczek}. 
- More intriguing, ``non-Abelian" quasiparticles have been proposed to occur in several experimentally observed FQH states in the first excited Landau level. 
- Most notably, this is the case with an even-denominator filling factor $\nu=5/2$ state~\cite{Willett87}, believed to be described by the Moore-Read Pfaffian state~\cite{MooreRead, Greiter91, Greiter92} that contains non-Abelian anyons of the Ising type~\cite{Nayak96, ReadGreen, BondersonGurarieNayak11}.
+%intro to quantum Hall effect
+When a two-dimensional semiconductor is placed in a strong perpendicular magnetic field, the energy of electrons in the system becomes independent of their momentum. Fermi liquid theory does not apply, and the system can realize a number of exotic phases. The integer quantum Hall effect was the first such phase to be discovered, it was also the first known example of a topological phase\cite{vonKlitzing}. Not longer after this, the fractional quantum Hall effect was discovered\cite{Tsui-PhysRevLett.48.1559}, and this was the first example of a LRE topological phase. The vast majority of observed fractional quantum Hall states belong to the sequence Laughlin~\cite{Laughlin-PhysRevLett.50.1395}, hierarchy~\cite{Haldane1983, Halperin84} and ``composite fermion"~\cite{Jain:1989p294} states. These states realize quasiparticles which have fractional charge and statistics\cite{Laughlin-PhysRevLett.50.1395,LeinaasMyrheim, Arovas-Schrieffer-Wilczek}. 
+Even more exotic states, which host non-Abelian anyons, are also proposed to exist at certain quantum Hall fractions, most notably $\nu=5/2$\cite{MooreRead, Greiter91, Greiter92}. 
+%introduction to two layers
 
-Non-Abelian anyons are of much current interest, both from a fundamental physics perspective and as a platform for topological quantum computing~\cite{Kitaev:QC:03,Nayak:TQCReview:2008}.
-The Ising anyons in the Moore-Read phase are akin to ``Majorana zero modes'' sought after in many recent experiments~\cite{MourikZuo:InSbWire:2012, Rokhinson:InSbWireFracACJosephson:2012, DengLarssonXu:InSbWire:2012, DasRonen:InAsWire:2012, Nadj-PergeYazdani:2014}.
-The ability to control non-Abelian excitations would give rise to long-lived quantum memory~\cite{KitaevWireMajorana:01}.
-
-The aforementioned hierarchies of Abelian and non-Abelian states are \emph{a priori} relevant when the FQH system can be described as a single partially occupied Landau level, that is, the electrons carry no internal degree of freedom.
+The quantum Hall states discussed above `single-species' quantum Hall systems, where the electrons have no internal degrees of freedom. 
 However, ``multicomponent" FQH states are ubiquitous; most obviously electrons carry spin.
 While the Coulomb energy scales as $e^2/\epsilon\ell_B [\unit{K}] \approx 50 \sqrt{B[\unit{T}]}$, assuming free electron values for the mass and $g$ factor in $\mathrm{GaAs}$, the Zeeman splitting is only $E_Z [\unit{K}] \approx 0.3 B[\unit{T}]$, suggesting that in many circumstances the ground state of the system may not be fully spin-polarized. 
 Several classes of unpolarized FQH states have been formulated, including the so-called Halperin $(mmn)$ states~\cite{Halperin83} and spin unpolarized composite fermion states~\cite{Wu93, Wu94, Davenport12, Balram14}.
 In materials such as $\mathrm{AlAs}$ or graphene, ordinary electron spin may furthermore combine with valley degrees of freedom, which can change the sequence of the observed integer and FQH states~\cite{Bishop07, Padmanabhan09, Gokmen10, Novoselov05, Zhang05, Du09, Bolotin09, Ghahari11, Dean11, Feldman12}. 
 
-Here we study an important class of multicomponent FQH systems where the internal degrees of freedom correspond to a subband or layer index, generally referred to as \emph{pseudo-spin}. 
+In this Chapter we study an important class of multicomponent FQH systems where the internal degrees of freedom correspond to a subband or layer index, generally referred to as \emph{pseudo-spin}. 
 For example, if a 2DEG is confined by an infinite square well in the perpendicular $z$-direction, the effective Hilbert space may be restricted to several low-lying subbands of the quantum well (QW). 
 In the most common case, the relevant subbands are the lowest symmetric and antisymmetric subbands of the infinite square well that play the role of an effective \SU2 degree of freedom. 
 Furthermore, it is possible to fabricate samples that consist of two quantum wells separated by a thin insulating barrier. We refer to the latter type of device as the quantum Hall bilayer (QHB). 
@@ -60,7 +54,7 @@ The tunability of interactions in quantum Hall bilayers and quantum wells can gi
 Examples of such phases occur at $\nu=1$ and $\nu=1/2$.
 They have a rich experimental history that we briefly review in Sec.~\ref{sec:ex_back}. 
 
-In this work we focus on the QHB at total filling factor $\nu=1/3+1/3$.
+In this Chapter we focus on the QHB at total filling factor $\nu=1/3+1/3$.
 The early experiment by Suen \emph{et al.}~\cite{Suen94} measured the quasiparticle excitation gap in a wide QW as a function of $\DSAS$.
 The gap was found to close around $\Dnorm \lesssim 0.1$, with an incompressible phase on either side of the transition.
 A realistic model of this system~\cite{Lay97}, that included LDA calculation of the band structure, reproduced the observed behavior of the gap. 
@@ -99,7 +93,7 @@ We develop a diagnostic that detects spin-charge separation in the ground-state 
 By varying the short-range Haldane pseudopotentials in the bilayer system at finite interlayer distance and tunneling, we find evidence for a non-Abelian phase that exhibits spin-charge separation and has non-trivial ground-degeneracy, consistent with the interlayer Pfaffian state. 
 The phase is realized by either reducing the $V_0$ or increasing the $V_1$ pseudopotential component of the interaction, which may naturally occur as a consequence of strong Landau level mixing.    
 
-The remainder of this paper is organized as follows.
+The remainder of this chapter is organized as follows.
 In Sec.~\ref{sec:ex_back} we review some of the previous experimental work in QHB and QW systems.
 In Sec.~\ref{sec:method} we introduce the model of the QHB and discuss the numerical methods and diagnostics for identifying the FQH phases and transitions between them. 
 Sec.~\ref{sec:phase} contains our main results for the phase diagram of $1/3+1/3$ QHB as a function of parameters $w$, $d$ and $\DSAS$. 
@@ -159,9 +153,79 @@ This system may not be fully captured by our model in Sec.~\ref{sec:method} beca
 It is possible, however, that the transition observed at $\nu=5/3$ in Ref.~\cite{Liu15} is indeed in the universality class of $\barthird \to (112)$ transition that we identify in Sec.~\ref{sec:phase} below.  
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Density Matrix Renormalization Group Applied to Quantum Hall systems}
 
+The main numerical method used in this chapter is infinite density renormalization group (iDMRG). In this section we provide a review of what this technique is and how it can be applied to quantum Hall systems.
+
+\subsection{Review of DMRG}
+
+The techniques of DMRG were developed over two decades ago by White\cite{WhiteDMRG} and have been extremely successful since that time in studying two-dimensional systems. Here I will give a rough introduction to how this algorithm works, readers may consult a review for a proper introduction to the method\cite{Schollwock}.
+
+The basic idea of the algorithm is as follows. Consider the following quantum state:
+\begin{equation}
+\Psi=\sum_{\{\alpha_i\}} c_{\alpha_1\alpha_2\ldots\alpha_N}\ket{\alpha_1\alpha_2\ldots\alpha_N}.
+\label{DMRGstart}
+\end{equation}
+Here $i\in[1,N]$ labels the sites of the one-dimensional system, and $\alpha_i$ is an eigenstate of that site (for example for a spin system $\alpha$ could be $S^z$). Naturally a general state is a sum over all possible eigenvalues on each site, each with a coefficient labelled $c$. We can think of $c$ as being a vector, and it can take $d^N$ values, where $d$ is dimension of the $\alpha$ basis on one site. In can be useful to think of $c$ as an $d^{N-1}\times d$ matrix instead of a $d^N$ dimensional vector. Then we can even write $c$ as a product of two matrices, one of size $d^{N-1}\times d$ and the other of size $d\times d$:
+\begin{equation}
+\Psi=\sum_{\{\alpha_i\}}\sum_\beta M_{\alpha_1\alpha_2\ldots\alpha_{N-1}\beta}\Lambda_\beta B^N_{\beta\alpha_N}\ket{\alpha_1\alpha_2\ldots\alpha_N}.
+\end{equation}
+This equation is related to Eq.~(\ref{DMRGstart}) by a singular-value decomposition (SVD), which factors the matrix $c$ into three matrices $M,\Lambda$,$B$, with $\Lambda$ a diagonal matrix. The matrix $B$ contains sum over all states on site $N$, while $A$ contains all the other sites. The index $\beta$, when summed over, multiplies the matrices $A$, $\Lambda$ and $B$. It is called a `virtual' degree of freedom. We can now continue this procedure, by turning $A$ into a $d^{N-2}\times d^2$ matrix, and performing another singular value decomposition. This will leave us with a matrix $B^N$ which contains the $\alpha_N$ index, a matrix $B^{N-1}$ containing the $\alpha_{N-1}$ index, and a new matrix $A$ which contains all the other indices. There will now be two virtual dimension to sum over. We can repeat this process for the entire system. Each physical site will have a $B$ matrix associated with it. Away from the edges of the chain, the $B$ matrices will have approximately $d^N$ elements. This procedure is an exact rewriting of Eq.~(\ref{DMRGstart}). Note that in either the representation in terms of the $B$ matrices, or Eq.~(\ref{DMRGstart}) we have to store $d^N$ numbers do describe our system. This will be very difficult as $N$ becomes large, and so such a formulation cannot be used to study large systems numerically.
+
+To understand why the above rewriting is useful, it is useful to consider the Schimdt decomposition, which states that for any quantum state defined on two subsystems $A$ and $B$:
+\begin{equation}
+\Psi=\sum_{i,j}c_{ij}\ket{i}_A\ket{j}_B,
+\end{equation}
+there is a new basis for the $A$ and $B$ in which the matrix $c_{ij}$ is diagonal:
+\begin{equation}
+\Psi=\sum_{a}c_{a}\ket{a}_A\ket{a}_B,
+\end{equation}
+where $a$ is a label for some basis of $A$ and $B$. The connection to the previous paragraph is that the Schmidt decomposition can be performed using an SVD, with $c_a$ the $\Lambda$ from the $SVD$, and $\ket{a}_A=M\ket{i}_a$, $\ket{a}_B=B\ket{j}_B$. This is important because the $c_a$ from the Schmidt decomposition are the eigenvalues of the reduced density matrix. For a one-dimensional gapped system, these eigenvalues are all positive numbers less than one, and they decay exponentially. Therefore we can obtain a good approximation of $\Psi$ by truncating the matrix $c_a$ to an exponentially small part. If we apply this to the previous paragraph, we see that each matrix $B_i$ can be truncated as well. The size of the truncated matrix $c_a$ is called the `bond dimension' $\chi$, and $B_i$ will go from having \sim$d^N$ values to having only $\chi^2 d$. Therefore the number of numbers needed to represent Eq.~(\ref{DMRGstart}) no longer grows exponentially in $N$, and we can represent our system on a computer. The representation on Eq.~(\ref{DMRGstart}) as a product of matrices $B_i$ is called a `matrix product state' (MPS).
+
+DMRG is the procedure of variationally optimizing a Hamiltonian using matrix product states as the variational ansatz. Since matrix product states can represent any one-dimensional gapped system, in one dimensions this is an excellent ansatz to use. In order to optimize the matrix product state, one needs to be able to quickly contract it with the Hamiltonian. To do this it is convenient to decompose the Hamiltonian into a `matrix-product operator' (MPO), i.e. to write the Hamiltonian as a product of a number of matrices, each of which acts on an individual site. In general this seems like a hard problem, however there are a number of tricks one can use to find the matrix product operators for a given Hamiltonian. For example consider a Hamiltonian which is a product of one site operators, such as:
+\begin{equation}
+H=\sum_i S^z_i
+\label{simpleham}
+\end{equation}
+The following matrix operator represents this Hamiltonian:
+\begin{equation}
+H_i=\left[\begin{array}{cc} \mathbb{1} & 0 \\ S^z & \mathbb{1}\end{array}\right]
+\end{equation}
+This matrix is in the `virtual basis': to get the Hamiltonian this basis is summed over, which means that to get the full Hamiltonian one multiplies matrices like the above for each site. The operators in the matrix act on the physical basis at each site. One can check that multiplying out these matrices generates Eq.~(\ref{simpleham}). Similar matrices for two-site operators such as $S^z_i S^z_{i+1}$ also exist. One can also get exponentially decaying interactions by multiplying matrices of the form:
+\begin{equation}
+H_i=\left[\begin{array}{cc} \mathbb{1} & 0 \\ S^z & \mathbb{1}\end{array}\right]
+\end{equation}
+
+Once the MPO for a given Hamiltonian is known one can find the ground state of that Hamiltonian by multipying all the matrix product operators and matrix product states together, except for a single matrix $B_i$. Then we find the $B_i$ which has the lowest eigenvalue with respect to the operator obtained by multiplying all the other matrices. This is repeated for each $B_i$ until convergence is achieved. The infinite DMRG (iDMRG) algorithm used in this chapter is the same, but every MPS and MPO is taken to be the same.
+
+\subsection{DMRG applied to quantum Hall systems}
+
+In this chapter we will use the above-mentioned DMRG algorithm to study a quantum Hall system. One obvious problem is that quantum Hall systems are two-dimensional, whereas in the previous subsection DMRG was defined for a one-dimensional system. DMRG is commonly used to study two-dimensional systems by defining such systems in a quasi-one-dimensional setup such as on a strip or cylinder, in this chapter we use a cylinder. In a one-dimensional system the bond dimension $\chi$ needed to accurately approximate the system increased polynomially in system size, and this is why the problem is numerically tractable. In a quasi-1D setup the required $\chi\sim e^{L_x}$, where $L_x$ is the diameter of the cylinder. Therefore we will only be able to deal with fairly small cylinders. This is still reasonable. The other numerical method used to study quantum Hall systems, has an exponential cost in both the diameter of the cylinder and its length, so DMRG is still much faster.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Model and Method}\label{sec:method}
 
+\subsection{Numerical methods}\label{sec:numerics}
+
+We work in the Landau gauge, $(A_x,A_y)=\ell_B^{-2}(y,0)$, where the single-particle orbitals with momentum $k_x=\frac{2\pi m}{L}$ ($m \in \mathbb{Z}$) are spatially localized near $y = k_x \ell_B^2$. 
+The system is fully periodic along the $x$-direction, but naturally maps to a long-range interacting 1D fermion chain along $y$-axis.
+We study such chains using exact diagonalization as well as density-matrix renormalization group~\cite{ZaletelQHdmrg13, ZaletelMixing}.
+
+For the purposes of exact diagonalization (ED), it is useful to minimize the finite-size effects by assuming the 1D chain to be periodic (i.e., the physical system is  periodic along both $x$ and $y$ directions, or equivalently it has the topology of a torus). 
+Using magnetic translation symmetry reduction of the Hilbert space~\cite{Haldane-PhysRevLett.55.2095}, it is possible to study systems of about 10 electrons with pseudo-spin degree of freedom at filling $1/3+1/3$. 
+The advantages of ED method are the direct access to the entire low-lying excitation spectrum, resolved ground state degeneracy, the ability to simulate complicated interactions (e.g., 3-body) that give rise to non-Abelian states, and compute overlaps between model wavefunctions and exact states.
+
+Because of the exponential cost of ED that becomes prohibitive for systems with pseudo-spin degree of freedom, the bulk of our results are obtained via the recently developed infinite DMRG method (iDMRG)~\cite{ZaletelQHdmrg13, ZaletelMixing} that allows access to larger system sizes. 
+iDMRG places the Hamiltonian on an infinitely long cylinder of circumference $L$, and employs a variational procedure to find the ground state within the variational space of matrix product states (MPS)~\cite{Fannes1992,Ostlund1995,Rommer1997}. 
+MPS can only represent systems with a finite amount of entanglement $S$, which in turn is limited by the ``bond dimension" $\chi$ via $S < \log(\chi)$, while the computational resources required scale as $O(\chi^3)$. In this work we used a bond dimension $\chi \sim 5000\mbox{--}8000$.
+On a cylinder, the entanglement scales with the circumference $L$, but is independent of the length of the cylinder. 
+Therefore, while the complexity remains exponential in the circumference, it is constant in the length of the cylinder, which provides an advantage over ED. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The bilayer model}
 We label the two layers of the bilayer with the index $\mu \in \{\up,\dn\}$, and consider  Hamiltonians of the general form
 \begin{equation}
@@ -203,22 +267,6 @@ In experiment, such variations of the interaction may arise due to Landau level 
 
 Henceforth, we set the energy and length scales $\frac{e^2}{\epsilon\ell_B} = \ell_B = 1$ whenever units are omitted.
 
-
-\subsection{Numerical methods}\label{sec:numerics}
-
-We work in the Landau gauge, $(A_x,A_y)=\ell_B^{-2}(y,0)$, where the single-particle orbitals with momentum $k_x=\frac{2\pi m}{L}$ ($m \in \mathbb{Z}$) are spatially localized near $y = k_x \ell_B^2$. 
-The system is fully periodic along the $x$-direction, but naturally maps to a long-range interacting 1D fermion chain along $y$-axis.
-We study such chains using exact diagonalization as well as density-matrix renormalization group~\cite{ZaletelQHdmrg13, ZaletelMixing}.
-
-For the purposes of exact diagonalization (ED), it is useful to minimize the finite-size effects by assuming the 1D chain to be periodic (i.e., the physical system is  periodic along both $x$ and $y$ directions, or equivalently it has the topology of a torus). 
-Using magnetic translation symmetry reduction of the Hilbert space~\cite{Haldane-PhysRevLett.55.2095}, it is possible to study systems of about 10 electrons with pseudo-spin degree of freedom at filling $1/3+1/3$. 
-The advantages of ED method are the direct access to the entire low-lying excitation spectrum, resolved ground state degeneracy, the ability to simulate complicated interactions (e.g., 3-body) that give rise to non-Abelian states, and compute overlaps between model wavefunctions and exact states.
-
-Because of the exponential cost of ED that becomes prohibitive for systems with pseudo-spin degree of freedom, the bulk of our results are obtained via the recently developed infinite DMRG method (iDMRG)~\cite{ZaletelQHdmrg13, ZaletelMixing} that allows access to larger system sizes. 
-iDMRG places the Hamiltonian on an infinitely long cylinder of circumference $L$, and employs a variational procedure to find the ground state within the variational space of matrix product states (MPS)~\cite{Fannes1992,Ostlund1995,Rommer1997}. 
-MPS can only represent systems with a finite amount of entanglement $S$, which in turn is limited by the ``bond dimension" $\chi$ via $S < \log(\chi)$, while the computational resources required scale as $O(\chi^3)$. In this work we used a bond dimension $\chi \sim 5000\mbox{--}8000$.
-On a cylinder, the entanglement scales with the circumference $L$, but is independent of the length of the cylinder. 
-Therefore, while the complexity remains exponential in the circumference, it is constant in the length of the cylinder, which provides an advantage over ED. 
 
 
 \subsection{Entanglement invariants for the identification of FQH phases}
