@@ -181,7 +181,7 @@ there is a new basis for the $A$ and $B$ in which the matrix $c_{ij}$ is diagona
 \begin{equation}
 \Psi=\sum_{a}c_{a}\ket{a}_A\ket{a}_B,
 \end{equation}
-where $a$ is a label for some basis of $A$ and $B$. The connection to the previous paragraph is that the Schmidt decomposition can be performed using an SVD, with $c_a$ the $\Lambda$ from the $SVD$, and $\ket{a}_A=M\ket{i}_a$, $\ket{a}_B=B\ket{j}_B$. This is important because the $c_a$ from the Schmidt decomposition are the eigenvalues of the reduced density matrix. For a one-dimensional gapped system, these eigenvalues are all positive numbers less than one, and they decay exponentially. Therefore we can obtain a good approximation of $\Psi$ by truncating the matrix $c_a$ to an exponentially small part. If we apply this to the previous paragraph, we see that each matrix $B_i$ can be truncated as well. The size of the truncated matrix $c_a$ is called the `bond dimension' $\chi$, and $B_i$ will go from having \sim$d^N$ values to having only $\chi^2 d$. Therefore the number of numbers needed to represent Eq.~(\ref{DMRGstart}) no longer grows exponentially in $N$, and we can represent our system on a computer. The representation on Eq.~(\ref{DMRGstart}) as a product of matrices $B_i$ is called a `matrix product state' (MPS).
+where $a$ is a label for some basis of $A$ and $B$. The connection to the previous paragraph is that the Schmidt decomposition can be performed using an SVD, with $c_a$ the $\Lambda$ from the $SVD$, and $\ket{a}_A=M\ket{i}_a$, $\ket{a}_B=B\ket{j}_B$. This is important because the $c_a$ from the Schmidt decomposition are the eigenvalues of the reduced density matrix. For a one-dimensional gapped system, these eigenvalues are all positive numbers less than one, and they decay exponentially. Therefore we can obtain a good approximation of $\Psi$ by truncating the matrix $c_a$ to an exponentially small part. If we apply this to the previous paragraph, we see that each matrix $B_i$ can be truncated as well. The size of the truncated matrix $c_a$ is called the `bond dimension' $\chi$, and $B_i$ will go from having $\sim d^N$ values to having only $\chi^2 d$. Therefore the number of numbers needed to represent Eq.~(\ref{DMRGstart}) no longer grows exponentially in $N$, and we can represent our system on a computer. The representation on Eq.~(\ref{DMRGstart}) as a product of matrices $B_i$ is called a `matrix product state' (MPS). The bond dimension $\chi$ represents the amount of entanglement between the subsystems on either side of the bond. The computational resources required to find the ground state are $O(\chi^3)$.
 
 DMRG is the procedure of variationally optimizing a Hamiltonian using matrix product states as the variational ansatz. Since matrix product states can represent any one-dimensional gapped system, in one dimensions this is an excellent ansatz to use. In order to optimize the matrix product state, one needs to be able to quickly contract it with the Hamiltonian. To do this it is convenient to decompose the Hamiltonian into a `matrix-product operator' (MPO), i.e. to write the Hamiltonian as a product of a number of matrices, each of which acts on an individual site. In general this seems like a hard problem, however there are a number of tricks one can use to find the matrix product operators for a given Hamiltonian. For example consider a Hamiltonian which is a product of one site operators, such as:
 \begin{equation}
@@ -199,31 +199,61 @@ H_i=\left[\begin{array}{cc} \mathbb{1} & 0 \\ S^z & \mathbb{1}\end{array}\right]
 
 Once the MPO for a given Hamiltonian is known one can find the ground state of that Hamiltonian by multipying all the matrix product operators and matrix product states together, except for a single matrix $B_i$. Then we find the $B_i$ which has the lowest eigenvalue with respect to the operator obtained by multiplying all the other matrices. This is repeated for each $B_i$ until convergence is achieved. The infinite DMRG (iDMRG) algorithm used in this chapter is the same, but every MPS and MPO is taken to be the same.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DMRG applied to quantum Hall systems}
 
-In this chapter we will use the above-mentioned DMRG algorithm to study a quantum Hall system. One obvious problem is that quantum Hall systems are two-dimensional, whereas in the previous subsection DMRG was defined for a one-dimensional system. DMRG is commonly used to study two-dimensional systems by defining such systems in a quasi-one-dimensional setup such as on a strip or cylinder, in this chapter we use a cylinder. In a one-dimensional system the bond dimension $\chi$ needed to accurately approximate the system increased polynomially in system size, and this is why the problem is numerically tractable. In a quasi-1D setup the required $\chi\sim e^{L_x}$, where $L_x$ is the diameter of the cylinder. Therefore we will only be able to deal with fairly small cylinders. This is still reasonable. The other numerical method used to study quantum Hall systems, has an exponential cost in both the diameter of the cylinder and its length, so DMRG is still much faster.
+In this chapter we will use the above-mentioned DMRG algorithm to study a quantum Hall system. One obvious problem is that quantum Hall systems are two-dimensional, whereas in the previous subsection DMRG was defined for a one-dimensional system. DMRG is commonly used to study two-dimensional systems by defining such systems in a quasi-one-dimensional setup such as on a strip or cylinder, in this chapter we use a cylinder. In a one-dimensional system the bond dimension $\chi$ needed to accurately approximate the system increased polynomially in system size, and this is why the problem is numerically tractable. In a quasi-1D setup the required $\chi\sim e^{L_x}$, where $L_x$ is the diameter of the cylinder. Therefore we will only be able to deal with fairly small cylinders. This is still reasonable. The other numerical method used to study quantum Hall systems, exact diagonalization, has an exponential cost in both the diameter of the cylinder and its length, so DMRG can study significantly larger sizes.
 
+To put the quantum Hall system on a cylinder, we use the Landau gauge $(A_x,A_y)=(By,0)$. The Hamiltonian in this gauge, in the absence of interactions between electrons, is:
+\footnote{This is the Hamiltonian for a single species, which will be discussed for most of this section. The generalization to more species is fairly straightforward\cite{ZaletelMixing}.}
+\begin{equation}
+H_0=p_y^2+\left(p_x^2-\frac{eB}{c}y\right)^2.
+\end{equation}
+Where $B$ is the magnetic field, $x$ is the direction around the circumference of the cylinder and $y$ is the direction along the cylinder. This Hamiltonian has a number of ground states, which are given by the following wave functions:
+\begin{equation}
+\phi_n(x,y)=\frac{e^{-ik_nx}e^{-(y-k_n\ell_B^2)^2}}{\sqrt(2L_x\pi^{1/2}} \quad k_n=\frac{2\pi n}{L_x}.
+\label{formfactors}
+\end{equation}
 
+We will perform numerics in the orbital basis, indexed by $\mu$ and defined by:
+\begin{equation}
+c(r)=\sum_n \phi_n(x,y)c_n,
+\end{equation}
+where $c_n$ annihilates an electron in orbital $n$ and $c(r)$ annihilates an electron at position $r=(x,y)$. Each orbital carries $x$-momentum $k_n$ and is localized at position $k_n\ell_B^2$. The occupation for each orbital is either $0$ or $1$. Therefore in the orbital basis the quantum Hall problem reduces to a one-dimensional Hubbard model (though with some unusual interactions) and this is a problem that can be solved with DMRG.
+ 
+We want to find ground states of the above Hamiltonian, including interactions
+\begin{equation}
+\delta H=\sum(r,r^\prime) V(r-r^\prime) \rho(r)\rho(r^\prime).
+\label{HCoulomb}
+\end{equation}
+$V(r)$ will typically be a Coulomb interaction, and $\rho(r)\equiv c^\dagger(r)c(r)$ is the electron density. Naturally the eigenstates of the full Hamiltonian may not be spanned by the basis $\phi_n$, but we restrict ourselves to this basis anyways, which is projection to the lowest Landau level. In the systems considered in this chapter this is a reasonable approximation to make. The every separation between Landau levels from $H_0$ is proportional to the magnetic field $B$, while $\delta H\sim\sqrt{B}$. Therefore at large enough fields higher Landau levels can be neglected. It has also been shown that expansions in the Landau level mixing parameter $\kappa$ (which is essentially $\delta H/H_0$) are stable even for $\kappa\approx1$. Though neglecting Landau level mixing is a reasonable approximation in this work, in other systems such as graphene, where the Landau level spacing is $\sim\sqrt{B}$, or in cases where Landau level mixing breaks a particle-hole symmetry, it cannot be neglected.
 
+Eq.~(\ref{HCoulomb}) can be written in the orbital basis as: 
+\begin{equation}
+\delta H=\sum_{n,m,k} V_{mk} c^{\dagger}_{n+m} c_{n+k}^{\dagger} c_{n+m+k} c_{n}.
+\end{equation}
+We see that the Coulomb Hamiltonian induces both hopping between orbitals as well as diagonal terms. Note that all of these hoppings preserve momentum in the $x$-direction. If $V_{mk}$ is a Coulomb interaction then it is proportional to $|r-r^\prime|^{-1}$. In the orbital basis, the orbitals are at positions $2\pi n \ell_B^2/L_x$, i.e.~they get closer together as the diameter of the cylinder is increased, and in orbital space the Coulomb interaction gets longer-ranged as $L_x$ is increased. The longer-ranged interaction induces more entanglement between the different orbitals, and so a larger $\chi$ is required to represent the matrix product state. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Model and Method}\label{sec:method}
+In the previous subsection we saw how to represent both on-site interactions and exponentially decaying interactions using matrix product operators. In the quantum Hall problem we have a power-law decaying operator. This can be approximated by a linear combination of exponentials, and that is the approach taken in this chapter\cite{ZaletelQHdmrg13}. 
 
-\subsection{Numerical methods}\label{sec:numerics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Model and Method}\label{sec:method}
 
-We work in the Landau gauge, $(A_x,A_y)=\ell_B^{-2}(y,0)$, where the single-particle orbitals with momentum $k_x=\frac{2\pi m}{L}$ ($m \in \mathbb{Z}$) are spatially localized near $y = k_x \ell_B^2$. 
-The system is fully periodic along the $x$-direction, but naturally maps to a long-range interacting 1D fermion chain along $y$-axis.
-We study such chains using exact diagonalization as well as density-matrix renormalization group~\cite{ZaletelQHdmrg13, ZaletelMixing}.
+%\subsection{Numerical methods}\label{sec:numerics}
 
-For the purposes of exact diagonalization (ED), it is useful to minimize the finite-size effects by assuming the 1D chain to be periodic (i.e., the physical system is  periodic along both $x$ and $y$ directions, or equivalently it has the topology of a torus). 
-Using magnetic translation symmetry reduction of the Hilbert space~\cite{Haldane-PhysRevLett.55.2095}, it is possible to study systems of about 10 electrons with pseudo-spin degree of freedom at filling $1/3+1/3$. 
-The advantages of ED method are the direct access to the entire low-lying excitation spectrum, resolved ground state degeneracy, the ability to simulate complicated interactions (e.g., 3-body) that give rise to non-Abelian states, and compute overlaps between model wavefunctions and exact states.
+%We work in the Landau gauge, $(A_x,A_y)=\ell_B^{-2}(y,0)$, where the single-particle orbitals with momentum $k_x=\frac{2\pi m}{L}$ ($m \in \mathbb{Z}$) are spatially localized near $y = k_x \ell_B^2$. 
+%The system is fully periodic along the $x$-direction, but naturally maps to a long-range interacting 1D fermion chain along $y$-axis.
+%We study such chains using exact diagonalization as well as density-matrix renormalization group~\cite{ZaletelQHdmrg13, ZaletelMixing}.
 
-Because of the exponential cost of ED that becomes prohibitive for systems with pseudo-spin degree of freedom, the bulk of our results are obtained via the recently developed infinite DMRG method (iDMRG)~\cite{ZaletelQHdmrg13, ZaletelMixing} that allows access to larger system sizes. 
-iDMRG places the Hamiltonian on an infinitely long cylinder of circumference $L$, and employs a variational procedure to find the ground state within the variational space of matrix product states (MPS)~\cite{Fannes1992,Ostlund1995,Rommer1997}. 
-MPS can only represent systems with a finite amount of entanglement $S$, which in turn is limited by the ``bond dimension" $\chi$ via $S < \log(\chi)$, while the computational resources required scale as $O(\chi^3)$. In this work we used a bond dimension $\chi \sim 5000\mbox{--}8000$.
-On a cylinder, the entanglement scales with the circumference $L$, but is independent of the length of the cylinder. 
-Therefore, while the complexity remains exponential in the circumference, it is constant in the length of the cylinder, which provides an advantage over ED. 
+%For the purposes of exact diagonalization (ED), it is useful to minimize the finite-size effects by assuming the 1D chain to be periodic (i.e., the physical system is  periodic along both $x$ and $y$ directions, or equivalently it has the topology of a torus). 
+%Using magnetic translation symmetry reduction of the Hilbert space~\cite{Haldane-PhysRevLett.55.2095}, it is possible to study systems of about 10 electrons with pseudo-spin degree of freedom at filling $1/3+1/3$. 
+%The advantages of ED method are the direct access to the entire low-lying excitation spectrum, resolved ground state degeneracy, the ability to simulate complicated interactions (e.g., 3-body) that give rise to non-Abelian states, and compute overlaps between model wavefunctions and exact states.
+
+%Because of the exponential cost of ED that becomes prohibitive for systems with pseudo-spin degree of freedom, the bulk of our results are obtained via the recently developed infinite DMRG method (iDMRG)~\cite{ZaletelQHdmrg13, ZaletelMixing} that allows access to larger system sizes. 
+%iDMRG places the Hamiltonian on an infinitely long cylinder of circumference $L$, and employs a variational procedure to find the ground state within the variational space of matrix product states (MPS)~\cite{Fannes1992,Ostlund1995,Rommer1997}. 
+%MPS can only represent systems with a finite amount of entanglement $S$, which in turn is limited by the ``bond dimension" $\chi$ via $S < \log(\chi)$, while the computational resources required scale as $O(\chi^3)$. In this work we used a bond dimension $\chi \sim 5000\mbox{--}8000$.
+%On a cylinder, the entanglement scales with the circumference $L$, but is independent of the length of the cylinder. 
+%Therefore, while the complexity remains exponential in the circumference, it is constant in the length of the cylinder, which provides an advantage over ED. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{The bilayer model}
@@ -233,10 +263,7 @@ We label the two layers of the bilayer with the index $\mu \in \{\up,\dn\}$, and
 	- \frac{\DSAS}{2} \int\! \D^2\r\, c^{\mu\dagger}(\r) \sigma^x_{\mu \nu} c^{\nu}(\r), 
 	\label{ham}
 \end{equation}
-where ${c^{\mu}}^\dagger (\r)$ creates an electron in layer $\mu$ at the position $\r\equiv(x,y)$. The first term is the Coulomb interaction, expressed in terms of the density operator 
-\begin{eqnarray}\label{density}
-	n^{\mu}(\r)=c^{\mu\dagger} (\r) c^{\mu}(\r).
-\end{eqnarray}
+where ${c^{\mu}}^\dagger (\r)$ creates an electron in layer $\mu$ at the position $\r\equiv(x,y)$. The first term is the Coulomb interaction
 for an electron in layer $\mu$. The precise form of the interaction term depends on the details of the bilayer. The second term encodes tunneling between the two layers.
 When $V_C^{\mu\nu}$ is \SU2 symmetric this Hamiltonian is equivalent to a $\nu=2/3$ system with spin, and in this case $\DSAS$ can be thought of as the Zeeman splitting.
 
