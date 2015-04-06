@@ -6,14 +6,14 @@
 
 \section{Introduction}
 
-In this chapter we use the formalism developed in Chapter \ref{chapter::methods} to construct a model a topological phase known as the bosonic quantum Hall effect. This is a phase which is constructed of interacting bosons, but which has a quantized Hall conductivity and gapless edge modes, and we will show that our model indeed has these properties. The bosonic integer quantum Hall effect has short-ranged entanglement, and is a symmetry-protected topological phase protected by $\uxu$ symmetry, while the fractional case has long-ranged entanglement and the same symmetry, and is a `symmetry-enriched' topological phase\cite{EssinHermele}. 
+In this chapter we use the formalism developed in Chapter \ref{chapter::methods} to construct a model of a topological phase known as the bosonic quantum Hall effect. This is a phase which is constructed of interacting bosons, but which has a quantized Hall conductivity and gapless edge modes, and we will show that our model indeed has these properties. The bosonic integer quantum Hall effect has short-ranged entanglement, and is a symmetry-protected topological phase protected by $\uxu$ symmetry, while the fractional case has long-ranged entanglement and the same symmetry, and is a `symmetry-enriched' topological phase\cite{EssinHermele}. 
 
 Prior to our work, Ref.~\cite{LuVishwanath2012} used Chern-Simons approaches to provide understanding of the boson IQHE (for a review, see Ref.~\cite{TurnerVishwanath2013}).  Several papers have proposed qualitative construction of such phases using Chern-Simons flux attachment\cite{SenthilLevin2012} and slave-particle approaches.\cite{GroverVishwanath2012, LuLee2012_QPT, LuLee2012_S1}  However, prior to our work there have been no microscopic models producing such states.
 Our approach is different from Chern-Simons and slave-particle approaches, in that we work directly with physical degrees of freedom and do not introduce artificial fluxes or enlarge the Hilbert space.  More specifically, we think directly in terms of charge and vortex degrees of freedom, which are all precisely mathematically defined in our lattice models.  In this way, our work is close in spirit to pursuits to understand fractionalized phases of spins and bosons in terms of the vortex physics.\cite{BalentsFisherNayak1999, SenthilFisher_Z2}  The $U(1) \times U(1)$ structure allows us to provide an unambiguous and simple physical picture of the integer and fractional quantum Hall states of bosons.  Thus, an elementary integer quantum Hall state is obtained when a vortex in one species binds a charge of the other species and the resulting composite object condenses; our approach provides a precise meaning of such a condensation.  General integer quantum Hall states are obtained when a vortex in one species binds a fixed number of charges of the other species.  On the other hand, fractional quantum Hall states are obtained when we have condensation of composite objects that are bound states of $d$ vortices of one species and $c$ particles of the other species.  In this case we show that the system has a fractional quantum Hall response given by $\sigma_{xy} = 2c/d$ and has quasiparticles carrying fractional charges of $1/d$ of the microscopic charges and non-trivial mutual statistics.  Such $d$-tupled vortex condensation leading to charge fractionalization is reminiscent of the idea in Refs.~\cite{BalentsFisherNayak1999, SenthilFisher_Z2} of paired-vortex condensation leading to $Z_2$ fractionalized phases, although in the present case there is also binding of charges and the phase shows quantized Hall response.
 
 This chapter is organized as follows.  In Sec.~\ref{sec::demon} we describe how the results of Chapter \ref{chapter::methods} can be used to realize integer and fractional quantum Hall phases, and how these phases can be studied in Monte Carlo simulations.  In Sec.~\ref{sec::results} we present the results of these numerics, including evidence for gapless modes at the boundary of the quantum Hall states.  In Sec.~\ref{sec:reverse} we show the broader phase diagrams for our models.  
 %In Sec.~\ref{sec:connections} we demonstrate the connections between our models and various field-theoretic approaches, specifically non-linear sigma models with topological terms and $K$-matrix theories.  
-Finally, in Sec.~\ref{sec:H} we present a local Hamiltonian which gives the action discussed in the rest of the chapter.
+Finally, in Sec.~\ref{section::H} we present a local Hamiltonian which gives the action discussed in the rest of the chapter.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,18 +22,18 @@ Finally, in Sec.~\ref{sec:H} we present a local Hamiltonian which gives the acti
 
 We start with the action for two species of bosons with statistical interactions given in Chapter \ref{chapter::methods}, Eq.~(\ref{kaction_1}):
 \begin{eqnarray}
-S&=&\frac{1}{2}\sum_k \left[v_1(k)|\JJ_1(k)|^2+v_2(k)|\JJ_2(k)|^2\right]\nonumber\\
-&+&i\sum_k \theta(k)\JJ_1(-k)\cdot \vec{a}_{J2}(k).
+S=\frac{1}{2}\sum_k \left[v_1(k)|\JJ_1(k)|^2+v_2(k)|\JJ_2(k)|^2\right]
++i\sum_k \theta(k)\JJ_1(-k)\cdot \vec{a}_{J2}(k).
 \label{kaction_2}
 \end{eqnarray}
-The problem with using this action to realize boson QHE, or any phase, is that the $\theta$ term is non-local, and cannot be realized by a local Hamiltonian. We would like to make the action local. Note that the non-locality of the action is due to the explicit appearance of the gauge field $\vec{a}_2$. Therefore the model can be made local if we set $\theta(k)=|f_k|^2 w(k)$, where $w(k)$ is some local interaction term. Since $f_k$ is the Fourier transform of a lattice derivative, $|f_k|^2$ is equivalent to two derivatives in real space. Therefore when we transform the action to real space we get:
+The problem with using this action to realize boson QHE, or any phase, is that the $\theta$ term is non-local, and cannot be realized by a local Hamiltonian. We would like to make the action local. Note that the non-locality of the action is due to the explicit appearance of the gauge field $\vec{a}_{J2}$. Therefore the model can be made local if we set $\theta(k)=|f_k|^2 w(k)$, where $w(k)$ is some local interaction term. Since $f_k$ is the Fourier transform of a lattice derivative, $|f_k|^2$ is equivalent to two derivatives in real space. Therefore when we transform the action to real space end up taking the curl of both $\JJ_1$ and $a_{J2}$, and from the definition of $a_{J2}$ in Eq.~(\ref{adef}) we get:
 \begin{eqnarray}
 S&=&\frac{1}{2} \sum_{r,r'} v_1(r-r')\JJ_1(r)\cdot\JJ_1(r')
 +\frac{1}{2}\sum_{R,R'} v_2(R-R')\JJ_2(R)\cdot\JJ_2(R')\nonumber\\
 &+&i\sum_{R,R'}  w(R-R')[\vec{\nabla}\times\JJ_1](R)\cdot\JJ_2(R').
 \label{action}
 \end{eqnarray}
-Now all of the terms are local. Note that $\JJ_1(r)$ and $\JJ_2(R)$ live on cubic lattices which are dual to each other. 
+Now all of the terms are local. Note that $\JJ_1(r)$ and $\JJ_2(R)$ live on cubic lattices which are dual to each other, as described in Chapter~\ref{chapter::methods}. 
 
 The action in Eq.~(\ref{action}) is local, but it is also difficult to analyze. In order to study it, we want to transform to new variables $\GG_1$, $\GG_2$ which are gapped, as described in Chapter \ref{chapter::methods}. To do this we need to find expressions for $v_1(k)$, $v_2(k)$ and $w(k)$ which can be transformed using a modular transformation with some $(a,b,c,d)$ to an action which is gapped. The expressions which can accomplish this are: 
 \begin{eqnarray}
@@ -60,32 +60,32 @@ S&=&\frac{1}{2d^2\lambda_1}\sum_r \GG_1(r)^2
 \end{eqnarray}
 where we have used $ad-bc=1$ where necessary. 
 
-For the case where $\lambda_i$ are small the $\GG$ variables are see a large energy potential and are gapped, and we can read off the Hall conductivity from the coefficient of the Chern-Simons term for the $A$ fields. We find
+For the case where the $\lambda_i$ are small the $\GG$ variables see a large energy potential and are gapped, and we can read off the Hall conductivity from the coefficient of the Chern-Simons term for the $A$ fields. We find
 \begin{equation}
 \sigma_{xy}^{12}(k\rightarrow0)=\frac{c}{d},
 \label{sigma}
 \end{equation}
-In units of $e^2/h$. From the $\GG\cdot\vec{A}$ terms we can see that the $\GG$ bosons carry 
+in units of $e^2/h$. From the $\GG\cdot\vec{A}$ terms we can see that the $\GG$ bosons carry 
 \begin{equation}
 {\rm charge} = \frac{1}{d}, \label{charge1d}
 \end{equation}
 relative to $\Aext_1$ and $\Aext_2$ respectively.
 From the mutual statistics term we can see that they have mutual statistics $2\pi b/d$. 
 
-We see that when $d=1$, the system has a Hall conductivity quantized to be an integer and excitations carrying integer charges. We propose that this is a realization of the bosonic integer quantum Hall effect.\cite{LuVishwanath2012}  When $d>1$, we see that the Hall conductivity is quantized as a rational number and the $\GG$ quasiparticles carry fractional charge and statistics. Therefore this phase is a fractional quantum Hall effect for bosons. Note that the Hall conductivity studied here is the `cross-species Hall conductivity': the current of bosons coupled to the external field $\Aext_2$ under an applied $\Aext_1$ field. If these external fields are identified [reducing the symmetry of the system from $uxu$ to $U(1)$, then the Hall conductivity is doubled, which gives a Hall conductivity quantized to an even integer, consistent with studies of the boson quantum Hall effect in the literature.
+We see that when $d=1$, the system has a Hall conductivity quantized to be an integer and excitations carrying integer charges. We propose that this is a realization of the bosonic integer quantum Hall effect.\cite{LuVishwanath2012}  When $d>1$, we see that the Hall conductivity is quantized as a rational number and the $\GG$ quasiparticles carry fractional charge and statistics. Therefore this phase is a fractional quantum Hall effect for bosons. Note that the Hall conductivity studied here is the `cross-species Hall conductivity': the current of bosons coupled to the external field $\Aext_2$ under an applied $\Aext_1$ field. If these external fields are identified [reducing the symmetry of the system from $\uxu$ to $U(1)$], then the Hall conductivity is doubled, which gives a Hall conductivity quantized to an even integer, consistent with studies of the boson quantum Hall effect in the literature.
 
-As an intermediate step in the change of variables procedure defined in Chapter \ref{chapter::methods}, we obtain the following action (which is a specialization of Eq.~(\ref{JQ1}):
+As an intermediate step in the change of variables procedure defined in Chapter \ref{chapter::methods}, we obtain the following action [which is a specialization of Eq.~(\ref{JQ1})]:
 \begin{eqnarray}
 S = \frac{1}{2}\sum_{k} \frac{(2\pi)^2\lambda_1}{|\vec{f}_k|^2 } |\QQ_1(k)|^2\label{JQreal}
 + \frac{1}{2}\sum_{R} \frac{1}{\lambda_2} |\JJ_2(R) - \eta(R)\QQ_1(R)|^2.\nonumber
 \end{eqnarray}
 Here $\eta(R)=c/d$ everywhere in the system, though later we will consider spatially varying $\eta(R)$. Studying this action at small $\lambda_1$ and $\lambda_2$ can tell us about the physics of the quantum Hall states.
 
-First consider the situation where $c=0$, which leads to $\eta(R)=0$, and consider the limit of small $\lambda_1$, $\lambda_2$. We can see from Eq.~(\ref{sigma}) that $\sigma^{12}_{xy}$ vanishes and therefore this system is not in a Quantum Hall state. 
-There is a small energy cost for loops in the $\QQ_1$ variables, but a large energy cost for loops in the $\JJ_2$ variables. Therefore the $\JJ_2$ loops are gapped. The $\QQ_1$ variables are `condensed', which means that large loops of these variables can form. In general, since $\JJ_1$ and $\QQ_1$ are related by a duality transformation, if one of them is gapped the other is condensed. Therefore the $\JJ_1$ variables are gapped in this phase. Since the physical $\JJ_1$ and $\JJ_2$ variables are gapped, the system is a trivial insulator. This situation is shown on the right side of Fig.~\ref{surface}.  We could have arrived at this conclusion also more quickly by examining Eqs.~(\ref{vintro})-(\ref{tintro}) for $c=0$, but it was convenient to develop the picture in the $\cQ_1$ and $\cJ_2$ variables.
+First consider the situation where $c=0$, which leads to $\eta(R)=0$, and consider the limit of small $\lambda_1$, $\lambda_2$. We can see from Eq.~(\ref{sigma}) that $\sigma^{12}_{xy}$ vanishes and therefore this system is not in a quantum Hall state. 
+There is a small energy cost for loops in the $\QQ_1$ variables, but a large energy cost for loops in the $\JJ_2$ variables. Therefore the $\JJ_2$ loops are gapped. The $\QQ_1$ variables are `condensed', which means that large loops of these variables can form. In general, since $\JJ_1$ and $\QQ_1$ are related by a duality transformation, if one of them is gapped the other is condensed. Therefore the $\JJ_1$ variables are gapped in this phase. Since the physical $\JJ_1$ and $\JJ_2$ variables are gapped, the system is a trivial insulator. This situation is shown on the left side of Fig.~\ref{surface}.  We could have arrived at this conclusion also more quickly by examining Eqs.~(\ref{vintro})-(\ref{tintro}) for $c=0$, but it was convenient to develop the picture in the $\cQ_1$ and $\cJ_2$ variables.
 
 Now consider the case where $c\neq0$, so that $\eta(R)=c/d$. Since the $\GG$ variables are gapped we have a quantized Hall conductivity, and the system is in the bosonic quantum Hall state.
-Notice that composite objects with $\JJ_2=c$ and $\QQ_1=d$ see a very small energy cost, and therefore large loops of such objects can form.  On the other hand, both the $\JJ_2$ and $\QQ_1$ variables see large potentials if they exist independently, so only small loops of these variables can form by themselves. This is illustrated on the left side of Fig.~\ref{surface}. We can see that the boson quantum Hall effect can be well described by binding bosons of species $1$ to vortices of species $2$. 
+Notice that composite objects with $\JJ_2=c$ and $\QQ_1=d$ see a very small energy cost, and therefore large loops of such objects can form.  On the other hand, both the $\JJ_2$ and $\QQ_1$ variables see large potentials if they exist independently, so only small loops of these variables can form by themselves. This is illustrated on the right side of Fig.~\ref{surface} (for $c=d=1$). We can see that the boson quantum Hall effect can be well described by binding bosons of species $1$ to vortices of species $2$. 
 
 We would like to know what carries the charges that leads to the $\sigma^{12}_{xy}\neq 0$. By analogy with the fermionic Quantum Hall effect, we expect that the charges are being carried by edge states. We will examine the physics of the formation of edge states by including a boundary between the quantum Hall state and the trivial insulator in our system.
 This is accomplished by allowing $\eta(R)$ to vary in space. Therefore we have one region where $\eta(R)=c/d$, and we have another region where $\eta(R)=0$.  Note that we have defined $\eta(R)$ as varying on the dual lattice denoted by the index $R$. Before we allowed $\eta$ to vary in space, we had a symmetry between the $\JJ_1$ and $\JJ_2$ variables in the case where $v_1=v_2$. However the different variables see the boundary differently and it  breaks this symmetry.
@@ -114,7 +114,7 @@ c/d & {\rm for}~ X_L \leq X < X_R \\
 where $X$ is the $x$-coordinate on the dual lattice. The quantum Hall behavior occurs in the region with non-zero $\eta$. 
 We will take half of the system to be in the quantum Hall phase and the other half in the trivial insulator phase.
 
-Note that the original action in terms of $\cJ_1, \cJ_2$ currents, Eq.~(\ref{action}), has a sign problem.  There are a number of ways to reformulation the action to avoid this problem, some of which are described in Chapter \ref{chapter::methods}.   The remainder of this section will be devoted to developing several additional exact reformulations of Eq.~(\ref{JQreal}) which work for spatially varying $\eta(R)$.  These reformulations are also useful because they provide access to boson Green's functions.
+Note that the original action in terms of $\cJ_1, \cJ_2$ currents, Eq.~(\ref{action}), has a sign problem.  There are a number of ways to reformulate the action to avoid this problem, some of which are described in Chapter \ref{chapter::methods}.   The remainder of this section will be devoted to developing several additional exact reformulations of Eq.~(\ref{JQreal}) which work for spatially varying $\eta(R)$.  These reformulations are also useful because they provide access to boson Green's functions.
 
 Consider the following action:
 \begin{eqnarray}
@@ -127,7 +127,7 @@ The new $\alpha_1$ and $\alpha_2$ variables are real-valued vector fields residi
 % Appendix~\ref{app:connections} motivates the connection with Eq.~(\ref{action}) by starting from an action in terms of vortex variables, while we can also derive the result Eq.~(\ref{JQreal}) for general $\eta(R)$ from a direct analysis below.
 
 In order to get a sign-free action that we can study efficiently in Monte Carlo, we start with Eq.~(\ref{preal}) but perform different integrations. 
-First, we integrate out the $\alpha_{2}$ variables. Then, we integrate our the $\JJ_1$ variables using the techniques in Sec.~\ref{subsec::JtoQ}: 
+First, we integrate out the $\alpha_{2}$ variables. Then, we integrate out the $\JJ_1$ variables using the techniques in Sec.~\ref{subsec::JtoQ}, which gives:
 \begin{eqnarray}
 &&Z=\sideset{}{'}\sum_{\JJ_2}  \sum_{\vec{p}_1}  \int_{-\pi}^{\pi}  \mathcal{D}\phi_1 \int_{-\pi}^{\pi} \prod_{\mu=1}^{3} d\gamma_{1\mu}
 e^{-S[\phi_1,\gamma_1,\vec{p}_1,\JJ_2]} , ~~~~~
@@ -237,6 +237,13 @@ b_{\chi_2} \approx 2\pi\lambda_1 d^2
 \end{equation}
 for the algebraic decay of $\chi_2(R-R')$.  
 
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=\linewidth]{figures/onecord.eps}
+\caption{ Correlation functions a) $\chi_1$ and b) $\chi_2$, plotted against the chord distance of Eq.~(\ref{cordlength}), on a log-log scale, for $\eta=1$ edge.  Error bars come from comparing runs with different initial conditions.  The straight lines imply that we have algebraic decay in the correlation functions and therefore the edge is gapless.  The slope of these lines varies with $\lambda$, and the extracted exponents are shown in Fig.~\ref{exponents}.}
+\label{onegood}
+\end{wrapfigure}
+
+
 We now present results for $\chi_1$ and $\chi_2$. In all the results in this section, we show data on the line in the parameter space where $\lambda_1=\lambda_2=\lambda$. All data was taken with a system size of $L=20$.  We know that we are in the quantum Hall phase when $\lambda$ is small, because it is here that the $\GG$ variables are gapped. In Sec.~\ref{sec:reverse} we will present the phase diagrams of these models and will see that, for all $\eta \neq 0$, the system is in this quantum Hall state for $\lambda d^2\lesssim 0.33$ (the precise value depends on $c$ and $d$, but not very sensitively), while for $\eta=0$ the system will be in a trivial insulator state in this parameter regime.  Therefore at small $\lambda$ the edge we are studying is between a trivial insulator and a quantum Hall insulator. We have measured the correlation functions for $\lambda d^2=0.07,0.1,0.15,0.2,0.25$ and seen algebraic decay.  [We quote $\lambda d^2$ because at larger $d$ it takes smaller values of $\lambda$ for the $\cal{G}$ variables to become gapped, as can be seen in Eq.~(\ref{vgd2}).]  We plot $\chi$ on a log-log plot, so that if it decays algebraically we will see straight lines.  Due to the finite size of the system the lines will not be perfectly straight. We compensate for this by replacing $R-R'$ with the `chord distance' $D_{RR'}$:
 \begin{equation}
 D_{RR'}=\frac{L}{\pi}\sin\left[\frac{\pi |R-R'|}{L}\right],
@@ -249,9 +256,9 @@ In Fig.~\ref{onegood} we show $\chi_1$ and $\chi_2$ for the case where $\eta=1$.
 % which is one of the predictions of the $K$-matrix theory discussed in Appendix~\ref{app:connections}.
 
 \begin{wrapfigure}{r}{0.6\textwidth}
-\includegraphics[width=\linewidth]{figures/onecord.eps}
-\caption{ Correlation functions a) $\chi_1$ and b) $\chi_2$, plotted against the chord distance of Eq.~(\ref{cordlength}), on a log-log scale, for $\eta=1$ edge.  Error bars come from comparing runs with different initial conditions.  The straight lines imply that we have algebraic decay in the correlation functions and therefore the edge is gapless.  The slope of these lines varies with $\lambda$, and the extracted exponents are shown in Fig.~\ref{exponents}.}
-\label{onegood}
+\includegraphics[width=\linewidth]{figures/twocord.eps}
+\caption{ Same as Fig.~\ref{onegood}, but for $\eta=2$ edge. Once again, we see evidence for gapless modes. Note that in b) we measure pair-boson $e^{i 2\phi_2}$ correlators on the edge, while single-boson $e^{i\phi_2}$ correlators decay exponentially.
+\label{twogood}}
 \end{wrapfigure}
 
 Figure \ref{twogood} shows the same measurements for $\eta=2$. Again we see evidence of algebraic decay with exponents which depend on $\lambda$. As above, we used the reformulation in Eq.~(\ref{Sint}) for the $\chi_2$ measurements. Note that for this data it is important to measure correlators of $\exp(i2\phi_2)$, as defined in Eq.~(\ref{Crr}). As expected, we found that single-boson correlators decay exponentially in this case, and only pair-boson correlators show algebraic decay.
@@ -268,17 +275,13 @@ In Ref.\cite{FQHE}
  we discuss a phenomenological understanding of the edge which predicts that the product of these exponents in the integer quantum Hall case should be equal to $1$.
 We can see from Fig.~\ref{exponents} that the products we measured are approximately equal to one.
 
-\begin{wrapfigure}{r}{0.6\textwidth}
-\includegraphics[width=\linewidth]{figures/twocord.eps}
-\caption{ Same as Fig.~\ref{onegood}, but for $\eta=2$ edge. Once again, we see evidence for gapless modes. Note that in b) we measure pair-boson $e^{i 2\phi_2}$ correlators on the edge, while single-boson $e^{i\phi_2}$ correlators decay exponentially.
-\label{twogood}}
-\end{wrapfigure}
-
-\begin{wrapfigure}{r}{0.6\textwidth}
-\includegraphics[width=\linewidth,angle=-90]{figures/exp1.eps}
+%\begin{wrapfigure}{r}{0.6\textwidth}
+\begin{figure}
+\includegraphics[width=0.4\linewidth,angle=-90]{figures/exp1.eps}
 \caption{ The exponents of the algebraic decay for $\eta=1$ and $\eta=2$, extracted using the fitting function in Eq.~(\ref{fitfunction}). We see that the $b_{\chi_1}$ exponent decreases with increasing $\lambda$ while the $b_{\chi_2}$ exponent increases. The product of these exponents is also shown.
 \label{exponents}}
-\end{wrapfigure}
+\end{figure}
+%\end{wrapfigure}
 
 Figure~\ref{onethird} shows $\chi_2$ for $\eta=1/3$. The existence of straight lines in this plot implies that we have gapless modes in a fractional quantum Hall system. We acquired this data using the reformulation in Eq.~(\ref{Sfrac2}). We were unable to measure $\chi_1$ for the fractional cases because the decay exponents were too large. Recall that in order to have gapped $\cal{G}$ variables we need $\lambda d^2 \lesssim 0.33$; for $d^2=9$ this leads to a small $\lambda$, and the spin-wave theory estimate Eq.~(\ref{bchi1_sw}) tells us that this leads to large exponents for $\chi_1$.  The presence of the factor $d^2$ in the product $b_{\chi_1} b_{\chi_2} \approx d^2$, which we obtained here by the direct analysis, is an indirect manifestation of the fractionalization when parameter $d>1$.  
 Indeed, 
@@ -346,6 +349,12 @@ In Ref.~\cite{short_range3} we studied a statistical action with $\theta_{\cal{G
 We know from Ref.~\cite{short_range3} that in the middle phase the variables dual to the $\GG$ variables are gapped. 
 We can also compute the action for the variables dual to the $\GG$ variables and see that it has the same potential as the action for the $\JJ$ variables. The two actions also have values of $\theta(k)$ which differ only by an integer multiple of $2\pi$. Such difference will translate to factors $e^{2\pi i}$ in the partition sum and therefore will not contribute. Therefore if the variables dual to the $\GG$ variables are gapped then the $\JJ$ variables should also be gapped. Therefore this middle phase is a trivial insulator in the $\JJ$ variables. This can be confirmed by measuring the conductivity numerically in this phase. 
 
+\begin{wrapfigure}{r}{0.6\textwidth}
+\includegraphics[width=\linewidth]{figures/fracphase.eps}
+\caption{The phase diagram for the model with $c=1,d=3$. In the lower left phase the $\GG$ variables are gapped and we have a fractional quantum Hall phase with $\sigma^{12}_{xy}=2\cdot\frac{1}{3}$. In the upper right phase the $\JJ$ variables are condensed, which implies a superfluid. In the middle phase the $\JJ$ variables are gapped and we have a trivial insulator. This figure is reproduced from Ref.~\cite{short_range3}, but the phases have been re-interpreted in terms of the physical variables discussed in this work.}
+\label{fracphase}
+\end{wrapfigure}
+
 In the upper right corner phase we can see from Eq.~(\ref{qaction}) that the $\cQ$ variables are gapped,  and therefore the $\JJ$ variables are condensed and this phase is a superfluid.  In our previous work\cite{short_range3} we found that transition between the trivial insulator and the superfluid is a pair of XY transitions, while we found more complicated behavior at the fractional quantum Hall-trivial insulator transition. 
 
 The structure described in the previous paragraph holds for any set of physical variables which can be mapped to a statistical action with $\theta_\cG=2\pi/m$, with $m$ an integer. %\cite{footnoten2}.
@@ -353,11 +362,6 @@ One exception is $m=2$, where our specific model with $c=1, d=2$ has an addition
 
 Finally, for more complicated fractions $c/d$, our model will have multiple phases in the middle of the phase diagram, resembling hierarchy of phases that we found in $U(1) \times U(1)$ loop models with marginally long-ranged interactions and modular invariance.\cite{Gen2Loops}  We expect that the ``middle'' phase at the largest $\lambda$ is a trivial insulator, while the other phases are various quantum Hall states.  For example, in our model Eqs.~(\ref{vintro})-(\ref{tintro}) with $c=2, d=5$, we found the following sequence of phases upon increasing $\lambda_1 = \lambda_2$: fractional quantum Hall insulators $\sigma^{12}_{xy} = 2\cdot 2/5$ and $\sigma^{12}_{xy} = 2\cdot 1/2$, trivial insulator $\sigma^{12}_{xy} = 0$, and superfluid.  It would be interesting to explore such phase diagrams and phase transitions in more detail in the future.
 
-\begin{wrapfigure}{r}{0.6\textwidth}
-\includegraphics[width=\linewidth]{figures/fracphase.eps}
-\caption{The phase diagram for the model with $c=1,d=3$. In the lower left phase the $\GG$ variables are gapped and we have a fractional quantum Hall phase with $\sigma^{12}_{xy}=2\cdot\frac{1}{3}$. In the upper right phase the $\JJ$ variables are condensed, which implies a superfluid. In the middle phase the $\JJ$ variables are gapped and we have a trivial insulator. This figure is reproduced from Ref.~\cite{short_range3}, but the phases have been re-interpreted in terms of the physical variables discussed in this work.}
-\label{fracphase}
-\end{wrapfigure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -376,11 +380,13 @@ $\hat{\bj} = \hat{\bx}$ or $\hat{\by}$, while we will view the conjugate momentu
 Here $\epsilon_{xy} = -\epsilon_{yx} = 1$ is the 2d antisymmetric tensor and $<\bR, \bR + \hat{\bj}>$ and $<\br, \br + \hat{\bk}>$ are crossing links.\cite{footnoteKitaev}
 Note that in this chapter we adopt the following notation:  Spatial lattice sites are labeled with bold face, e.g., $\br, \bR$.  Spatial directions are labeled with Roman letters, e.g., $j, k$; space-time directions that appear later will be labeled with Greek letters, e.g., $\mu, \nu$.  Oriented fields residing on spatial links are viewed as spatial vectors and are labeled with bold face, e.g., ${\bm \alpha_1}, {\bm \alpha_2}$.
 
-\begin{wrapfigure}{r}{0.6\textwidth}[t!]
+%\begin{wrapfigure}{r}{0.6\textwidth}[t!]
+\begin{figure}
 \includegraphics[width=\linewidth]{figures/H.eps}
 \caption{Our Hamiltonian Eq.~(\ref{H}) has U(1) rotors residing on sites $\br$ of the direct square lattice and U(1) rotors residing on sites $\bR$ of the dual lattice.  We also have harmonic oscillators residing on crosses $\ell$ of the links of the two lattices.  The first and second U(1) systems are coupled to the oscillator position and momentum variables respectively as if the latter were gauge fields.\cite{footnoteKitaev}  With appropriate choices of parameters and additional charge-flux couplings, we can induce condensations of bound states of charges and vortices leading to the quantum Hall states discussed in the main text.}
 \label{fig:H}
-\end{wrapfigure}
+\end{figure}
+%\end{wrapfigure}
 
 
 Our Hamiltonian is:
@@ -410,8 +416,8 @@ e^{-\delta\tau \hat{H}} &\approx& e^{-\delta\tau (\hat{H}_{u1} + \hat{H}_{h2} + 
 \mathbbm{1}_{\tau_\half \equiv \tau + \frac{\delta\tau}{2}} &=&
 \sum_{n_1(\br, \tau_\half) = -\infty}^\infty
 \int_{-\pi}^\pi D\phi_2(\bR, \tau_\half) 
-\int_{-\infty}^\infty D\pi_\ell(\tau_\half) ~
-\Big|   n_1(\br, \tau_\half), \phi_2(\bR, \tau_\half), \pi_\ell(\tau_\half) \Big\ra
+\int_{-\infty}^\infty D\pi_\ell(\tau_\half) ~\\
+&&\quad\Big|   n_1(\br, \tau_\half), \phi_2(\bR, \tau_\half), \pi_\ell(\tau_\half) \Big\ra
 \Big\la n_1(\br, \tau_\half), \phi_2(\bR, \tau_\half), \pi_\ell(\tau_\half) \Big| ~.
 \end{eqnarray*}
 Here we used one set of variables on ``integer'' time slices $\tau = {\rm int} \times \delta\tau$ and conjugate variables on ``half-integer'' time slices $\tau_\half \equiv \tau + \delta\tau/2$.  We also arranged the Trotter decomposition so that the pieces of the Hamiltonian act as $c$-numbers on the kets of the above insertions of unity.  Throughout, we omit normalization constants.  The remaining inputs to complete the path integral formulation in the above variables are overlaps such as
@@ -419,7 +425,7 @@ Here we used one set of variables on ``integer'' time slices $\tau = {\rm int} \
 \big\la \chi_\ell(\tau + \delta\tau) \big| \pi_\ell(\tau_\half) \big\ra
 \big\la \pi_\ell(\tau_\half) \big| \chi_\ell(\tau) \big\ra &=& e^{i \pi_\ell(\tau_\half) [\chi_\ell(\tau + \delta\tau) - \chi_\ell(\tau)]}
 = e^{i \alpha_{2k} \epsilon_{kj} \nabla_\tau \alpha_{1j}} ~,
-\quad {\rm for~} \ell = <\br, \br+\hat{\bj}>, ~ \\
+\quad {\rm for~} \ell = <\br, \br+\hat{\bj}>, ~ \nonumber\\
 \big\la \phi_1(\br, \tau + \delta\tau) \big| n_1(\br, \tau_\half) \big\ra
 \big\la n_1(\br, \tau_\half) \big| \phi_1(\br, \tau) \big\ra &=&
 e^{i n_1(\br, \tau_\half) [\phi_1(\br, \tau + \delta\tau) - \phi_1(\br, \tau)]}
