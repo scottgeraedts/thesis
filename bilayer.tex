@@ -33,11 +33,11 @@
 \section{Introduction}
 
 %intro to quantum Hall effect
-When a two-dimensional semiconductor is placed in a strong perpendicular magnetic field, the energy of electrons in the system becomes independent of their momentum. Fermi liquid theory does not apply, and the system can realize a number of exotic phases. The integer quantum Hall effect was the first such phase to be discovered, it was also the first known example of a topological phase\cite{vonKlitzing}. Not longer after this, the fractional quantum Hall effect was discovered\cite{Tsui-PhysRevLett.48.1559}, and this was the first example of a LRE topological phase. The vast majority of observed fractional quantum Hall states belong to the sequence Laughlin~\cite{Laughlin-PhysRevLett.50.1395}, hierarchy~\cite{Haldane1983, Halperin84} and ``composite fermion"~\cite{Jain:1989p294} states. These states realize quasiparticles which have fractional charge and statistics\cite{Laughlin-PhysRevLett.50.1395,LeinaasMyrheim, Arovas-Schrieffer-Wilczek}. 
+When a two-dimensional semiconductor is placed in a strong perpendicular magnetic field, the energy of electrons in the system becomes independent of their momentum. Fermi liquid theory does not apply, and the system can realize a number of exotic phases. The integer quantum Hall effect was the first such phase to be discovered, it was also the first known example of a topological phase\cite{klitzing}. Not longer after this, the fractional quantum Hall effect was discovered\cite{Tsui-PhysRevLett.48.1559}, and this was the first example of a long-range entangled topological phase. The vast majority of observed fractional quantum Hall states belong to the Laughlin~\cite{Laughlin-PhysRevLett.50.1395}, hierarchy~\cite{Haldane1983, Halperin84} and ``composite fermion"~\cite{Jain:1989p294} states. These states realize quasiparticles which have fractional charge and statistics\cite{Laughlin-PhysRevLett.50.1395,LeinaasMyrheim, Arovas-Schrieffer-Wilczek}. 
 Even more exotic states, which host non-Abelian anyons, are also proposed to exist at certain quantum Hall fractions, most notably $\nu=5/2$\cite{MooreRead, Greiter91, Greiter92}. 
 %introduction to two layers
 
-The quantum Hall states discussed above `single-species' quantum Hall systems, where the electrons have no internal degrees of freedom. 
+The quantum Hall states discussed above are `single-species' quantum Hall systems, where the electrons have no internal degrees of freedom. 
 However, ``multicomponent" FQH states are ubiquitous; most obviously electrons carry spin.
 While the Coulomb energy scales as $e^2/\epsilon\ell_B [\unit{K}] \approx 50 \sqrt{B[\unit{T}]}$, assuming free electron values for the mass and $g$ factor in $\mathrm{GaAs}$, the Zeeman splitting is only $E_Z [\unit{K}] \approx 0.3 B[\unit{T}]$, suggesting that in many circumstances the ground state of the system may not be fully spin-polarized. 
 Several classes of unpolarized FQH states have been formulated, including the so-called Halperin $(mmn)$ states~\cite{Halperin83} and spin unpolarized composite fermion states~\cite{Wu93, Wu94, Davenport12, Balram14}.
@@ -155,12 +155,12 @@ It is possible, however, that the transition observed at $\nu=5/3$ in Ref.~\cite
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Density Matrix Renormalization Group Applied to Quantum Hall systems}
-
-The main numerical method used in this chapter is infinite density renormalization group (iDMRG). In this section we provide a review of what this technique is and how it can be applied to quantum Hall systems.
+\label{sec:method}
+The main numerical method used in this chapter is infinite density renormalization group (iDMRG). In this section we provide a review of what this technique is and how it can be applied to quantum Hall systems. We then specialize to the case of quantum Hall bilayers, and we describe some of the numerical measurements which will be used to distinguish between different quantum Hall phases.
 
 \subsection{Review of DMRG}
 
-The techniques of DMRG were developed over two decades ago by White\cite{WhiteDMRG} and have been extremely successful since that time in studying two-dimensional systems. Here I will give a rough introduction to how this algorithm works, readers may consult a review for a proper introduction to the method\cite{Schollwock}.
+The techniques of DMRG were developed over two decades ago by White\cite{WhiteDMRG} and have been extremely successful since that time in studying one-dimensional systems. Here I will give a rough introduction to how this algorithm works, readers may consult a review for a proper introduction to the method\cite{Schollwock}.
 
 The basic idea of the algorithm is as follows. Consider the following quantum state:
 \begin{equation}
@@ -171,7 +171,7 @@ Here $i\in[1,N]$ labels the sites of the one-dimensional system, and $\alpha_i$ 
 \begin{equation}
 \Psi=\sum_{\{\alpha_i\}}\sum_\beta M_{\alpha_1\alpha_2\ldots\alpha_{N-1}\beta}\Lambda_\beta B^N_{\beta\alpha_N}\ket{\alpha_1\alpha_2\ldots\alpha_N}.
 \end{equation}
-This equation is related to Eq.~(\ref{DMRGstart}) by a singular-value decomposition (SVD), which factors the matrix $c$ into three matrices $M,\Lambda$,$B$, with $\Lambda$ a diagonal matrix. The matrix $B$ contains sum over all states on site $N$, while $A$ contains all the other sites. The index $\beta$, when summed over, multiplies the matrices $A$, $\Lambda$ and $B$. It is called a `virtual' degree of freedom. We can now continue this procedure, by turning $A$ into a $d^{N-2}\times d^2$ matrix, and performing another singular value decomposition. This will leave us with a matrix $B^N$ which contains the $\alpha_N$ index, a matrix $B^{N-1}$ containing the $\alpha_{N-1}$ index, and a new matrix $A$ which contains all the other indices. There will now be two virtual dimension to sum over. We can repeat this process for the entire system. Each physical site will have a $B$ matrix associated with it. Away from the edges of the chain, the $B$ matrices will have approximately $d^N$ elements. This procedure is an exact rewriting of Eq.~(\ref{DMRGstart}). Note that in either the representation in terms of the $B$ matrices, or Eq.~(\ref{DMRGstart}) we have to store $d^N$ numbers do describe our system. This will be very difficult as $N$ becomes large, and so such a formulation cannot be used to study large systems numerically.
+This equation is related to Eq.~(\ref{DMRGstart}) by a singular-value decomposition (SVD), which factors the matrix $c$ into three matrices $M,\Lambda$,$B$, with $\Lambda$ a diagonal matrix. The matrix $B$ contains sum over all states on site $N$, while $M$ contains all the other sites. The index $\beta$, when summed over, multiplies the matrices $A$, $\Lambda$ and $B$. It is called a `virtual' degree of freedom. We can now continue this procedure, by turning $A$ into a $d^{N-2}\times d^2$ matrix, and performing another singular value decomposition. This will leave us with a matrix $B^N$ which contains the $\alpha_N$ index, a matrix $B^{N-1}$ containing the $\alpha_{N-1}$ index, and a new matrix $A$ which contains all the other indices. There will now be two virtual dimension to sum over. We can repeat this process for the entire system. Each physical site will have a $B$ matrix associated with it. Away from the edges of the chain, the $B$ matrices will have approximately $d^N$ elements. This procedure is an exact rewriting of Eq.~(\ref{DMRGstart}). Note that in either the representation in terms of the $B$ matrices, or Eq.~(\ref{DMRGstart}) we have to store $d^N$ numbers to describe our system. This will be very difficult as $N$ becomes large, and so such a formulation cannot be used to study large systems numerically.
 
 To understand why the above rewriting is useful, it is useful to consider the Schimdt decomposition, which states that for any quantum state defined on two subsystems $A$ and $B$:
 \begin{equation}
@@ -190,14 +190,15 @@ H=\sum_i S^z_i
 \end{equation}
 The following matrix operator represents this Hamiltonian:
 \begin{equation}
-H_i=\left[\begin{array}{cc} \mathbb{1} & 0 \\ S^z & \mathbb{1}\end{array}\right]
+H_i=\left[\begin{array}{cc} \mathbb{1} & 0 \\ S^z & \mathbb{1}\end{array}\right].
 \end{equation}
 This matrix is in the `virtual basis': to get the Hamiltonian this basis is summed over, which means that to get the full Hamiltonian one multiplies matrices like the above for each site. The operators in the matrix act on the physical basis at each site. One can check that multiplying out these matrices generates Eq.~(\ref{simpleham}). Similar matrices for two-site operators such as $S^z_i S^z_{i+1}$ also exist. One can also get exponentially decaying interactions by multiplying matrices of the form:
 \begin{equation}
-H_i=\left[\begin{array}{cc} \mathbb{1} & 0 \\ S^z & \mathbb{1}\end{array}\right]
+H_i=\left[\begin{array}{ccc} \mathbb{1} & 0 & 0 \\ \lambda S^z & \lambda & 0 \\ S^z& S^z & \mathbb{1}\end{array}\right],
 \end{equation}
+which generates a term in the Hamiltonian of the form $\lambda^{r-r^\prime}S^z(r)S^z(r^\prime)$.
 
-Once the MPO for a given Hamiltonian is known one can find the ground state of that Hamiltonian by multipying all the matrix product operators and matrix product states together, except for a single matrix $B_i$. Then we find the $B_i$ which has the lowest eigenvalue with respect to the operator obtained by multiplying all the other matrices. This is repeated for each $B_i$ until convergence is achieved. The infinite DMRG (iDMRG) algorithm used in this chapter is the same, but every MPS and MPO is taken to be the same.
+Once the MPO for a given Hamiltonian is known one can find the ground state of that Hamiltonian by multipying all the matrix product operators and matrix product states together, except for a single matrix $B_i$. Then we find the $B_i$ which has the lowest eigenvalue with respect to the operator obtained by multiplying all the other matrices. This is repeated for each $B_i$ until convergence is achieved. The infinite DMRG (iDMRG) algorithm used in this chapter follows this algorithm, but every MPS and MPO is taken to be the same.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DMRG applied to quantum Hall systems}
@@ -215,7 +216,7 @@ Where $B$ is the magnetic field, $x$ is the direction around the circumference o
 \label{formfactors}
 \end{equation}
 
-We will perform numerics in the orbital basis, indexed by $\mu$ and defined by:
+We will perform numerics in the orbital basis, indexed by $n$ and defined by:
 \begin{equation}
 c(r)=\sum_n \phi_n(x,y)c_n,
 \end{equation}
@@ -226,7 +227,7 @@ We want to find ground states of the above Hamiltonian, including interactions
 \delta H=\sum(r,r^\prime) V(r-r^\prime) \rho(r)\rho(r^\prime).
 \label{HCoulomb}
 \end{equation}
-$V(r)$ will typically be a Coulomb interaction, and $\rho(r)\equiv c^\dagger(r)c(r)$ is the electron density. Naturally the eigenstates of the full Hamiltonian may not be spanned by the basis $\phi_n$, but we restrict ourselves to this basis anyways, which is projection to the lowest Landau level. In the systems considered in this chapter this is a reasonable approximation to make. The every separation between Landau levels from $H_0$ is proportional to the magnetic field $B$, while $\delta H\sim\sqrt{B}$. Therefore at large enough fields higher Landau levels can be neglected. It has also been shown that expansions in the Landau level mixing parameter $\kappa$ (which is essentially $\delta H/H_0$) are stable even for $\kappa\approx1$. Though neglecting Landau level mixing is a reasonable approximation in this work, in other systems such as graphene, where the Landau level spacing is $\sim\sqrt{B}$, or in cases where Landau level mixing breaks a particle-hole symmetry, it cannot be neglected.
+$V(r)$ will typically be a Coulomb interaction, and $\rho(r)\equiv c^\dagger(r)c(r)$ is the electron density. Naturally the eigenstates of the full Hamiltonian may not be spanned by the basis $\phi_n$, but we restrict ourselves to this basis anyways, which is projection to the lowest Landau level. In the systems considered in this chapter this is a reasonable approximation to make. The energy separation between Landau levels from $H_0$ is proportional to the magnetic field $B$, while $\delta H\sim\sqrt{B}$. Therefore at large enough fields higher Landau levels can be neglected. It has also been shown that expansions in the Landau level mixing parameter $\kappa$ (which is essentially $\delta H/H_0$) are stable even for $\kappa\approx1$. Though neglecting higher Landau levels is a reasonable approximation in this work, in other systems such as graphene, where the Landau level spacing is $\sim\sqrt{B}$, or in cases where Landau level mixing breaks a particle-hole symmetry, it cannot be neglected.
 
 Eq.~(\ref{HCoulomb}) can be written in the orbital basis as: 
 \begin{equation}

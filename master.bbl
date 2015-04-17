@@ -1,5 +1,10 @@
 \begin{thebibliography}{100}
 
+\bibitem{Wen_book}
+X.-G. Wen, {\em Quantum field theory of many-body systems: from the origin of
+  sound to an origin of light and electrons}.
+\newblock Oxford: Oxford University Press, 2007.
+
 \bibitem{klitzing}
 K.~v. Klitzing, G.~Dorda, and M.~Pepper, ``New method for high-accuracy
   determination of the fine-structure constant based on quantized hall
@@ -44,6 +49,11 @@ X.~Chen, Z.-C. Gu, Z.-X. Liu, and X.-G. Wen, ``Symmetry protected topological
 \bibitem{KapustinThorngren}
 A.~Kapustin and R.~Thorngren {\em arXiV/hep-th}, p.~1309.4721, 2013.
 
+\bibitem{Laughlin-PhysRevLett.50.1395}
+R.~B. Laughlin, ``Anomalous quantum hall effect: An incompressible quantum
+  fluid with fractionally charged excitations,'' {\em Phys. Rev. Lett.},
+  vol.~50, pp.~1395--1398, May 1983.
+
 \bibitem{FidkowskiKitaev2011}
 L.~Fidkowski and A.~Kitaev, ``Topological phases of fermions in one
   dimension,'' {\em Phys. Rev. B}, vol.~83, p.~075103, Feb 2011.
@@ -68,11 +78,6 @@ K.~Walker and Z.~Wang, ``(3+1)-tqfts and topological insulators,'' {\em
 \bibitem{KeyserlingkBurnell2014}
 C.~W. {von Keyserlingk} and F.~J. {Burnell}, ``{Walker-Wang models and axion
   electrodynamics},'' {\em ArXiv e-prints}, 2014.
-
-\bibitem{Wen_book}
-X.-G. Wen, {\em Quantum field theory of many-body systems: from the origin of
-  sound to an origin of light and electrons}.
-\newblock Oxford: Oxford University Press, 2007.
 
 \bibitem{SenthilLevin2012}
 T.~Senthil and M.~Levin, ``Integer quantum hall effect for bosons,'' {\em Phys.
@@ -99,6 +104,14 @@ M.~Metlitski and M.~P.~A. Fisher {\em unpublished notes}, 2013.
 M.~A. Metlitski, C.~L. Kane, and M.~P.~A. Fisher, ``Bosonic topological
   insulator in three dimensions and the statistical witten effect,'' {\em Phys.
   Rev. B}, vol.~88, p.~035131, Jul 2013.
+
+\bibitem{FuMajorana}
+S.~Vijay, T.~Hsieh, and L.~Fu, ``Majorana fermion surface code for universal
+  quantum computation,'' {\em arXiv:cond-mat}, vol.~1504.01724, 2015.
+
+\bibitem{KitaevWireMajorana:01}
+A.~Y. Kitaev, ``{Unpaired Majorana fermions in quantum wires},'' vol.~44,
+  p.~131, Oct. 2001.
 
 \bibitem{CuiWang}
 S.~X. Cui and Z.~Wang, ``Universal quantum computation with metaplectic
@@ -370,15 +383,6 @@ D.~C. Tsui, H.~L. Stormer, and A.~C. Gossard, ``Two-dimensional
   magnetotransport in the extreme quantum limit,'' {\em Phys. Rev. Lett.},
   vol.~48, pp.~1559--1562, May 1982.
 
-\bibitem{prangegirvin}
-R.~E. Prange and S.~M. Girvin, {\em The Quantum Hall Effect}.
-\newblock Springer-Verlag, New York, 1990.
-
-\bibitem{Laughlin-PhysRevLett.50.1395}
-R.~B. Laughlin, ``Anomalous quantum hall effect: An incompressible quantum
-  fluid with fractionally charged excitations,'' {\em Phys. Rev. Lett.},
-  vol.~50, pp.~1395--1398, May 1983.
-
 \bibitem{Haldane1983}
 F.~D.~M. Haldane, ``Fractional quantization of the hall effect: A hierarchy of
   incompressible quantum fluid states,'' {\em Phys. Rev. Lett.}, vol.~51,
@@ -402,12 +406,6 @@ D.~Arovas, J.~R. Schrieffer, and F.~Wilczek, ``Fractional statistics and the
   quantum hall effect,'' {\em Phys. Rev. Lett.}, vol.~53, pp.~722--723, Aug
   1984.
 
-\bibitem{Willett87}
-R.~Willett, J.~P. Eisenstein, H.~L. St\"ormer, D.~C. Tsui, A.~C. Gossard, and
-  J.~H. English, ``Observation of an even-denominator quantum number in the
-  fractional quantum hall effect,'' {\em Phys. Rev. Lett.}, vol.~59,
-  pp.~1776--1779, Oct 1987.
-
 \bibitem{Greiter91}
 M.~Greiter, X.-G. Wen, and F.~Wilczek, ``Paired hall state at half filling,''
   {\em Phys. Rev. Lett.}, vol.~66, pp.~3205--3208, Jun 1991.
@@ -415,49 +413,6 @@ M.~Greiter, X.-G. Wen, and F.~Wilczek, ``Paired hall state at half filling,''
 \bibitem{Greiter92}
 M.~Greiter, X.-G. Wen, and F.~Wilczek {\em Nucl. Phys. B}, vol.~374, p.~567,
   1992.
-
-\bibitem{Nayak96}
-C.~Nayak and F.~Wilczek {\em Nucl. Phys. B}, vol.~479, pp.~529--553, 1996.
-
-\bibitem{ReadGreen}
-N.~Read and D.~Green, ``Paired states of fermions in two dimensions with
-  breaking of parity and time-reversal symmetries and the fractional quantum
-  hall effect,'' {\em Phys. Rev. B}, vol.~61, pp.~10267--10297, Apr 2000.
-
-\bibitem{BondersonGurarieNayak11}
-P.~Bonderson, V.~Gurarie, and C.~Nayak, ``Plasma analogy and non-abelian
-  statistics for ising-type quantum hall states,'' {\em Phys. Rev. B}, vol.~83,
-  p.~075303, Feb 2011.
-
-\bibitem{Kitaev:QC:03}
-A.~Y. Kitaev, ``Fault-tolerant quantum computation by anyons,'' vol.~303,
-  pp.~2--30, Jan. 2003.
-
-\bibitem{Nayak:TQCReview:2008}
-C.~Nayak, S.~H. Simon, A.~Stern, M.~Freedman, and S.~Das~Sarma, ``Non-abelian
-  anyons and topological quantum computation,'' vol.~80, pp.~1083--1159, Sept.
-  2008.
-
-\bibitem{Rokhinson:InSbWireFracACJosephson:2012}
-L.~P. Rokhinson, X.~Liu, and J.~K. Furdyna, ``The fractional a.c. {J}osephson
-  effect in a semiconductor-superconductor nanowire as a signature of
-  {M}ajorana particles,'' {\em Nat. Phys.}, vol.~8, pp.~795--799, Sept. 2012.
-
-\bibitem{DengLarssonXu:InSbWire:2012}
-M.~T. Deng, C.~L. Yu, G.~Y. Huang, M.~Larsson, P.~Caroff, and H.~Q. Xu,
-  ``{Anomalous Zero-Bias Conductance Peak in a $\mathrm{Nb}$-$\mathrm{InSb}$
-  Nanowire-$\mathrm{Nb}$ Hybrid Device},'' {\em Nano Lett.}, vol.~12,
-  pp.~6414--6419, Nov. 2012.
-
-\bibitem{DasRonen:InAsWire:2012}
-A.~Das, Y.~Ronen, Y.~Most, Y.~Oreg, M.~Heiblum, and H.~Shtrikman, ``{Zero-bias
-  peaks and splitting in an $\mathrm{Al}$-$\mathrm{InAs}$ nanowire topological
-  superconductor as a signature of Majorana fermions},'' {\em Nat. Phys.},
-  vol.~8, pp.~887--895, Nov. 2012.
-
-\bibitem{KitaevWireMajorana:01}
-A.~Y. Kitaev, ``{Unpaired Majorana fermions in quantum wires},'' vol.~44,
-  p.~131, Oct. 2001.
 
 \bibitem{Halperin83}
 B.~I. Halperin, ``{Theory of quantized Hall conductance},'' {\em Helv. Phys.
@@ -737,6 +692,16 @@ N.~Kumada, D.~Terasawa, M.~Morino, K.~Tagashira, A.~Sawada, Z.~F. Ezawa,
 Y.~Liu, S.~Hasdemir, J.~Shabani, M.~Shayegan, L.~N. Pfeiffer, K.~W. West, and
   K.~W. Baldwin unpublished, 2015.
 
+\bibitem{WhiteDMRG}
+S.~R. White, ``Density matrix formulation for quantum renormalization groups,''
+  {\em Phys. Rev. Lett.}, vol.~69, pp.~2863--2866, Nov 1992.
+
+\bibitem{Schollwock}
+U.~Schollwöck, ``The density-matrix renormalization group in the age of matrix
+  product states,'' {\em Annals of Physics}, vol.~326, no.~1, pp.~96 -- 192,
+  2011.
+\newblock January 2011 Special Issue.
+
 \bibitem{BisharaNayakMixing}
 W.~Bishara and C.~Nayak, ``Effect of landau level mixing on the effective
   interaction between electrons in the fractional quantum hall regime,'' {\em
@@ -773,26 +738,6 @@ S.~H. Simon and E.~H. Rezayi, ``Landau level mixing in the perturbative
 \bibitem{PakrouskiMixing}
 K.~Pakrouski, M.~R. Peterson, T.~Jolicoeur, V.~W. Scarola, C.~Nayak, and
   M.~Troyer unpublished, 2014.
-
-\bibitem{Haldane-PhysRevLett.55.2095}
-F.~D.~M. Haldane, ``Many-particle translational symmetries of two-dimensional
-  electrons at rational landau-level filling,'' {\em Phys. Rev. Lett.},
-  vol.~55, pp.~2095--2098, Nov 1985.
-
-\bibitem{Fannes1992}
-M.~Fannes, B.~Nachtergaele, and R.~Werner, ``Finitely correlated states on
-  quantum spin chains,'' {\em Communications in Mathematical Physics},
-  vol.~144, no.~3, pp.~443--490, 1992.
-
-\bibitem{Ostlund1995}
-S.~\"Ostlund and S.~Rommer, ``Thermodynamic limit of density matrix
-  renormalization,'' {\em Phys. Rev. Lett.}, vol.~75, pp.~3537--3540, Nov 1995.
-
-\bibitem{Rommer1997}
-S.~Rommer and S.~\"Ostlund, ``Class of ansatz wave functions for
-  one-dimensional spin systems and their relation to the density matrix
-  renormalization group,'' {\em Phys. Rev. B}, vol.~55, pp.~2164--2181, Jan
-  1997.
 
 \bibitem{Zhang2012}
 Y.~Zhang, T.~Grover, A.~Turner, M.~Oshikawa, and A.~Vishwanath, ``Quasiparticle
@@ -836,6 +781,11 @@ J.~P. Eisenstein, H.~L. Stormer, L.~N. Pfeiffer, and K.~W. West, ``Evidence for
 \bibitem{spinpolED}
 X.~C. Xie, Y.~Guo, and F.~C. Zhang, ``Fractional quantum hall effect with spin
   reversal,'' {\em Phys. Rev. B}, vol.~40, pp.~3487--3490, Aug 1989.
+
+\bibitem{ReadGreen}
+N.~Read and D.~Green, ``Paired states of fermions in two dimensions with
+  breaking of parity and time-reversal symmetries and the fractional quantum
+  hall effect,'' {\em Phys. Rev. B}, vol.~61, pp.~10267--10297, Apr 2000.
 
 \bibitem{KunYang14}
 Y.~Zhang, E.~H. Rezayi, and K.~Yang, ``Existence of strong-pairing quantum hall
