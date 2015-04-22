@@ -15,6 +15,18 @@ A.~Einstein, B.~Podolsky, and N.~Rosen, ``Can quantum-mechanical description of
   physical reality be considered complete?,'' {\em Phys. Rev.}, vol.~47,
   pp.~777--780, May 1935.
 
+\bibitem{TurnerVishwanath2013}
+A.~M. {Turner} and A.~{Vishwanath}, ``{Beyond Band Insulators: Topology of
+  Semi-metals and Interacting Phases},'' {\em ArXiv e-prints}, Jan. 2013.
+
+\bibitem{KitaevPreskill}
+A.~Kitaev and J.~Preskill, ``Topological entanglement entropy,'' {\em Phys.
+  Rev. Lett.}, vol.~96, p.~110404, Mar 2006.
+
+\bibitem{LevinWen}
+M.~Levin and X.-G. Wen, ``Detecting topological order in a ground state wave
+  function,'' {\em Phys. Rev. Lett.}, vol.~96, p.~110405, Mar 2006.
+
 \bibitem{QSHEreview}
 J.~Maciejko, T.~L. Hughes, and S.-C. Zhang, ``The quantum spin hall effect,''
   {\em Annual Review of Condensed Matter Physics}, vol.~2, pp.~31--53, 2011.
@@ -26,6 +38,10 @@ M.~Z. Hasan and C.~L. Kane, ``<i>colloquium</i>: Topological insulators,'' {\em
 \bibitem{QiZhangRMP}
 X.-L. Qi and S.-C. Zhang, ``Topological insulators and superconductors,'' {\em
   Rev. Mod. Phys.}, vol.~83, pp.~1057--1110, Oct 2011.
+
+\bibitem{NielsenNinomiya}
+H.~Nielsen and Ninomiya, ``A no-go theorem for regularizing chiral fermions,''
+  {\em Phys. Lett. B}, vol.~105, pp.~219--223, 1981.
 
 \bibitem{KitaevClass}
 A.~Kitaev, ``Periodic table for topological insulators and superconductors,''
@@ -57,6 +73,11 @@ R.~B. Laughlin, ``Anomalous quantum hall effect: An incompressible quantum
 \bibitem{FidkowskiKitaev2011}
 L.~Fidkowski and A.~Kitaev, ``Topological phases of fermions in one
   dimension,'' {\em Phys. Rev. B}, vol.~83, p.~075103, Feb 2011.
+
+\bibitem{WangSenthil2014}
+C.~Wang and T.~Senthil, ``Interacting fermionic topological
+  insulators/superconductors in three dimensions,'' {\em Phys. Rev. B},
+  vol.~89, p.~195124, May 2014.
 
 \bibitem{LuVishwanath}
 Y.-M. Lu and A.~Vishwanath, ``Theory and classification of interacting integer
@@ -104,6 +125,10 @@ M.~Metlitski and M.~P.~A. Fisher {\em unpublished notes}, 2013.
 M.~A. Metlitski, C.~L. Kane, and M.~P.~A. Fisher, ``Bosonic topological
   insulator in three dimensions and the statistical witten effect,'' {\em Phys.
   Rev. B}, vol.~88, p.~035131, Jul 2013.
+
+\bibitem{FreedmanUniversal}
+M.~Freedman, M.~Larsen, and Z.~Wang, ``A modular functor which is universal for
+  quantum computation,'' {\em Commun. Math. Physics.}, vol.~227, p.~605, 2002.
 
 \bibitem{FuMajorana}
 S.~Vijay, T.~Hsieh, and L.~Fu, ``Majorana fermion surface code for universal
@@ -247,10 +272,6 @@ A.~M. Essin and M.~Hermele, ``Classifying fractionalization: Symmetry
 Y.-M. Lu and A.~Vishwanath, ``Theory and classification of interacting integer
   topological phases in two dimensions: A chern-simons approach,'' {\em Phys.
   Rev. B}, vol.~86, p.~125119, Sep 2012.
-
-\bibitem{TurnerVishwanath2013}
-A.~M. {Turner} and A.~{Vishwanath}, ``{Beyond Band Insulators: Topology of
-  Semi-metals and Interacting Phases},'' {\em ArXiv e-prints}, Jan. 2013.
 
 \bibitem{GroverVishwanath2012}
 T.~{Grover} and A.~{Vishwanath}, ``{Quantum Phase Transition between Integer
@@ -754,19 +775,11 @@ H.-H. Tu, Y.~Zhang, and X.-L. Qi, ``Momentum polarization: An entanglement
   measure of topological spin and chiral central charge,'' {\em Phys. Rev. B},
   vol.~88, p.~195412, Nov 2013.
 
-\bibitem{KitaevPreskill}
-A.~Kitaev and J.~Preskill, ``Topological entanglement entropy,'' {\em Phys.
-  Rev. Lett.}, vol.~96, p.~110404, Mar 2006.
-
 \bibitem{LiHaldane}
 H.~Li and F.~Haldane, ``Entanglement spectrum as a generalization of
   entanglement entropy: Identification of topological order in non-abelian
   fractional quantum hall effect states,'' {\em Phys. Rev. Lett.}, vol.~101,
   p.~010504, Jul 2008.
-
-\bibitem{LevinWen}
-M.~Levin and X.-G. Wen, ``Detecting topological order in a ground state wave
-  function,'' {\em Phys. Rev. Lett.}, vol.~96, p.~110405, Mar 2006.
 
 \bibitem{wenzee}
 X.~G. Wen and A.~Zee, ``Shift and spin vector: New topological quantum numbers
@@ -843,5 +856,18 @@ N.~Samkharadze, J.~D. Watson, G.~Gardner, M.~J. Manfra, L.~N. Pfeiffer, K.~W.
   West, and G.~A. Cs\'athy, ``Quantitative analysis of the disorder broadening
   and the intrinsic gap for the $\nu{}=\frac{5}{2}$ fractional quantum hall
   state,'' {\em Phys. Rev. B}, vol.~84, p.~121305, Sep 2011.
+
+\bibitem{Wen2014}
+J.~C. Wang, Z.-C. Gu, and X.-G. Wen, ``Field-theory representation of
+  gauge-gravity symmetry-protected topological invariants, group cohomology,
+  and beyond,'' {\em Phys. Rev. Lett.}, vol.~114, p.~031601, Jan 2015.
+
+\bibitem{SenthilReview}
+T.~Senthil {\em arXiv:cond-mat}, p.~1405.4015, 2014.
+
+\bibitem{BosonParafermions}
+M.~F. Maghrebi, S.~Ganeshan, D.~J. Clarke, A.~V. Gorshkov, and J.~D. Sau,
+  ``Parafermionic zero modes in ultracold bosonic systems,'' {\em
+  arXiv:cond-mat}, p.~1504.04012, 2015.
 
 \end{thebibliography}
