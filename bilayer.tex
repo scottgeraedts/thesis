@@ -167,11 +167,11 @@ The basic idea of the algorithm is as follows. Consider the following quantum st
 \Psi=\sum_{\{\alpha_i\}} c_{\alpha_1\alpha_2\ldots\alpha_N}\ket{\alpha_1\alpha_2\ldots\alpha_N}.
 \label{DMRGstart}
 \end{equation}
-Here $i\in[1,N]$ labels the sites of the one-dimensional system, and $\alpha_i$ is an eigenstate of that site (for example for a spin system $\alpha$ could be $S^z$). Naturally a general state is a sum over all possible eigenvalues on each site, each with a coefficient labelled $c$. We can think of $c$ as being a vector, and it can take $d^N$ values, where $d$ is dimension of the $\alpha$ basis on one site. In can be useful to think of $c$ as an $d^{N-1}\times d$ matrix instead of a $d^N$ dimensional vector. Then we can even write $c$ as a product of two matrices, one of size $d^{N-1}\times d$ and the other of size $d\times d$:
+Here $i\in[1,N]$ labels the sites of the one-dimensional system, and $\alpha_i$ is an eigenstate of that site (for example for a spin system $\alpha$ could be $S^z$). Naturally a general state is a sum over all possible eigenvalues on each site, each with a coefficient labelled $c$. We can think of $c$ as being a vector, and it has $d^N$ elements, where $d$ is dimension of the $\alpha$ basis on one site. In can be useful to think of $c$ as an $d^{N-1}\times d$ matrix instead of a $d^N$ dimensional vector. Then we can even write $c$ as a product of two matrices, one of size $d^{N-1}\times d$ and the other of size $d\times d$:
 \begin{equation}
 \Psi=\sum_{\{\alpha_i\}}\sum_\beta M_{\alpha_1\alpha_2\ldots\alpha_{N-1}\beta}\Lambda_\beta B^N_{\beta\alpha_N}\ket{\alpha_1\alpha_2\ldots\alpha_N}.
 \end{equation}
-This equation is related to Eq.~(\ref{DMRGstart}) by a singular-value decomposition (SVD), which factors the matrix $c$ into three matrices $M,\Lambda$,$B$, with $\Lambda$ a diagonal matrix. The matrix $B$ contains sum over all states on site $N$, while $M$ contains all the other sites. The index $\beta$, when summed over, multiplies the matrices $A$, $\Lambda$ and $B$. It is called a `virtual' degree of freedom. We can now continue this procedure, by turning $A$ into a $d^{N-2}\times d^2$ matrix, and performing another singular value decomposition. This will leave us with a matrix $B^N$ which contains the $\alpha_N$ index, a matrix $B^{N-1}$ containing the $\alpha_{N-1}$ index, and a new matrix $A$ which contains all the other indices. There will now be two virtual dimension to sum over. We can repeat this process for the entire system. Each physical site will have a $B$ matrix associated with it. Away from the edges of the chain, the $B$ matrices will have approximately $d^N$ elements. This procedure is an exact rewriting of Eq.~(\ref{DMRGstart}). Note that in either the representation in terms of the $B$ matrices, or Eq.~(\ref{DMRGstart}) we have to store $d^N$ numbers to describe our system. This will be very difficult as $N$ becomes large, and so such a formulation cannot be used to study large systems numerically.
+This equation is related to Eq.~(\ref{DMRGstart}) by a singular-value decomposition (SVD), which factors the matrix $c$ into three matrices $M,\Lambda$,$B$, with $\Lambda$ a diagonal matrix. The matrix $B$ contains sum over all states on site $N$, while $M$ contains all the other sites. The index $\beta$, when summed over, multiplies the matrices $A$, $\Lambda$ and $B$. It is called a `virtual' degree of freedom. We can now continue this procedure, by turning $A$ into a $d^{N-2}\times d^2$ matrix, and performing another singular value decomposition. This will leave us with a matrix $B^N$ which contains the $\alpha_N$ index, a matrix $B^{N-1}$ containing the $\alpha_{N-1}$ index, and a new matrix, $A$ which contains all the other indices. There will now be two virtual dimension to sum over. We can repeat this process for the entire system. Each physical site will have a $B$ matrix associated with it. Away from the edges of the chain, the $B$ matrices will have approximately $d^N$ elements. This procedure is an exact rewriting of Eq.~(\ref{DMRGstart}). Note that in either the representation in terms of the $B$ matrices, or Eq.~(\ref{DMRGstart}) we have to store $d^N$ numbers to describe our system. This will be very difficult as $N$ becomes large, and so such a formulation cannot be used to study large systems numerically.
 
 To understand why the above rewriting is useful, it is useful to consider the Schimdt decomposition, which states that for any quantum state defined on two subsystems $A$ and $B$:
 \begin{equation}
@@ -181,9 +181,9 @@ there is a new basis for the $A$ and $B$ in which the matrix $c_{ij}$ is diagona
 \begin{equation}
 \Psi=\sum_{a}c_{a}\ket{a}_A\ket{a}_B,
 \end{equation}
-where $a$ is a label for some basis of $A$ and $B$. The connection to the previous paragraph is that the Schmidt decomposition can be performed using an SVD, with $c_a$ the $\Lambda$ from the $SVD$, and $\ket{a}_A=M\ket{i}_a$, $\ket{a}_B=B\ket{j}_B$. This is important because the $c_a$ from the Schmidt decomposition are the eigenvalues of the reduced density matrix. For a one-dimensional gapped system, these eigenvalues are all positive numbers less than one, and they decay exponentially. Therefore we can obtain a good approximation of $\Psi$ by truncating the matrix $c_a$ to an exponentially small part. If we apply this to the previous paragraph, we see that each matrix $B_i$ can be truncated as well. The size of the truncated matrix $c_a$ is called the `bond dimension' $\chi$, and $B_i$ will go from having $\sim d^N$ values to having only $\chi^2 d$. Therefore the number of numbers needed to represent Eq.~(\ref{DMRGstart}) no longer grows exponentially in $N$, and we can represent our system on a computer. The representation on Eq.~(\ref{DMRGstart}) as a product of matrices $B_i$ is called a `matrix product state' (MPS). The bond dimension $\chi$ represents the amount of entanglement between the subsystems on either side of the bond. The computational resources required to find the ground state are $O(\chi^3)$.
+where $a$ is a label for some basis of $A$ and $B$. The connection to the previous paragraph is that the Schmidt decomposition can be performed using an SVD, with $c_a$ the elements of $\Lambda$ from the $SVD$, and $\ket{a}_A=M\ket{i}_a$, $\ket{a}_B=B\ket{j}_B$. This is important because the $c_a$ from the Schmidt decomposition are the eigenvalues of the reduced density matrix. For a one-dimensional gapped system, these eigenvalues are all positive numbers less than one, and they decay exponentially. Therefore we can obtain a good approximation of $\Psi$ by truncating the matrix $c_a$ to an exponentially small part. If we apply this to the previous paragraph, we see that each matrix $B_i$ can be truncated as well. The size of the truncated matrix $c_a$ is called the `bond dimension' $\chi$, and $B_i$ will go from having $\sim d^N$ values to having only $\chi^2 d$. Therefore the number of numbers needed to represent Eq.~(\ref{DMRGstart}) no longer grows exponentially in $N$, and we can represent our system on a computer. The representation on Eq.~(\ref{DMRGstart}) as a product of matrices $B_i$ is called a `matrix product state' (MPS). The bond dimension $\chi$ represents the amount of entanglement between the subsystems on either side of the bond. The computational resources required to find the ground state are $O(\chi^3)$.
 
-DMRG is the procedure of variationally optimizing a Hamiltonian using matrix product states as the variational ansatz. Since matrix product states can represent any one-dimensional gapped system, in one dimensions this is an excellent ansatz to use. In order to optimize the matrix product state, one needs to be able to quickly contract it with the Hamiltonian. To do this it is convenient to decompose the Hamiltonian into a `matrix-product operator' (MPO), i.e. to write the Hamiltonian as a product of a number of matrices, each of which acts on an individual site. In general this seems like a hard problem, however there are a number of tricks one can use to find the matrix product operators for a given Hamiltonian. For example consider a Hamiltonian which is a product of one site operators, such as:
+DMRG is the procedure of variationally optimizing a Hamiltonian using matrix product states as the variational ansatz. Since matrix product states can represent any one-dimensional gapped system, in one dimensions this is an excellent ansatz to use. In order to optimize the matrix product state, one needs to be able to quickly contract it with the Hamiltonian. To do this it is convenient to decompose the Hamiltonian into a `matrix-product operator' (MPO), i.e., to write the Hamiltonian as a product of a number of matrices, each of which acts on an individual site. In general this seems like a hard problem; however, there are a number of tricks one can use to find the matrix product operators for a given Hamiltonian. For example, consider a Hamiltonian which is a product of one site operators, such as:
 \begin{equation}
 H=\sum_i S^z_i
 \label{simpleham}
@@ -199,22 +199,24 @@ H_i=\left[\begin{array}{ccc} \mathbb{1} & 0 & 0 \\ \lambda S^z & \lambda & 0 \\ 
 which generates a term in the Hamiltonian of the form $\lambda^{r-r^\prime}S^z(r)S^z(r^\prime)$.
 
 Once the MPO for a given Hamiltonian is known one can find the ground state of that Hamiltonian by multipying all the matrix product operators and matrix product states together, except for a single matrix $B_i$. Then we find the $B_i$ which has the lowest eigenvalue with respect to the operator obtained by multiplying all the other matrices. This is repeated for each $B_i$ until convergence is achieved. The infinite DMRG (iDMRG) algorithm used in this chapter follows this algorithm, but every MPS and MPO is taken to be the same.
+\footnote{More accurately, we will represent only a few sites and use periodic boundary conditions to get an `infinite' system.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{DMRG applied to quantum Hall systems}
 
-In this chapter we will use the above-mentioned DMRG algorithm to study a quantum Hall system. One obvious problem is that quantum Hall systems are two-dimensional, whereas in the previous subsection DMRG was defined for a one-dimensional system. DMRG is commonly used to study two-dimensional systems by defining such systems in a quasi-one-dimensional setup such as on a strip or cylinder, in this chapter we use a cylinder. In a one-dimensional system the bond dimension $\chi$ needed to accurately approximate the system increased polynomially in system size, and this is why the problem is numerically tractable. In a quasi-1D setup the required $\chi\sim e^{L_x}$, where $L_x$ is the diameter of the cylinder. Therefore we will only be able to deal with fairly small cylinders. This is still reasonable. The other numerical method used to study quantum Hall systems, exact diagonalization, has an exponential cost in both the diameter of the cylinder and its length, so DMRG can study significantly larger sizes.
+In this chapter we will use the above-mentioned DMRG algorithm to study a quantum Hall system. One obvious problem is that quantum Hall systems are two-dimensional, whereas in the previous subsection DMRG was defined for a one-dimensional system. DMRG is commonly used to study two-dimensional systems by defining such systems in a quasi-one-dimensional setup such as on a strip or cylinder; in this chapter we use a cylinder. In a one-dimensional system the bond dimension $\chi$ needed to accurately approximate the system increased polynomially in system size, and this is why the problem is numerically tractable. In a quasi-1D setup the required $\chi\sim e^{L_x}$, where $L_x$ is the diameter of the cylinder. Therefore we will only be able to deal with fairly small cylinders. This is still reasonable. The main competing numerical method used to study quantum Hall systems, exact diagonalization, has an exponential cost in both the diameter of the cylinder and its length, so DMRG can study significantly larger sizes.
 
-To put the quantum Hall system on a cylinder, we use the Landau gauge $(A_x,A_y)=(By,0)$. The Hamiltonian in this gauge, in the absence of interactions between electrons, is:
+To put the quantum Hall system on a cylinder, we use the Landau gauge $(A_x,A_y)=(By,0)$. The Hamiltonian in this gauge, in the absence of interactions between electrons, is
 \footnote{This is the Hamiltonian for a single species, which will be discussed for most of this section. The generalization to more species is fairly straightforward\cite{ZaletelMixing}.}
 \begin{equation}
-H_0=p_y^2+\left(p_x^2-\frac{eB}{c}y\right)^2.
+H_0=\frac{\hbar^2}{2m}p_y^2+\frac{\hbar^2}{2m}\left(p_x^2-\frac{eB}{c}y\right)^2.
 \end{equation}
 Where $B$ is the magnetic field, $x$ is the direction around the circumference of the cylinder and $y$ is the direction along the cylinder. This Hamiltonian has a number of ground states, which are given by the following wave functions:
 \begin{equation}
-\phi_n(x,y)=\frac{e^{-ik_nx}e^{-(y-k_n\ell_B^2)^2}}{\sqrt(2L_x\pi^{1/2}} \quad k_n=\frac{2\pi n}{L_x}.
+\phi_n(x,y)=\frac{e^{-ik_nx}e^{-(y-k_n\ell_B^2)^2}}{\sqrt{2L_x\pi^{1/2}} } \quad k_n=\frac{2\pi n}{L_x}.
 \label{formfactors}
 \end{equation}
+Here $\ell_B\equiv \sqrt{\frac{\hbar}{eB}}$ is the magnetic length, which we will soon set to be $1$. These wave functions are a combination of a plane wave in the $x$ direction and the solution to a harmonic oscillator in the $y$ direction. The above equation is for the lowest energy solution to the harmonic oscillator problem, which corresponds to the lowest Landau level. Electrons in higher Landau levels have wave functions corresponding to higher energy eigenstates of the harmonic oscillator problem.
 
 We will perform numerics in the orbital basis, indexed by $n$ and defined by:
 \begin{equation}
@@ -227,13 +229,13 @@ We want to find ground states of the above Hamiltonian, including interactions
 \delta H=\sum(r,r^\prime) V(r-r^\prime) \rho(r)\rho(r^\prime).
 \label{HCoulomb}
 \end{equation}
-$V(r)$ will typically be a Coulomb interaction, and $\rho(r)\equiv c^\dagger(r)c(r)$ is the electron density. Naturally the eigenstates of the full Hamiltonian may not be spanned by the basis $\phi_n$, but we restrict ourselves to this basis anyways, which is projection to the lowest Landau level. In the systems considered in this chapter this is a reasonable approximation to make. The energy separation between Landau levels from $H_0$ is proportional to the magnetic field $B$, while $\delta H\sim\sqrt{B}$. Therefore at large enough fields higher Landau levels can be neglected. It has also been shown that expansions in the Landau level mixing parameter $\kappa$ (which is essentially $\delta H/H_0$) are stable even for $\kappa\approx1$. Though neglecting higher Landau levels is a reasonable approximation in this work, in other systems such as graphene, where the Landau level spacing is $\sim\sqrt{B}$, or in cases where Landau level mixing breaks a particle-hole symmetry, it cannot be neglected.
+$V(r)$ will typically be a Coulomb interaction, and $\rho(r)\equiv c^\dagger(r)c(r)$ is the electron density. Naturally the eigenstates of the full Hamiltonian may not be spanned by the basis $\phi_n$, but we restrict ourselves to this basis anyways, this is projection to the lowest Landau level. In the systems considered in this chapter this is a reasonable approximation to make. The energy separation between Landau levels from $H_0$ is proportional to the magnetic field $B$, while $\delta H\sim\sqrt{B}$. Therefore at large enough fields higher Landau levels can be neglected. It has also been shown that expansions in the Landau level mixing parameter $\kappa$ (which is essentially $\delta H/H_0$) are stable even for $\kappa\approx1$. Though neglecting higher Landau levels is a reasonable approximation in this work, in other systems such as graphene, where the Landau level spacing is $\sim\sqrt{B}$, or in cases where Landau level mixing breaks a particle-hole symmetry, it cannot be neglected. 
 
 Eq.~(\ref{HCoulomb}) can be written in the orbital basis as: 
 \begin{equation}
 \delta H=\sum_{n,m,k} V_{mk} c^{\dagger}_{n+m} c_{n+k}^{\dagger} c_{n+m+k} c_{n}.
 \end{equation}
-We see that the Coulomb Hamiltonian induces both hopping between orbitals as well as diagonal terms. Note that all of these hoppings preserve momentum in the $x$-direction. If $V_{mk}$ is a Coulomb interaction then it is proportional to $|r-r^\prime|^{-1}$. In the orbital basis, the orbitals are at positions $2\pi n \ell_B^2/L_x$, i.e.~they get closer together as the diameter of the cylinder is increased, and in orbital space the Coulomb interaction gets longer-ranged as $L_x$ is increased. The longer-ranged interaction induces more entanglement between the different orbitals, and so a larger $\chi$ is required to represent the matrix product state. 
+We see that the Coulomb Hamiltonian induces both hopping between orbitals as well as diagonal terms. Note that all of these hoppings preserve momentum in the $x$-direction. If $V_{mk}$ is a Coulomb interaction then it is proportional to $|r-r^\prime|^{-1}$. In the orbital basis, the orbitals are at positions $2\pi n \ell_B^2/L_x$, i.e.,~they get closer together as the diameter of the cylinder is increased, and in orbital space the Coulomb interaction gets longer-ranged as $L_x$ is increased. The longer-ranged interaction induces more entanglement between the different orbitals, and so a larger $\chi$ is required to represent the matrix product state. 
 
 In the previous subsection we saw how to represent both on-site interactions and exponentially decaying interactions using matrix product operators. In the quantum Hall problem we have a power-law decaying operator. This can be approximated by a linear combination of exponentials, and that is the approach taken in this chapter\cite{ZaletelQHdmrg13}. 
 
@@ -307,11 +309,11 @@ However, these phases do have different topological orders, and we can therefore
 In a topological theory, the ground state degeneracy on both the torus and infinitely long cylinder is equal to the number of anyon types.
 There is a special basis for the ground state manifold, the minimally entangled basis, in which each basis state $\ket{a}$ can be identified with an anyon type $a$~\cite{KitaevPreskill, LiHaldane, Zhang2012}.
 
-By measuring how various entanglement properties of $\ket{a}$ scale with the circumference $L$, we can measure:
+By measuring how various entanglement properties of $\ket{a}$ scale with the circumference $L$, we can measure 
 	the quantum dimensions $d_a$~\cite{KitaevPreskill,LevinWen};
 	the internal quantum numbers (spin, charge, etc.) of each anyon $a$;
 	the ``shift" $\shift$~\cite{wenzee}, or equivalently the bulk Hall viscosity~\cite{ZaletelQHdmrg13};
-	the topological spins $\theta_a = e^{2 \pi i h_a}$ and the chiral central charge $c_-$ of the edge theory~\cite{Zhang2012, ZaletelQHdmrg13, HHTuMomPol13}.
+	the topological spins $\theta_a = e^{2 \pi i h_a}$; and the chiral central charge $c_-$ of the edge theory~\cite{Zhang2012, ZaletelQHdmrg13, HHTuMomPol13}.
 Below we provide a brief summary of these measurements in the context of FQH systems, and refer to Refs.~\cite{ZaletelMixing} for a detailed discussion. 
 
 To measure entanglement properties we divide the cylinder \emph{in orbital space} into two semi-infinite halves $L/R$ and Schmidt decompose the state as $ \ket{\Psi} = \sum_\mu \lambda_\mu \ket{\mu}_{ L} \otimes \ket{\mu}_{ R}$.
@@ -326,7 +328,7 @@ The corrections are set by a length scale $\tilde{\xi}$ which need not be direct
 
 To measure a \Uone charge $Q_a$ for anyon $a$, we partition the total charge operator into its components to the left / right of an entanglement cut, $\hat{Q} = \hat{Q}_L + \hat{Q}_R$. 
 The left Schmidt states are eigenstates of $\hat{Q}_L$, $\hat{Q}_L \ket{\mu; a}_L \equiv Q_{\mu; a} \ket{\mu; a}_L $, where $\ket{\mu; a}_L$ are the Schmidt states of ground state $\ket{a}$ and $Q_{\mu; a} \in \mathbb{Z}$ in units where the elementary charge is 1.
-The charge $Q_a$ of anyon $a$ is given by the charge polarization in the ground state, which can be expressed as an ``entanglement average'' \cite{ZaletelQHdmrg13}
+The charge $Q_a$ of anyon $a$ is given by the charge polarization in the ground state, which can be expressed as an ``entanglement average'' \cite{ZaletelQHdmrg13}:
 \begin{align}
 	e^{2 \pi i Q_a} \equiv e^{2 \pi i \sum_\mu \lambda^2_\mu Q_{\mu; a}}.
 \end{align}
@@ -343,7 +345,7 @@ Similar to the charge, the resulting phase $T_a = \exp(2\pi i M_a)$ may be compu
 \begin{align}
 	M_a &=  \sum_\mu \lambda^2_\mu K_{\mu; a} + \textrm{analytic terms} .
 \end{align}
-$M_a$ is the ``momentum polarization'', scaling as \cite{ZaletelQHdmrg13,HHTuMomPol13}
+$M_a$ is the ``momentum polarization'', scaling as \cite{ZaletelQHdmrg13,HHTuMomPol13}:
 \begin{align}
 	M_a &= -\frac{\nu\shift}{(4\pi\ell_B)^2}L^2 + h_a - \frac{c_-}{24} + \mathcal{O}(e^{-L / \tilde{\xi}}) \pmod{1}.
 	\label{mompol}
@@ -409,12 +411,12 @@ One may be concerned that in an experiment disorder will break the rotational sy
 	\caption{(Color online)
 		Momentum polarization $M_a$ for the representative points from the phases in Fig.~\ref{phase}, plotted against $\frac{\nu}{(4\pi\ell_B)^2}L^2$.
 		The coefficient of proportionality is the shift $\shift$, which we can read off to be $3$, $1$ and $0$ for the $(330)$, $(112)$ and $\barthird$ phase respectively, as expected.
-		Data was taken at $d=1.6$, $\DSAS=0$; $d=0.2$, $\DSAS=0$; and $d=2$, $\DSAS=0.1$ for the $(330)$, $(112)$ and $\barthird$ phases, respectively. Values for the shift obtained from fitting the data are shown directly on the figure.
+		Data was taken at $d=1.6$, $\DSAS=0$; $d=0.2$, $\DSAS=0$; and $d=2$, $\DSAS=0.1$ for the $(330)$, $(112)$, and $\barthird$ phases, respectively. Values for the shift obtained from fitting the data are shown directly on the figure.
 	}
 	\label{mompolfig}
 \end{figure}
 We have determined the phases by using the entanglement invariants discussed in Sec.~\ref{sec:ent_sig}.
-First, we measure the momentum polarization $M_a$  in order to compute the shift $\shift$, which should take the values $3$, $1$ and $0$ in the $(330)$, $(112)$ and $\barthird$ state, respectively. 
+First, we measure the momentum polarization $M_a$  in order to compute the shift $\shift$, which should take the values $3$, $1$, and $0$ in the $(330)$, $(112)$, and $\barthird$ state, respectively. 
 Fig.~\ref{mompolfig} shows the momentum polarization at three representative points in the phase diagram.
 We plot $M_a$  as a function of $L^2$, so by Eq.~(\ref{mompol}) we should get straight lines with a slope proportional to $\shift$.
 The green line $(330)$ was taken at $d=1.6$, $\DSAS=0$, giving $\shift \approx 3$;
@@ -446,7 +448,7 @@ While the transition may continue shifting to slightly smaller $\DSAS$ as $L$ is
 At smaller $d$, the critical value of $\DSAS$ is fairly small at $L=14$ and so we may be concerned that in the thermodynamic limit it is actually zero.
 We can test this at $d = 0$ by exploiting the fact that tunneling acts as a simple Zeeman field in the spin realization, so the energetics can be fully determined by the energy difference between the $(112)$ and $\barthird$ phases at $d=0$, $\DSAS=0$. 
 Using the additional symmetries at this point we can perform accurate finite-size scaling to extract the energy difference in the thermodynamic limit, and we find that the transition occurs at $\DSAS\approx0.018$.
-Therefore at least at small $d$, it appears that we have reached large enough sizes so that finite size effects do not change the location of the phase transition. Note that this system is formally equivalent to a $\nu=2/3$ system with spin, and our value for the energy difference matches the numerical literature for the spin-polarization transition in that system.\cite{spinpolED}
+Therefore, at least at small $d$, it appears that we have reached large enough sizes so that finite size effects do not change the location of the phase transition. Note that this system is formally equivalent to a $\nu=2/3$ system with spin, and our value for the energy difference matches the numerical literature for the spin-polarization transition in that system.\cite{spinpolED}
 
 
 We have also assessed the sensitivity to layer width $w$ for select cuts through the phase boundary.
@@ -465,12 +467,12 @@ We obtain $\DSAS \approx 0.07$, and this gives us reason to believe that our dat
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Order of the transitions}\label{sec:order}
 
-\begin{figure}[ttt]
+\begin{figure}%[ttt]
 	\includegraphics[width=0.6\linewidth]{figures/A.eps}
 	\caption{\label{Aplots} (Color online) Data as a function of tunneling strength, crossing the $(112):\barthird$ transition. The correlation length is flat except very close to the transition, where it is discontinuous. There is also a kink in the energy and in $\corrM$. This is all consistent with a first-order transition. }
 \end{figure}
 
-\begin{figure}[ttt]
+\begin{figure}%[ttt]
 	\includegraphics[width=0.6\linewidth]{figures/B.eps}
 	\caption{\label{Bplots} (Color online) Data as a function of tunneling strength, crossing the $(330):\barthird$ transition. The correlation length has a peak near the transition, but this is consistent with both a first and second order transition. The middle panel shows the energy for both the $(330)$ and $\barthird$ phases (see text), and as these lines are not parallel the systems energy has a kink. There is also a jump in $\corrR(r=0)$, consistent with a first-order transition. }
 \end{figure}
@@ -488,7 +490,7 @@ The different colored lines in the figure correspond to increasing $\chi$, and w
 However, a similar effect could be seen at a weakly first-order transition if $\chi$ is not large enough to capture the state.
 Therefore we need other ways to determine the order of these transitions.
  
-\begin{figure}[ttt]
+\begin{figure}%[ttt]
 	\includegraphics[width=0.6\linewidth]{figures/C.eps}
 	\caption{\label{Cplots} (Color online) Data as a function of interlayer separation, crossing the $(330):(112)$ transition. The correlation length has a peak, while the energy has a kink and the $\corrR(r=0)$ are jumps across the transition. This is indicative of a first order transition, though the transition is weaker compared to the others in the phase diagram. }
 \end{figure}
@@ -505,7 +507,7 @@ It is also useful to look at the behavior of local correlations, such as the rea
 \begin{align}
 	\corrR(\r)=\braket{ n^\up(\r)n^\dn(0) } - \braket{n^\up(\r)} \braket{n^\dn(0)},
 \end{align}
-where $n^\mu(\r)$ was defined in Eq.~(\ref{density}).
+where $n^\mu(\r)=(c^\mu)^\dagger(\r)c^\mu(\r)$.
 In the $(330)$ phase, the layers are uncorrelated, and this quantity should be approximately zero. In the other phases, at small $\r$ the electrons repel and so $\corrR(\r)$ should be negative. We can also look at the same correlation function in orbital space instead of real space:
 \begin{align}\begin{split}
 	\corrM(m) &= \braket{ n^\up_m n^\dn_0 } - \braket{n^\up_m}\braket{n^\dn_0}, \\
@@ -514,7 +516,7 @@ In the $(330)$ phase, the layers are uncorrelated, and this quantity should be a
 For $m=0$, this quantity will be negative in the $\barthird$ phase, but it will be small in the other phases. %why?
 When the above quantities have different values on either side of a phase transition, we expect them to jump discontinuously for a first-order transition and to vary continuously for a second-order transition.
 
-We plot these quantities in the bottom panels of Figs.~\ref{Aplots}, \ref{Bplots} and \ref{Cplots}, and see discrete jumps in all cases.
+We plot these quantities in the bottom panels of Figs.~\ref{Aplots}, \ref{Bplots}, and \ref{Cplots}, and see discrete jumps in all cases.
 Based on the results of this section we can claim that all the transitions in the diagram are first order, with the strongest first order transition being the $(112):\barthird$ transition. The $(330):(112)$ transition has only a slight kink in the energy and the jump in $g(r)$ is smaller than the other transitions, so this is the weakest first order transition in the diagram.
 
 In Ref.~\cite{Hirayama2004}, four experimental sweeps in our phase diagram were performed. Two of these sweeps had small $\DSAS$, and had $d\approx1.4-2.8$. These sweeps found a $\nu=2/3$ state which we take to be the $(330)$ state at large $d$, but below $d\approx1.8$ they find no QH state. 
@@ -524,7 +526,7 @@ We surmise that the quantum Hall state is not observed in experiment because the
 
 \subsection{Spin polarization}\label{sec:polarization}
 
-In addition to the bilayer degree of freedom electrons carry spin, resulting in a four-component system.
+In addition to the bilayer degree of freedom, electrons carry spin, resulting in a four-component system.
 Thus far we have assumed the spin is polarized by the external magnetic field, an assumption we can test with our simulations. 
 
 The spin-polarized $\barthird$ phase at $d=0, w = 0$ and large $\DSAS$ is essentially a one-component system with filling $2/3$, while the competing spin-unpolarized state is a two component (spin) system with each component having filling $1/3$. 
@@ -552,7 +554,7 @@ Also note that experimental studies \cite{Hirayama2002b,Hirayama2004} on this sy
 \section{Non-Abelian phase}
 \label{sec:nonabelian}
 
-\begin{figure}[ttt]
+\begin{figure}%[ttt]
 	\includegraphics[width=0.6\linewidth]{figures/V0phase.eps}
 	\caption{Phase diagram as a function of interlayer separation $d$ and the modification of the Haldane potential $\delta V_0$. We find that as $-\delta V_0$ is increased, a new phase appears which we believe is a bilayer-spin charge separated non-Abelian phase. Data is taken with zero tunneling $\DSAS = 0$ and layer width $w=0$.}
 	\label{V0phase}
@@ -720,7 +722,7 @@ This defines an overlap matrix. The sum of singular values of the overlap matrix
 		The system contains 8 electrons and 12 flux quanta, on a torus with a hexagonal unit cell. The color scale indicates the sum of singular values of the $3\times3$ overlap matrix defined in the main text.
 		(a) The interaction is varied by changing $d/\ell_B$ and adding $\delta V_0$ pseudopotential.
 		(b) The interaction is varied by changing $d/\ell_B$ and adding $\delta V_1$ pseudopotential. The same amount of $\delta V_1$ is added to both intralayer and interlayer Coulomb. 
-		(c) The effect of varying both $V_0$ and $V_1$ at fixed bilayer distance $d=1.5\ell_B$. Note that the iPf phase is located in the narrow red strip, and can be stabilized by either the reduction in $V_0$ (a), the increase in $V_1$ (b), or increase of both $\delta V_0$ and $\delta V_1$ (c).		
+		(c) The effect of varying both $V_0$ and $V_1$ at fixed bilayer distance $d=1.5\ell_B$. Note that the iPf phase is located in the narrow red strip, and can be stabilized by either the reduction in $V_0$ (a), the increase in $V_1$ (b), or the increase of both $\delta V_0$ and $\delta V_1$ (c).		
 	}
 	\label{overlap}
 \end{figure}
@@ -757,7 +759,7 @@ leading to the two-fold degenerate $P_\sigma(Q_L, S^z_L )$ just discussed.
 \begin{figure}%[tb]
 	\includegraphics[width=0.6\linewidth]{figures/charge_polarization.eps}
 	\caption{(Color online)
-		Entanglement of for spin-charge separation in the non-Abelian phase.
+		Entanglement evidence for spin-charge separation in the non-Abelian phase.
 		We plot the probability $P_a(Q_L, S^z_L )$ for charges $Q_L, S^z_L $ to fluctuate to the left of the cut in ground states $a =\Omega_1 / \Omega_2$. 
 		The center of this distribution gives the charge and spin of the anyon associated with the ground state. 
 		We see that ground state $\Omega_1$ corresponds to a quasiparticle with $S^z=0$ and $Q = 0$, consistent with either the $\mathbb{1}$ or  $\psi$  sector; in the other ground state there is a quasiparticle with $S^z=1/2$ and $Q = 0$, consistent with the $\spinon$ sector.
@@ -808,11 +810,11 @@ To make this measurement, we compute the difference in the entanglement entropy 
 %which is more robust than extrapolating either individually,
 From Eq.~\eqref{eq:TEE}~\cite{KitaevPreskill,LevinWen},
 \begin{align}
-	S_{\Omega^2}(L) - S_{\Omega^1}(L) = \log(d_{\Omega^2}/d_{\Omega^1}) + \mathcal{O}(e^{-L/\tilde{\xi}})
+	S_{\Omega^2}(L) - S_{\Omega^1}(L) = \log(d_{\Omega^2}/d_{\Omega^1}) + \mathcal{O}(e^{-L/\tilde{\xi}}),
 \end{align}
 from which we obtain the ratio of quantum dimensions $d_{\Omega_2}/d_{\Omega_1}$.
 Assuming $\ket{\Omega^1}$ corresponds to a Abelian anyon ($d_{\Omega^1}=1$), and provided the finite-size effects are small enough, we extract the quantum dimension of the spin-charge separated anyon.
-In Fig.~\ref{deltas} we show the results of this subtraction, for $L = 12\mbox{--}17$, for several different combinations of $d$, $\delta V_0$ and $\delta V_1$.
+In Fig.~\ref{deltas} we show the results of this subtraction, for $L = 12\mbox{--}17$, for several different combinations of $d$, $\delta V_0$, and $\delta V_1$.
 Finite-size and finite-$\chi$ effects introduce significant systematic errors into our calculation of this quantity, leading to results for $\Delta S = S_{\Omega^2} - S_{\Omega^1}$ which vary from $0.1\mbox{--}0.5$ for different measurements.
 Though this prevents us from determining the quantum dimension precisely, we can still say that our results are consistent with $d_{\spinon} = \sqrt{2}$ (as shown by the blue dashed line in Fig.~\ref{deltas}), and inconsistent with the intralayer Pfaffian value $d=2$ (as shown by the green dashed line), and the Abelian value of $d=1$. 
 
@@ -840,7 +842,7 @@ This is consistent with the identification $\Omega^1 = \psi$, $\Omega^2 = \spino
 
 Further support for our identification of ground states can be found in the entanglement spectrum.
 We first give the theoretical orbital entanglement spectra for the ground states of the iPf phase, which depends on both the ground state $\ket{a}$ and the charge across the entanglement cut.
-(Note that so far in this work, we have given the entanglement spectra for only one value of electric charge crossing the entanglement cut, we chose the value of charge which has the lowest lying entanglement states.  Henceforth we will be explicit about the charges.)
+(Note that so far in this work, we have given the entanglement spectra for only one value of electric charge crossing the entanglement cut, and we chose the value of charge which has the lowest lying entanglement states.  Henceforth we will be explicit about the charges.)
 For any of the nine MES and fixed charge $(Q,S^z)$ across the entanglement cut, the entanglement spectra counting follows one of three possible sequences.
 \begin{align}\begin{split}
 	s_1: 1, 2, 6, 13, \dots,
@@ -848,7 +850,7 @@ For any of the nine MES and fixed charge $(Q,S^z)$ across the entanglement cut, 
 \\	s_\chi: 1, 3, 8, 18, \dots.
 \end{split}\end{align}
 For state $\ket{\mathbb{1}}$, the entanglement spectrum follows the $s_1$ sequence for even $Q$, and $s_\chi$ sequence for odd $Q$.
-For state $\ket{\psi}$, the spectrum follows $s_\chi$ and $s_1$ for even and odd $Q$ respectively.
+For state $\ket{\psi}$, the spectrum follows $s_\chi$ and $s_1$ for even and odd $Q$, respectively.
 For state $\ket{\spinon}$, the entanglement spectrum always follows $s_\sigma$.
 
 
